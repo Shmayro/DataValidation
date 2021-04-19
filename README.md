@@ -38,11 +38,8 @@ Within the download you'll find the following directories and files:
 
 ```
 DataValidation
-├── CHANGELOG.md
-├── LICENSE.md
 ├── README.md
 ├── angular-cli.json
-├── documentation
 ├── e2e
 ├── karma.conf.js
 ├── package-lock.json
@@ -78,11 +75,6 @@ DataValidation
 │   │   │   ├── dashboard.component.html
 │   │   │   ├── dashboard.component.spec.ts
 │   │   │   └── dashboard.component.ts
-│   │   ├── icons
-│   │   │   ├── icons.component.css
-│   │   │   ├── icons.component.html
-│   │   │   ├── icons.component.spec.ts
-│   │   │   └── icons.component.ts
 │   │   ├── layouts
 │   │   │   └── admin-layout
 │   │   │       ├── admin-layout.component.html
