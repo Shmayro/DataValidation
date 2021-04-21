@@ -19,11 +19,11 @@ export class MapsComponent implements OnInit {
 
   ngOnInit() {
 
-    var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
+    var myLatlng = new google.maps.LatLng(43.336962, 5.410928);
     var mapOptions = {
         zoom: 13,
         center: myLatlng,
-        scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
+        //scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
         styles: [{
             "featureType": "water",
             "stylers": [{
@@ -115,7 +115,7 @@ export class MapsComponent implements OnInit {
 
     var marker = new google.maps.Marker({
         position: myLatlng,
-        title: "Hello World!"
+        title: "Aix-Marseille université"
     });
 
     // To add the marker to the map, call setMap();
