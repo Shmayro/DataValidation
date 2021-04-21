@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng generate component component-name` to generate a new component or `ng g c component-name`. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
@@ -83,11 +83,21 @@ DataValidation
 │   │   │       ├── admin-layout.component.ts
 │   │   │       ├── admin-layout.module.ts
 │   │   │       └── admin-layout.routing.ts
+│   │   ├── login
+│   │   │   ├── login.component.css
+│   │   │   ├── login.component.html
+│   │   │   ├── login.component.spec.ts
+│   │   │   └── login.component.ts
 │   │   ├── maps
 │   │   │   ├── maps.component.css
 │   │   │   ├── maps.component.html
 │   │   │   ├── maps.component.spec.ts
 │   │   │   └── maps.component.ts
+│   │   ├── register
+│   │   │   ├── register.component.css
+│   │   │   ├── register.component.html
+│   │   │   ├── register.component.spec.ts
+│   │   │   └── register.component.ts
 │   │   ├── table-list
 │   │   │   ├── table-list.component.css
 │   │   │   ├── table-list.component.html
