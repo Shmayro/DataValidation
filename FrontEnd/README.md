@@ -1,5 +1,5 @@
 {
-    "name": "Frontend",
+    "name": "frontend",
     "version": "2.5.0",
     "lockfileVersion": 1,
     "requires": true,

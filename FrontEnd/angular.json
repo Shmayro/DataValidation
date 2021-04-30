@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "Frontend": {
+        "frontend": {
             "root": "",
             "sourceRoot": "src",
             "projectType": "application",
@@ -63,18 +63,18 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "Frontend:build"
+                        "browserTarget": "frontend:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "Frontend:build:production"
+                            "browserTarget": "frontend:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "Frontend:build"
+                        "browserTarget": "frontend:build"
                     }
                 },
                 "test": {
@@ -118,7 +118,7 @@
                 }
             }
         },
-        "Frontend-e2e": {
+        "frontend-e2e": {
             "root": "",
             "sourceRoot": "",
             "projectType": "application",
@@ -127,7 +127,7 @@
                     "builder": "@angular-devkit/build-angular:protractor",
                     "options": {
                         "protractorConfig": "./protractor.conf.js",
-                        "devServerTarget": "Frontend:serve"
+                        "devServerTarget": "frontend:serve"
                     }
                 },
                 "lint": {
@@ -142,7 +142,7 @@
             }
         }
     },
-    "defaultProject": "Frontend",
+    "defaultProject": "frontend",
     "schematics": {
         "@schematics/angular:component": {
             "prefix": "app",
