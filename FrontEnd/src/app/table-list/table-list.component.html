@@ -9,23 +9,57 @@
                     <div class="card-body">
                         <form novalidate="" ng-reflect-form="[object Object]" class="ng-untouched ng-pristine ng-invalid">
                             <div>
-                                <label for="firstName">File : </label>
+                                <label for="firstName">File :</label>
                                 <input type="file" #fileInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)" accept=".csv" />
-                                <button mat-raised-button (click)="unitStand()" class="btn pull-right">
+                                <button mat-raised-button (click)="createFile()" class="btn pull-right">
                   Standardize
                 </button>
                             </div>
                         </form>
                         <br />
 
-                        <div class="table-responsive">
-                            <!-- Filtrage -->
-                            <mat-label>Filter : </mat-label>
+                        <div class="table-responsive" [hidden]="dataSource.data.length === 0">
+                            <!-- Visualization -->
+                            <mat-label>Visualization :</mat-label>
                             <section class="example-section">
-                                <mat-checkbox [(ngModel)]="HiddenSN">BY SOCIETY NAME</mat-checkbox>
-                                <mat-checkbox [(ngModel)]="HiddenCode">BY ZIPCODE</mat-checkbox>
-                                <mat-checkbox [(ngModel)]="HiddenCity">BY CITY</mat-checkbox>
-                                <mat-checkbox [(ngModel)]="HiddenCountry">BY COUNTRY</mat-checkbox>
+                                <mat-checkbox [(ngModel)]="HiddenSN" [checked]="step.checked">
+                                    SOCIETY NAME
+                                </mat-checkbox>
+                                <mat-checkbox [(ngModel)]="HiddenIN">
+                                    INBUILDING
+                                </mat-checkbox>
+                                <mat-checkbox [(ngModel)]="HiddenEXT">EXTBUILDING</mat-checkbox>
+                                <mat-checkbox [(ngModel)]="HiddenPOI">
+                                    POI LOGISTIC
+                                </mat-checkbox>
+                                <mat-checkbox [(ngModel)]="HiddenZONE">
+                                    ZONE
+                                </mat-checkbox>
+                                <mat-checkbox [(ngModel)]="HiddenHOUSE">HOUSE NUM</mat-checkbox>
+                                <mat-checkbox [(ngModel)]="HiddenROADNAME">
+                                    ROADNAME
+                                </mat-checkbox>
+                                <mat-checkbox [(ngModel)]="HiddenPOBOX">
+                                    POBOX
+                                </mat-checkbox>
+
+                                <mat-checkbox [(ngModel)]="HiddenCode">ZIPCODE</mat-checkbox>
+                                <mat-checkbox [(ngModel)]="HiddenCity">CITY</mat-checkbox>
+                                <mat-checkbox [(ngModel)]="HiddenCountry">
+                                    COUNTRY
+                                </mat-checkbox>
+                            </section>
+                            <!-- Filtrage -->
+                            <mat-label>Filter By :</mat-label>
+                            <section class="example-section">
+                                <mat-checkbox [(ngModel)]="HiddenSN">
+                                    SOCIETY NAME
+                                </mat-checkbox>
+                                <mat-checkbox [(ngModel)]="HiddenCode">ZIPCODE</mat-checkbox>
+                                <mat-checkbox [(ngModel)]="HiddenCity">CITY</mat-checkbox>
+                                <mat-checkbox [(ngModel)]="HiddenCountry">
+                                    COUNTRY
+                                </mat-checkbox>
                             </section>
 
                             <mat-form-field name="SOCIETY_NAME" ngDefaultControl [(ngModel)]="any" *ngIf="HiddenSN" class="filter" floatLabel="never">
@@ -47,7 +81,7 @@
                                 <mat-label>Search the country</mat-label>
                                 <input matInput [formControl]="COUNTRY" />
                             </mat-form-field>
-                            <br/>
+                            <br />
                             <!--Table-->
                             <table mat-table class="mat-elevation-z8 table-hover table" [dataSource]="dataSource" matSort>
                                 <ng-container matColumnDef="SOCIETY_NAME">
@@ -63,15 +97,17 @@
                                     <th mat-header-cell *matHeaderCellDef mat-sort-header>
                                         INBUILDING
                                     </th>
-                                    <td mat-cell *matCellDef="let row">{{ row.INBUIDING }}%</td>
+                                    <td mat-cell *matCellDef="let element">
+                                        {{ element.INBUILDING }}
+                                    </td>
                                 </ng-container>
 
                                 <ng-container matColumnDef="EXTBUILDING">
                                     <th mat-header-cell *matHeaderCellDef mat-sort-header>
                                         EXTBUILDING
                                     </th>
-                                    <td mat-cell *matCellDef="let row">
-                                        {{ row.EXTBUILDING }}
+                                    <td mat-cell *matCellDef="let element">
+                                        {{ element.EXTBUILDING }}
                                     </td>
                                 </ng-container>
 
@@ -79,8 +115,8 @@
                                     <th mat-header-cell *matHeaderCellDef mat-sort-header>
                                         POI LOGISTIC
                                     </th>
-                                    <td mat-cell *matCellDef="let row">
-                                        {{ row.POI_LOGISTIC }}
+                                    <td mat-cell *matCellDef="let element">
+                                        {{ element.POI_LOGISTIC }}
                                     </td>
                                 </ng-container>
 
@@ -88,61 +124,63 @@
                                     <th mat-header-cell *matHeaderCellDef mat-sort-header>
                                         ZONE
                                     </th>
-                                    <td mat-cell *matCellDef="let row">{{ row.ZONE }}</td>
+                                    <td mat-cell *matCellDef="let element">{{ element.ZONE }}</td>
                                 </ng-container>
 
-                                <ng-container matColumnDef="HOUSE_NUM">
+                                <ng-container matColumnDef="HOUSENUM">
                                     <th mat-header-cell *matHeaderCellDef mat-sort-header>
                                         HOUSE NUM
                                     </th>
-                                    <td mat-cell *matCellDef="let row">{{ row.HOUSE_NUM }}%</td>
+                                    <td mat-cell *matCellDef="let element">
+                                        {{ element.HOUSENUM }}
+                                    </td>
                                 </ng-container>
 
-                                <ng-container matColumnDef="ROADNUM">
+                                <ng-container matColumnDef="ROADNAME">
                                     <th mat-header-cell *matHeaderCellDef mat-sort-header>
-                                        ROADNUM
+                                        ROADNAME
                                     </th>
-                                    <td mat-cell *matCellDef="let row">{{ row.ROADNUM }}</td>
+                                    <td mat-cell *matCellDef="let element">
+                                        {{ element.ROADNAME }}
+                                    </td>
                                 </ng-container>
 
                                 <ng-container matColumnDef="POBOX">
                                     <th mat-header-cell *matHeaderCellDef mat-sort-header>
                                         POBOX
                                     </th>
-                                    <td mat-cell *matCellDef="let row">{{ row.POBOX }}</td>
+                                    <td mat-cell *matCellDef="let element">
+                                        {{ element.POBOX }}
+                                    </td>
                                 </ng-container>
 
                                 <ng-container matColumnDef="ZIPCODE">
                                     <th mat-header-cell *matHeaderCellDef mat-sort-header>
                                         ZIPCODE
                                     </th>
-                                    <td mat-cell *matCellDef="let row">{{ row.ZIPCODE }}</td>
+                                    <td mat-cell *matCellDef="let element">
+                                        {{ element.ZIPCODE }}
+                                    </td>
                                 </ng-container>
 
                                 <ng-container matColumnDef="CITY">
                                     <th mat-header-cell *matHeaderCellDef mat-sort-header>
                                         CITY
-
                                     </th>
-                                    <td mat-cell *matCellDef="let row">{{ row.CITY }}%</td>
+                                    <td mat-cell *matCellDef="let element">{{ element.CITY }}</td>
                                 </ng-container>
 
                                 <ng-container matColumnDef="COUNTRY">
                                     <th mat-header-cell *matHeaderCellDef mat-sort-header>
                                         COUNTRY
-
                                     </th>
-                                    <td mat-cell *matCellDef="let row">{{ row.COUNTRY }}</td>
+                                    <td mat-cell *matCellDef="let element">
+                                        {{ element.COUNTRY }}
+                                    </td>
                                 </ng-container>
 
                                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                                 <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-
-                                <tr class="mat-row" *matNoDataRow>
-                                    <td class="mat-cell" colspan="4">
-                                        No data matching the filter "{{ input.value }}"
-                                    </td>
-                                </tr>
                             </table>
                             <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
                             <button mat-raised-button (click)="unitStand()" class="btn pull-right">
@@ -158,190 +196,3 @@
         </div>
     </div>
 </div>
-
-<!--<table mat-table class="table table-hover" [dataSource]="dataSource" matSort>
-
-   
-    <ng-container matColumnDef="SOCIETY_NAME">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> SOCIETY NAME </th>
-        <td mat-cell *matCellDef="let row"> {{row.SOCIETY_NAME}} </td>
-    </ng-container>
-
-
-    <ng-container matColumnDef="INBUIDING">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> INBUIDING </th>
-        <td mat-cell *matCellDef="let row"> {{row.INBUIDING}}% </td>
-    </ng-container>
-
-
-    <ng-container matColumnDef="EXTBUILDING">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> EXTBUILDING </th>
-        <td mat-cell *matCellDef="let row"> {{row.EXTBUILDING}} </td>
-    </ng-container>
-
-
-    <ng-container matColumnDef="POI_LOGISTIC">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> POI LOGISTIC </th>
-        <td mat-cell *matCellDef="let row"> {{row.POI_LOGISTIC}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="ZONE">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> ZONE </th>
-        <td mat-cell *matCellDef="let row"> {{row.ZONE}} </td>
-    </ng-container>
-
- 
-    <ng-container matColumnDef="HOUSE_NUM">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> HOUSE NUM </th>
-        <td mat-cell *matCellDef="let row"> {{row.HOUSE_NUM}}% </td>
-    </ng-container>
-
-
-    <ng-container matColumnDef="ROADNUM">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> ROADNUM </th>
-        <td mat-cell *matCellDef="let row"> {{row.ROADNUM}} </td>
-    </ng-container>
-
-
-    <ng-container matColumnDef="POBOX">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> POBOX </th>
-        <td mat-cell *matCellDef="let row"> {{row.POBOX}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="ZIPCODE">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> ZIPCODE </th>
-        <td mat-cell *matCellDef="let row"> {{row.ZIPCODE}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="CITY">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> CITY </th>
-        <td mat-cell *matCellDef="let row"> {{row.CITY}}% </td>
-    </ng-container>
-
-
-    <ng-container matColumnDef="COUNTRY">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> COUNTRY </th>
-        <td mat-cell *matCellDef="let row"> {{row.COUNTRY}} </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
-
-    <tr class="mat-row" *matNoDataRow>
-        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
-    </tr>
-</table>
--->
-<!--
-
-    <table class="table table-hover">
-                                <thead class="">
-                                    <th>
-                                        SOCIETY NAME
-                                    </th>
-                                    <th>
-                                        INBUIDING
-                                    </th>
-                                    <th>
-                                        EXTBUILDING
-                                    </th>
-                                    <th>
-                                        POI LOGISTIC
-                                    </th>
-                                    <th>
-                                        ZONE
-                                    </th>
-                                    <th>
-                                        HOUSE NUM
-                                    </th>
-                                    <th>
-                                        ROADNUM
-                                    </th>
-                                    <th>
-                                        POBOX
-                                    </th>
-                                    <th>
-                                        ZIPCODE
-                                    </th>
-                                    <th>
-                                        CITY
-                                    </th>
-                                    <th>
-                                        COUNTRY
-                                    </th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            SDV SAINT ETIENNE
-                                        </td>
-                                        <td>
-
-                                        </td>
-                                        <td>
-
-                                        </td>
-                                        <td>
-
-                                        </td>
-                                        <td>
-                                            ZONE INDUSTRIELLE DE VERPILLEUX
-                                        </td>
-                                        <td>
-                                            1
-                                        </td>
-                                        <td>
-                                            RUE NEKER
-                                        </td>
-                                        <td>
-                                            BP 673
-                                        </td>
-                                        <td>
-                                            42000
-                                        </td>
-                                        <td>
-                                            SAINT ETIENNE
-                                        </td>
-                                        <td>
-                                            FRANCE
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            FC LOGISTIC
-                                        </td>
-                                        <td>
-
-                                        </td>
-                                        <td>
-                                            BATIMENT ROSTAND
-                                        </td>
-                                        <td>
-
-                                        </td>
-                                        <td>
-
-                                        </td>
-                                        <td>
-                                            22
-                                        </td>
-                                        <td>
-                                            AVENUE DES NATIONS
-                                        </td>
-                                        <td>
-
-                                        </td>
-                                        <td>
-
-                                        </td>
-                                        <td>
-                                            VILLEPINTE
-                                        </td>
-                                        <td>
-                                            FRANCE
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
--->

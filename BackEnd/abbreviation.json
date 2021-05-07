@@ -1,0 +1,6912 @@
+{
+	"Abbreviation": {
+		"BusinessNameAbbrev": {
+			"Langue": "English ",
+			"Abbrev": [{
+					"name": "Limited",
+					"abbreviation": "Ltd"
+				},
+				{
+					"name": "Corporation",
+					"abbreviation": "Corp"
+				},
+				{
+					"name": "Insurance",
+					"abbreviation": "Ins"
+				},
+				{
+					"name": "Juris Doctor",
+					"abbreviation": "JD"
+				},
+				{
+					"name": "Doctor of Dental Medicine",
+					"abbreviation": "DDM"
+				},
+				{
+					"name": "&",
+					"abbreviation": "And"
+				},
+				{
+					"name": "Limited Liability Company",
+					"abbreviation": "LLC"
+				},
+				{
+					"name": "Incorporated",
+					"abbreviation": "Inc"
+				},
+				{
+					"name": "Certified Public Accountant",
+					"abbreviation": "CPA"
+				},
+				{
+					"name": "Medical Doctor",
+					"abbreviation": "MD"
+				},
+				{
+					"name": "A.A.A.",
+					"abbreviation": "AAA"
+				},
+				{
+					"name": "Company",
+					"abbreviation": "Co"
+				},
+				{
+					"name": "Professional Corporation",
+					"abbreviation": "PC"
+				},
+				{
+					"name": "Esquire",
+					"abbreviation": "Esq"
+				},
+				{
+					"name": "Doctor of Dental Surgery",
+					"abbreviation": "DDS"
+				},
+				{
+					"name": "A Professional Corporation",
+					"abbreviation": "APC"
+				}
+			]
+		},
+		"StreetAbbrev": [{
+				"Langue": "English",
+				"Abbrev": [{
+						"name": "Access",
+						"abbreviation": "Accs"
+					},
+					{
+						"name": "Air National Guard Base",
+						"abbreviation": "ANGB"
+					},
+					{
+						"name": "Airport",
+						"abbreviation": "Aprt"
+					},
+					{
+						"name": "Alley",
+						"abbreviation": "Al"
+					},
+					{
+						"name": "Alley",
+						"abbreviation": "All"
+					},
+					{
+						"name": "Alley",
+						"abbreviation": "Ally"
+					},
+					{
+						"name": "Alley",
+						"abbreviation": "Aly"
+					},
+					{
+						"name": "Alleyway",
+						"abbreviation": "Alwy"
+					},
+					{
+						"name": "Amble",
+						"abbreviation": "Ambl"
+					},
+					{
+						"name": "Apartments",
+						"abbreviation": "Apts"
+					},
+					{
+						"name": "Approach",
+						"abbreviation": "Apch"
+					},
+					{
+						"name": "Approach",
+						"abbreviation": "App"
+					},
+					{
+						"name": "Arterial",
+						"abbreviation": "Artl"
+					},
+					{
+						"name": "Artery",
+						"abbreviation": "Arty"
+					},
+					{
+						"name": "Avenue",
+						"abbreviation": "Av"
+					},
+					{
+						"name": "Avenue",
+						"abbreviation": "Ave"
+					},
+					{
+						"name": "Back",
+						"abbreviation": "Bk"
+					},
+					{
+						"name": "Banan",
+						"abbreviation": "Ba"
+					},
+					{
+						"name": "Basin",
+						"abbreviation": "Basn"
+					},
+					{
+						"name": "Basin",
+						"abbreviation": "Bsn"
+					},
+					{
+						"name": "Beach",
+						"abbreviation": "Bch"
+					},
+					{
+						"name": "Bend",
+						"abbreviation": "Bend"
+					},
+					{
+						"name": "Bend",
+						"abbreviation": "Bnd"
+					},
+					{
+						"name": "Block",
+						"abbreviation": "Blk"
+					},
+					{
+						"name": "Boardwalk",
+						"abbreviation": "Bwlk"
+					},
+					{
+						"name": "Boulevard",
+						"abbreviation": "BLVD"
+					},
+					{
+						"name": "Boulevard",
+						"abbreviation": "BVD"
+					},
+					{
+						"name": "Boundary",
+						"abbreviation": "Bdy"
+					},
+					{
+						"name": "Bowl",
+						"abbreviation": "Bl"
+					},
+					{
+						"name": "Brace",
+						"abbreviation": "Br"
+					},
+					{
+						"name": "Brae",
+						"abbreviation": "Br"
+					},
+					{
+						"name": "Brae",
+						"abbreviation": "Brae"
+					},
+					{
+						"name": "Break",
+						"abbreviation": "Brk"
+					},
+					{
+						"name": "Bridge",
+						"abbreviation": "Bdge"
+					},
+					{
+						"name": "Bridge",
+						"abbreviation": "Br"
+					},
+					{
+						"name": "Bridge",
+						"abbreviation": "Brdg"
+					},
+					{
+						"name": "Bridge",
+						"abbreviation": "Bri"
+					},
+					{
+						"name": "Broadway",
+						"abbreviation": "Bdwy"
+					},
+					{
+						"name": "Broadway",
+						"abbreviation": "Bway"
+					},
+					{
+						"name": "Broadway",
+						"abbreviation": "Bwy"
+					},
+					{
+						"name": "Brook",
+						"abbreviation": "Brk"
+					},
+					{
+						"name": "Brow",
+						"abbreviation": "Brw"
+					},
+					{
+						"name": "Brow",
+						"abbreviation": "Brow"
+					},
+					{
+						"name": "Buildings",
+						"abbreviation": "Bldgs"
+					},
+					{
+						"name": "Buildings",
+						"abbreviation": "Bldngs"
+					},
+					{
+						"name": "Business",
+						"abbreviation": "Bus"
+					},
+					{
+						"name": "Bypass",
+						"abbreviation": "Bps"
+					},
+					{
+						"name": "Bypass",
+						"abbreviation": "Byp"
+					},
+					{
+						"name": "Bypass",
+						"abbreviation": "Bypa"
+					},
+					{
+						"name": "Byway",
+						"abbreviation": "Bywy"
+					},
+					{
+						"name": "Caravan",
+						"abbreviation": "Cvn"
+					},
+					{
+						"name": "Causeway",
+						"abbreviation": "Caus"
+					},
+					{
+						"name": "Causeway",
+						"abbreviation": "Cswy"
+					},
+					{
+						"name": "Causeway",
+						"abbreviation": "Cway"
+					},
+					{
+						"name": "Center",
+						"abbreviation": "Cen"
+					},
+					{
+						"name": "Center",
+						"abbreviation": "Ctr"
+					},
+					{
+						"name": "Central",
+						"abbreviation": "Ctrl"
+					},
+					{
+						"name": "Centre",
+						"abbreviation": "Cen"
+					},
+					{
+						"name": "Centre",
+						"abbreviation": "Ctr"
+					},
+					{
+						"name": "Centreway",
+						"abbreviation": "Cnwy"
+					},
+					{
+						"name": "Chase",
+						"abbreviation": "Ch"
+					},
+					{
+						"name": "Church",
+						"abbreviation": "Ch"
+					},
+					{
+						"name": "Circle",
+						"abbreviation": "Cir"
+					},
+					{
+						"name": "Circuit",
+						"abbreviation": "Cct"
+					},
+					{
+						"name": "Circuit",
+						"abbreviation": "Ci"
+					},
+					{
+						"name": "Circus",
+						"abbreviation": "Crc"
+					},
+					{
+						"name": "Circus",
+						"abbreviation": "Crcs"
+					},
+					{
+						"name": "City",
+						"abbreviation": "Cty"
+					},
+					{
+						"name": "Close",
+						"abbreviation": "Cl"
+					},
+					{
+						"name": "Common",
+						"abbreviation": "Cmn"
+					},
+					{
+						"name": "Common",
+						"abbreviation": "Comm"
+					},
+					{
+						"name": "Community",
+						"abbreviation": "Comm"
+					},
+					{
+						"name": "Concourse",
+						"abbreviation": "Cnc"
+					},
+					{
+						"name": "Concourse",
+						"abbreviation": "Con"
+					},
+					{
+						"name": "Copse",
+						"abbreviation": "Cps"
+					},
+					{
+						"name": "Corner",
+						"abbreviation": "Cnr"
+					},
+					{
+						"name": "Corner",
+						"abbreviation": "Crn"
+					},
+					{
+						"name": "Corso",
+						"abbreviation": "Cso"
+					},
+					{
+						"name": "Cottages",
+						"abbreviation": "Cotts"
+					},
+					{
+						"name": "County",
+						"abbreviation": "Co"
+					},
+					{
+						"name": "County Road",
+						"abbreviation": "CR"
+					},
+					{
+						"name": "County Route",
+						"abbreviation": "CR"
+					},
+					{
+						"name": "Court",
+						"abbreviation": "Crt"
+					},
+					{
+						"name": "Court",
+						"abbreviation": "Ct"
+					},
+					{
+						"name": "Courtyard",
+						"abbreviation": "Cyd"
+					},
+					{
+						"name": "Courtyard",
+						"abbreviation": "Ctyd"
+					},
+					{
+						"name": "Cove",
+						"abbreviation": "Ce"
+					},
+					{
+						"name": "Cove",
+						"abbreviation": "Cov"
+					},
+					{
+						"name": "Cove",
+						"abbreviation": "Cove"
+					},
+					{
+						"name": "Cove",
+						"abbreviation": "Cv"
+					},
+					{
+						"name": "Creek",
+						"abbreviation": "Ck"
+					},
+					{
+						"name": "Creek",
+						"abbreviation": "Cr"
+					},
+					{
+						"name": "Creek",
+						"abbreviation": "Crk"
+					},
+					{
+						"name": "Crescent",
+						"abbreviation": "Cr"
+					},
+					{
+						"name": "Crescent",
+						"abbreviation": "Cres"
+					},
+					{
+						"name": "Crest",
+						"abbreviation": "Crst"
+					},
+					{
+						"name": "Crest",
+						"abbreviation": "Cst"
+					},
+					{
+						"name": "Croft",
+						"abbreviation": "Cft"
+					},
+					{
+						"name": "Cross",
+						"abbreviation": "Cs"
+					},
+					{
+						"name": "Cross",
+						"abbreviation": "Crss"
+					},
+					{
+						"name": "Crossing",
+						"abbreviation": "Crsg"
+					},
+					{
+						"name": "Crossing",
+						"abbreviation": "Csg"
+					},
+					{
+						"name": "Crossing",
+						"abbreviation": "Xing"
+					},
+					{
+						"name": "Crossroad",
+						"abbreviation": "Crd"
+					},
+					{
+						"name": "Crossway",
+						"abbreviation": "Cowy"
+					},
+					{
+						"name": "Cul-de-sac",
+						"abbreviation": "Cds"
+					},
+					{
+						"name": "Cul-de-sac",
+						"abbreviation": "Csac"
+					},
+					{
+						"name": "Curve",
+						"abbreviation": "Cve"
+					},
+					{
+						"name": "Cutting",
+						"abbreviation": "Cutt"
+					},
+					{
+						"name": "Dale",
+						"abbreviation": "Dle"
+					},
+					{
+						"name": "Dale",
+						"abbreviation": "Dale"
+					},
+					{
+						"name": "Deviation",
+						"abbreviation": "Devn"
+					},
+					{
+						"name": "Dip",
+						"abbreviation": "Dip"
+					},
+					{
+						"name": "Distributor",
+						"abbreviation": "Dstr"
+					},
+					{
+						"name": "Down",
+						"abbreviation": "Dn"
+					},
+					{
+						"name": "Downs",
+						"abbreviation": "Dn"
+					},
+					{
+						"name": "Drive",
+						"abbreviation": "Dr"
+					},
+					{
+						"name": "Drive",
+						"abbreviation": "Drv"
+					},
+					{
+						"name": "Drive",
+						"abbreviation": "Dv"
+					},
+					{
+						"name": "Driveway",
+						"abbreviation": "Drwy"
+					},
+					{
+						"name": "Driveway",
+						"abbreviation": "Dvwy"
+					},
+					{
+						"name": "Driveway",
+						"abbreviation": "Dwy"
+					},
+					{
+						"name": "East",
+						"abbreviation": "E"
+					},
+					{
+						"name": "Edge",
+						"abbreviation": "Edg"
+					},
+					{
+						"name": "Edge",
+						"abbreviation": "Edge"
+					},
+					{
+						"name": "Elbow",
+						"abbreviation": "Elb"
+					},
+					{
+						"name": "End",
+						"abbreviation": "End"
+					},
+					{
+						"name": "Entrance",
+						"abbreviation": "Ent"
+					},
+					{
+						"name": "Esplanade",
+						"abbreviation": "Esp"
+					},
+					{
+						"name": "Estate",
+						"abbreviation": "Est"
+					},
+					{
+						"name": "Expressway",
+						"abbreviation": "Exp"
+					},
+					{
+						"name": "Expressway",
+						"abbreviation": "Expy"
+					},
+					{
+						"name": "Expressway",
+						"abbreviation": "Expwy"
+					},
+					{
+						"name": "Expressway",
+						"abbreviation": "Xway"
+					},
+					{
+						"name": "Extension",
+						"abbreviation": "Ex"
+					},
+					{
+						"name": "Fairway",
+						"abbreviation": "Fawy"
+					},
+					{
+						"name": "Fairway",
+						"abbreviation": "Fy"
+					},
+					{
+						"name": "Father",
+						"abbreviation": "Fr"
+					},
+					{
+						"name": "Ferry",
+						"abbreviation": "Fy"
+					},
+					{
+						"name": "Field",
+						"abbreviation": "Fd"
+					},
+					{
+						"name": "Fire Track",
+						"abbreviation": "Ftrk"
+					},
+					{
+						"name": "Firetrail",
+						"abbreviation": "Fit"
+					},
+					{
+						"name": "Flat",
+						"abbreviation": "Fl"
+					},
+					{
+						"name": "Flat",
+						"abbreviation": "Flat"
+					},
+					{
+						"name": "Follow",
+						"abbreviation": "Folw"
+					},
+					{
+						"name": "Footway",
+						"abbreviation": "Ftwy"
+					},
+					{
+						"name": "Foreshore",
+						"abbreviation": "Fshr"
+					},
+					{
+						"name": "Formation",
+						"abbreviation": "Form"
+					},
+					{
+						"name": "Fort",
+						"abbreviation": "Ft"
+					},
+					{
+						"name": "Freeway",
+						"abbreviation": "Frwy"
+					},
+					{
+						"name": "Freeway",
+						"abbreviation": "Fwy"
+					},
+					{
+						"name": "Front",
+						"abbreviation": "Frnt"
+					},
+					{
+						"name": "Frontage",
+						"abbreviation": "Fr"
+					},
+					{
+						"name": "Frontage",
+						"abbreviation": "Frtg"
+					},
+					{
+						"name": "Gap",
+						"abbreviation": "Gap"
+					},
+					{
+						"name": "Garden",
+						"abbreviation": "Gdn"
+					},
+					{
+						"name": "Gardens",
+						"abbreviation": "Gdn"
+					},
+					{
+						"name": "Gardens",
+						"abbreviation": "Gdns"
+					},
+					{
+						"name": "Gate",
+						"abbreviation": "Ga"
+					},
+					{
+						"name": "Gate",
+						"abbreviation": "Gte"
+					},
+					{
+						"name": "Gates",
+						"abbreviation": "Ga"
+					},
+					{
+						"name": "Gates",
+						"abbreviation": "Gte"
+					},
+					{
+						"name": "Gateway",
+						"abbreviation": "Gwy"
+					},
+					{
+						"name": "George",
+						"abbreviation": "Geo"
+					},
+					{
+						"name": "Glade",
+						"abbreviation": "Gl"
+					},
+					{
+						"name": "Glade",
+						"abbreviation": "Gld"
+					},
+					{
+						"name": "Glade",
+						"abbreviation": "Glde"
+					},
+					{
+						"name": "Glen",
+						"abbreviation": "Gln"
+					},
+					{
+						"name": "Glen",
+						"abbreviation": "Glen"
+					},
+					{
+						"name": "Grange",
+						"abbreviation": "Gra"
+					},
+					{
+						"name": "Green",
+						"abbreviation": "Gn"
+					},
+					{
+						"name": "Green",
+						"abbreviation": "Grn"
+					},
+					{
+						"name": "Ground",
+						"abbreviation": "Grnd"
+					},
+					{
+						"name": "Grove",
+						"abbreviation": "Gr"
+					},
+					{
+						"name": "Grove",
+						"abbreviation": "Gro"
+					},
+					{
+						"name": "Grovet",
+						"abbreviation": "Gr"
+					},
+					{
+						"name": "Gully",
+						"abbreviation": "Gly"
+					},
+					{
+						"name": "Harbor",
+						"abbreviation": "Hbr"
+					},
+					{
+						"name": "Harbour",
+						"abbreviation": "Hbr"
+					},
+					{
+						"name": "Haven",
+						"abbreviation": "Hvn"
+					},
+					{
+						"name": "Head",
+						"abbreviation": "Hd"
+					},
+					{
+						"name": "Heads",
+						"abbreviation": "Hd"
+					},
+					{
+						"name": "Heights",
+						"abbreviation": "Hgts"
+					},
+					{
+						"name": "Heights",
+						"abbreviation": "Ht"
+					},
+					{
+						"name": "Heights",
+						"abbreviation": "Hts"
+					},
+					{
+						"name": "High School",
+						"abbreviation": "HS"
+					},
+					{
+						"name": "Highroad",
+						"abbreviation": "Hird"
+					},
+					{
+						"name": "Highroad",
+						"abbreviation": "Hrd"
+					},
+					{
+						"name": "Highway",
+						"abbreviation": "Hwy"
+					},
+					{
+						"name": "Hill",
+						"abbreviation": "Hill"
+					},
+					{
+						"name": "Hill",
+						"abbreviation": "Hl"
+					},
+					{
+						"name": "Hills",
+						"abbreviation": "Hl"
+					},
+					{
+						"name": "Hills",
+						"abbreviation": "Hls"
+					},
+					{
+						"name": "Hospital",
+						"abbreviation": "Hosp"
+					},
+					{
+						"name": "House",
+						"abbreviation": "Ho"
+					},
+					{
+						"name": "House",
+						"abbreviation": "Hse"
+					},
+					{
+						"name": "Industrial",
+						"abbreviation": "Ind"
+					},
+					{
+						"name": "Interchange",
+						"abbreviation": "Intg"
+					},
+					{
+						"name": "International",
+						"abbreviation": "Intl"
+					},
+					{
+						"name": "Island",
+						"abbreviation": "I"
+					},
+					{
+						"name": "Island",
+						"abbreviation": "Is"
+					},
+					{
+						"name": "Junction",
+						"abbreviation": "Jctn"
+					},
+					{
+						"name": "Junction",
+						"abbreviation": "Jnc"
+					},
+					{
+						"name": "Junior",
+						"abbreviation": "Jr"
+					},
+					{
+						"name": "Key",
+						"abbreviation": "Key"
+					},
+					{
+						"name": "Lagoon",
+						"abbreviation": "Lgn"
+					},
+					{
+						"name": "Lakes",
+						"abbreviation": "L"
+					},
+					{
+						"name": "Landing",
+						"abbreviation": "Ldg"
+					},
+					{
+						"name": "Lane",
+						"abbreviation": "La"
+					},
+					{
+						"name": "Lane",
+						"abbreviation": "Lane"
+					},
+					{
+						"name": "Lane",
+						"abbreviation": "Ln"
+					},
+					{
+						"name": "Laneway",
+						"abbreviation": "Lnwy"
+					},
+					{
+						"name": "Line",
+						"abbreviation": "Line"
+					},
+					{
+						"name": "Line",
+						"abbreviation": "Ln"
+					},
+					{
+						"name": "Link",
+						"abbreviation": "Link"
+					},
+					{
+						"name": "Link",
+						"abbreviation": "Lk"
+					},
+					{
+						"name": "Little",
+						"abbreviation": "Lit"
+					},
+					{
+						"name": "Little",
+						"abbreviation": "Lt"
+					},
+					{
+						"name": "Lodge",
+						"abbreviation": "Ldg"
+					},
+					{
+						"name": "Lookout",
+						"abbreviation": "Lkt"
+					},
+					{
+						"name": "Loop",
+						"abbreviation": "Loop"
+					},
+					{
+						"name": "Loop",
+						"abbreviation": "Lp"
+					},
+					{
+						"name": "Lower",
+						"abbreviation": "Low"
+					},
+					{
+						"name": "Lower",
+						"abbreviation": "Lr"
+					},
+					{
+						"name": "Lower",
+						"abbreviation": "Lwr"
+					},
+					{
+						"name": "Mall",
+						"abbreviation": "Mall"
+					},
+					{
+						"name": "Mall",
+						"abbreviation": "Ml"
+					},
+					{
+						"name": "Manor",
+						"abbreviation": "Mnr"
+					},
+					{
+						"name": "Mansions",
+						"abbreviation": "Mans"
+					},
+					{
+						"name": "Market",
+						"abbreviation": "Mkt"
+					},
+					{
+						"name": "Meadow",
+						"abbreviation": "Mdw"
+					},
+					{
+						"name": "Meadows",
+						"abbreviation": "Mdw"
+					},
+					{
+						"name": "Meadows",
+						"abbreviation": "Mdws"
+					},
+					{
+						"name": "Mead",
+						"abbreviation": "Md"
+					},
+					{
+						"name": "Meander",
+						"abbreviation": "Mdr"
+					},
+					{
+						"name": "Meander",
+						"abbreviation": "Mndr"
+					},
+					{
+						"name": "Meander",
+						"abbreviation": "Mr"
+					},
+					{
+						"name": "Medical",
+						"abbreviation": "Med"
+					},
+					{
+						"name": "Memorial",
+						"abbreviation": "Mem"
+					},
+					{
+						"name": "Mews",
+						"abbreviation": "Mews"
+					},
+					{
+						"name": "Mews",
+						"abbreviation": "Mw"
+					},
+					{
+						"name": "Middle",
+						"abbreviation": "Mid"
+					},
+					{
+						"name": "Middle School",
+						"abbreviation": "MS"
+					},
+					{
+						"name": "Mile",
+						"abbreviation": "Mi"
+					},
+					{
+						"name": "Military",
+						"abbreviation": "Mil"
+					},
+					{
+						"name": "Motorway",
+						"abbreviation": "Mtwy"
+					},
+					{
+						"name": "Motorway",
+						"abbreviation": "Mwy"
+					},
+					{
+						"name": "Mount",
+						"abbreviation": "Mt"
+					},
+					{
+						"name": "Mountain",
+						"abbreviation": "Mtn"
+					},
+					{
+						"name": "Mountains",
+						"abbreviation": "Mtn"
+					},
+					{
+						"name": "Municipal",
+						"abbreviation": "Mun"
+					},
+					{
+						"name": "Museum",
+						"abbreviation": "Mus"
+					},
+					{
+						"name": "National Park",
+						"abbreviation": "NP"
+					},
+					{
+						"name": "National Recreation Area",
+						"abbreviation": "NRA"
+					},
+					{
+						"name": "National Wildlife Refuge Area",
+						"abbreviation": "NWRA"
+					},
+					{
+						"name": "Nook",
+						"abbreviation": "Nk"
+					},
+					{
+						"name": "Nook",
+						"abbreviation": "Nook"
+					},
+					{
+						"name": "North",
+						"abbreviation": "N"
+					},
+					{
+						"name": "Northeast",
+						"abbreviation": "NE"
+					},
+					{
+						"name": "Northwest",
+						"abbreviation": "NW"
+					},
+					{
+						"name": "Outlook",
+						"abbreviation": "Out"
+					},
+					{
+						"name": "Outlook",
+						"abbreviation": "Otlk"
+					},
+					{
+						"name": "Parade",
+						"abbreviation": "Pde"
+					},
+					{
+						"name": "Paradise",
+						"abbreviation": "Pdse"
+					},
+					{
+						"name": "Park",
+						"abbreviation": "Park"
+					},
+					{
+						"name": "Park",
+						"abbreviation": "Pk"
+					},
+					{
+						"name": "Parklands",
+						"abbreviation": "Pkld"
+					},
+					{
+						"name": "Parkway",
+						"abbreviation": "Pkwy"
+					},
+					{
+						"name": "Parkway",
+						"abbreviation": "Pky"
+					},
+					{
+						"name": "Parkway",
+						"abbreviation": "Pwy"
+					},
+					{
+						"name": "Pass",
+						"abbreviation": "Pass"
+					},
+					{
+						"name": "Pass",
+						"abbreviation": "Ps"
+					},
+					{
+						"name": "Passage",
+						"abbreviation": "Psge"
+					},
+					{
+						"name": "Path",
+						"abbreviation": "Path"
+					},
+					{
+						"name": "Pathway",
+						"abbreviation": "Phwy"
+					},
+					{
+						"name": "Pathway",
+						"abbreviation": "Pway"
+					},
+					{
+						"name": "Pathway",
+						"abbreviation": "Pwy"
+					},
+					{
+						"name": "Piazza",
+						"abbreviation": "Piaz"
+					},
+					{
+						"name": "Pike",
+						"abbreviation": "Pk"
+					},
+					{
+						"name": "Place",
+						"abbreviation": "Pl"
+					},
+					{
+						"name": "Plain",
+						"abbreviation": "Pl"
+					},
+					{
+						"name": "Plains",
+						"abbreviation": "Pl"
+					},
+					{
+						"name": "Plateau",
+						"abbreviation": "Plat"
+					},
+					{
+						"name": "Plaza",
+						"abbreviation": "Pl"
+					},
+					{
+						"name": "Plaza",
+						"abbreviation": "Plz"
+					},
+					{
+						"name": "Plaza",
+						"abbreviation": "Plza"
+					},
+					{
+						"name": "Pocket",
+						"abbreviation": "Pkt"
+					},
+					{
+						"name": "Point",
+						"abbreviation": "Pnt"
+					},
+					{
+						"name": "Point",
+						"abbreviation": "Pt"
+					},
+					{
+						"name": "Port",
+						"abbreviation": "Port"
+					},
+					{
+						"name": "Port",
+						"abbreviation": "Pt"
+					},
+					{
+						"name": "Post Office",
+						"abbreviation": "PO"
+					},
+					{
+						"name": "Precinct",
+						"abbreviation": "Pct"
+					},
+					{
+						"name": "Promenade",
+						"abbreviation": "Prm"
+					},
+					{
+						"name": "Promenade",
+						"abbreviation": "Prom"
+					},
+					{
+						"name": "Quad",
+						"abbreviation": "Quad"
+					},
+					{
+						"name": "Quadrangle",
+						"abbreviation": "Qdgl"
+					},
+					{
+						"name": "Quadrant",
+						"abbreviation": "Qdrt"
+					},
+					{
+						"name": "Quadrant",
+						"abbreviation": "Qd"
+					},
+					{
+						"name": "Quay",
+						"abbreviation": "Qy"
+					},
+					{
+						"name": "Quays",
+						"abbreviation": "Qy"
+					},
+					{
+						"name": "Quays",
+						"abbreviation": "Qys"
+					},
+					{
+						"name": "Ramble",
+						"abbreviation": "Ra"
+					},
+					{
+						"name": "Ramble",
+						"abbreviation": "Rmbl"
+					},
+					{
+						"name": "Range",
+						"abbreviation": "Rge"
+					},
+					{
+						"name": "Range",
+						"abbreviation": "Rnge"
+					},
+					{
+						"name": "Reach",
+						"abbreviation": "Rch"
+					},
+					{
+						"name": "Reservation",
+						"abbreviation": "Res"
+					},
+					{
+						"name": "Reserve",
+						"abbreviation": "Res"
+					},
+					{
+						"name": "Reservoir",
+						"abbreviation": "Res"
+					},
+					{
+						"name": "Rest",
+						"abbreviation": "Rest"
+					},
+					{
+						"name": "Rest",
+						"abbreviation": "Rst"
+					},
+					{
+						"name": "Retreat",
+						"abbreviation": "Rt"
+					},
+					{
+						"name": "Retreat",
+						"abbreviation": "Rtt"
+					},
+					{
+						"name": "Return",
+						"abbreviation": "Rtn"
+					},
+					{
+						"name": "Ridge",
+						"abbreviation": "Rdg"
+					},
+					{
+						"name": "Ridge",
+						"abbreviation": "Rdge"
+					},
+					{
+						"name": "Ridgeway",
+						"abbreviation": "Rgwy"
+					},
+					{
+						"name": "Right of Way",
+						"abbreviation": "Rowy"
+					},
+					{
+						"name": "Rise",
+						"abbreviation": "Ri"
+					},
+					{
+						"name": "Rise",
+						"abbreviation": "Rise"
+					},
+					{
+						"name": "River",
+						"abbreviation": "R"
+					},
+					{
+						"name": "River",
+						"abbreviation": "Riv"
+					},
+					{
+						"name": "River",
+						"abbreviation": "Rvr"
+					},
+					{
+						"name": "Riverway",
+						"abbreviation": "Rvwy"
+					},
+					{
+						"name": "Riviera",
+						"abbreviation": "Rvra"
+					},
+					{
+						"name": "Road",
+						"abbreviation": "Rd"
+					},
+					{
+						"name": "Roads",
+						"abbreviation": "Rds"
+					},
+					{
+						"name": "Roadside",
+						"abbreviation": "Rdsd"
+					},
+					{
+						"name": "Roadway",
+						"abbreviation": "Rdwy"
+					},
+					{
+						"name": "Roadway",
+						"abbreviation": "Rdy"
+					},
+					{
+						"name": "Robert",
+						"abbreviation": "Robt"
+					},
+					{
+						"name": "Rocks",
+						"abbreviation": "Rks"
+					},
+					{
+						"name": "Ronde",
+						"abbreviation": "Rnde"
+					},
+					{
+						"name": "Rosebowl",
+						"abbreviation": "Rsbl"
+					},
+					{
+						"name": "Rotary",
+						"abbreviation": "Rty"
+					},
+					{
+						"name": "Round",
+						"abbreviation": "Rnd"
+					},
+					{
+						"name": "Route",
+						"abbreviation": "Rt"
+					},
+					{
+						"name": "Route",
+						"abbreviation": "Rte"
+					},
+					{
+						"name": "Row",
+						"abbreviation": "Row"
+					},
+					{
+						"name": "Rue",
+						"abbreviation": "Rue"
+					},
+					{
+						"name": "Run",
+						"abbreviation": "Run"
+					},
+					{
+						"name": "Saint",
+						"abbreviation": "St"
+					},
+					{
+						"name": "Saints",
+						"abbreviation": "SS"
+					},
+					{
+						"name": "Senior",
+						"abbreviation": "Sr"
+					},
+					{
+						"name": "Serviceway",
+						"abbreviation": "Swy"
+					},
+					{
+						"name": "Serviceway",
+						"abbreviation": "Svwy"
+					},
+					{
+						"name": "Shunt",
+						"abbreviation": "Shun"
+					},
+					{
+						"name": "Siding",
+						"abbreviation": "Sdng"
+					},
+					{
+						"name": "Sister",
+						"abbreviation": "Sr"
+					},
+					{
+						"name": "Slope",
+						"abbreviation": "Slpe"
+					},
+					{
+						"name": "Sound",
+						"abbreviation": "Snd"
+					},
+					{
+						"name": "South",
+						"abbreviation": "S"
+					},
+					{
+						"name": "South",
+						"abbreviation": "Sth"
+					},
+					{
+						"name": "Southeast",
+						"abbreviation": "SE"
+					},
+					{
+						"name": "Southwest",
+						"abbreviation": "SW"
+					},
+					{
+						"name": "Spur",
+						"abbreviation": "Spur"
+					},
+					{
+						"name": "Square",
+						"abbreviation": "Sq"
+					},
+					{
+						"name": "Stairway",
+						"abbreviation": "Strwy"
+					},
+					{
+						"name": "State Highway",
+						"abbreviation": "SH"
+					},
+					{
+						"name": "State Highway",
+						"abbreviation": "SHwy"
+					},
+					{
+						"name": "State Route",
+						"abbreviation": "SR"
+					},
+					{
+						"name": "Station",
+						"abbreviation": "Sta"
+					},
+					{
+						"name": "Station",
+						"abbreviation": "Stn"
+					},
+					{
+						"name": "Strand",
+						"abbreviation": "Sd"
+					},
+					{
+						"name": "Strand",
+						"abbreviation": "Stra"
+					},
+					{
+						"name": "Street",
+						"abbreviation": "St"
+					},
+					{
+						"name": "Strip",
+						"abbreviation": "Strp"
+					},
+					{
+						"name": "Subway",
+						"abbreviation": "Sbwy"
+					},
+					{
+						"name": "Tarn",
+						"abbreviation": "Tn"
+					},
+					{
+						"name": "Tarn",
+						"abbreviation": "Tarn"
+					},
+					{
+						"name": "Terminal",
+						"abbreviation": "Term"
+					},
+					{
+						"name": "Terrace",
+						"abbreviation": "Tce"
+					},
+					{
+						"name": "Terrace",
+						"abbreviation": "Ter"
+					},
+					{
+						"name": "Terrace",
+						"abbreviation": "Terr"
+					},
+					{
+						"name": "Thoroughfare",
+						"abbreviation": "Thfr"
+					},
+					{
+						"name": "Thoroughfare",
+						"abbreviation": "Thor"
+					},
+					{
+						"name": "Tollway",
+						"abbreviation": "Tlwy"
+					},
+					{
+						"name": "Tollway",
+						"abbreviation": "Twy"
+					},
+					{
+						"name": "Top",
+						"abbreviation": "Top"
+					},
+					{
+						"name": "Tor",
+						"abbreviation": "Tor"
+					},
+					{
+						"name": "Towers",
+						"abbreviation": "Twrs"
+					},
+					{
+						"name": "Township",
+						"abbreviation": "Twp"
+					},
+					{
+						"name": "Trace",
+						"abbreviation": "Trce"
+					},
+					{
+						"name": "Track",
+						"abbreviation": "Tr"
+					},
+					{
+						"name": "Track",
+						"abbreviation": "Trk"
+					},
+					{
+						"name": "Trail",
+						"abbreviation": "Trl"
+					},
+					{
+						"name": "Trailer",
+						"abbreviation": "Trlr"
+					},
+					{
+						"name": "Triangle",
+						"abbreviation": "Tri"
+					},
+					{
+						"name": "Trunkway",
+						"abbreviation": "Tkwy"
+					},
+					{
+						"name": "Tunnel",
+						"abbreviation": "Tun"
+					},
+					{
+						"name": "Turn",
+						"abbreviation": "Tn"
+					},
+					{
+						"name": "Turn",
+						"abbreviation": "Trn"
+					},
+					{
+						"name": "Turn",
+						"abbreviation": "Turn"
+					},
+					{
+						"name": "Turnpike",
+						"abbreviation": "Tpk"
+					},
+					{
+						"name": "Turnpike",
+						"abbreviation": "Tpke"
+					},
+					{
+						"name": "Underpass",
+						"abbreviation": "Upas"
+					},
+					{
+						"name": "Underpass",
+						"abbreviation": "Ups"
+					},
+					{
+						"name": "University",
+						"abbreviation": "Uni"
+					},
+					{
+						"name": "University",
+						"abbreviation": "Univ"
+					},
+					{
+						"name": "Upper",
+						"abbreviation": "Up"
+					},
+					{
+						"name": "Upper",
+						"abbreviation": "Upr"
+					},
+					{
+						"name": "Vale",
+						"abbreviation": "Va"
+					},
+					{
+						"name": "Vale",
+						"abbreviation": "Vale"
+					},
+					{
+						"name": "Valley",
+						"abbreviation": "Vy"
+					},
+					{
+						"name": "Viaduct",
+						"abbreviation": "Vdct"
+					},
+					{
+						"name": "Viaduct",
+						"abbreviation": "Via"
+					},
+					{
+						"name": "Viaduct",
+						"abbreviation": "Viad"
+					},
+					{
+						"name": "View",
+						"abbreviation": "Vw"
+					},
+					{
+						"name": "View",
+						"abbreviation": "View"
+					},
+					{
+						"name": "Village",
+						"abbreviation": "Vill"
+					},
+					{
+						"name": "Villas",
+						"abbreviation": "Vlls"
+					},
+					{
+						"name": "Vista",
+						"abbreviation": "Vst"
+					},
+					{
+						"name": "Vista",
+						"abbreviation": "Vsta"
+					},
+					{
+						"name": "Walk",
+						"abbreviation": "Walk"
+					},
+					{
+						"name": "Walk",
+						"abbreviation": "Wk"
+					},
+					{
+						"name": "Walk",
+						"abbreviation": "Wlk"
+					},
+					{
+						"name": "Walkway",
+						"abbreviation": "Wkwy"
+					},
+					{
+						"name": "Walkway",
+						"abbreviation": "Wky"
+					},
+					{
+						"name": "Waters",
+						"abbreviation": "Wtr"
+					},
+					{
+						"name": "Way",
+						"abbreviation": "Way"
+					},
+					{
+						"name": "Way",
+						"abbreviation": "Wy"
+					},
+					{
+						"name": "West",
+						"abbreviation": "W"
+					},
+					{
+						"name": "Wharf",
+						"abbreviation": "Whrf"
+					},
+					{
+						"name": "William",
+						"abbreviation": "Wm"
+					},
+					{
+						"name": "Wynd",
+						"abbreviation": "Wyn"
+					},
+					{
+						"name": "Wynd",
+						"abbreviation": "Wynd"
+					},
+					{
+						"name": "Yard",
+						"abbreviation": "Yard"
+					},
+					{
+						"name": "Yard",
+						"abbreviation": "Yd"
+					}
+				]
+			},
+			{
+				"Langue": "spanich",
+				"Abbrev": [{
+						"name": "Acceso",
+						"abbreviation": "Acces."
+					},
+					{
+						"name": "Acequia",
+						"abbreviation": "Aceq."
+					},
+					{
+						"name": "Alameda",
+						"abbreviation": "Alam."
+					},
+					{
+						"name": "Alquería",
+						"abbreviation": "Alque."
+					},
+					{
+						"name": "Andador",
+						"abbreviation": "Andad."
+					},
+					{
+						"name": "Angosta",
+						"abbreviation": "Angta."
+					},
+					{
+						"name": "Apartamentos",
+						"abbreviation": "Aptos."
+					},
+					{
+						"name": "Apeadero",
+						"abbreviation": "Apdro."
+					},
+					{
+						"name": "Arboleda",
+						"abbreviation": "Arb."
+					},
+					{
+						"name": "Arrabal",
+						"abbreviation": "Arral."
+					},
+					{
+						"name": "Arroyo",
+						"abbreviation": "Arry."
+					},
+					{
+						"name": "Autopista",
+						"abbreviation": "Auto."
+					},
+					{
+						"name": "Autovía",
+						"abbreviation": "Autov."
+					},
+					{
+						"name": "Avenida",
+						"abbreviation": "Av."
+					},
+					{
+						"name": "Avenida",
+						"abbreviation": "Avd."
+					},
+					{
+						"name": "Avenida",
+						"abbreviation": "Avda."
+					},
+					{
+						"name": "Bajada",
+						"abbreviation": "Bjada."
+					},
+					{
+						"name": "Balneario",
+						"abbreviation": "Balnr."
+					},
+					{
+						"name": "Banda",
+						"abbreviation": "B."
+					},
+					{
+						"name": "Banda",
+						"abbreviation": "Bda."
+					},
+					{
+						"name": "Barranco",
+						"abbreviation": "Branc."
+					},
+					{
+						"name": "Barranquil",
+						"abbreviation": "Bqllo."
+					},
+					{
+						"name": "Barriada",
+						"abbreviation": "Barda."
+					},
+					{
+						"name": "Barrio",
+						"abbreviation": "Bº"
+					},
+					{
+						"name": "Barrio",
+						"abbreviation": "Barro."
+					},
+					{
+						"name": "Barrio",
+						"abbreviation": "Bo."
+					},
+					{
+						"name": "Bloque",
+						"abbreviation": "Blque."
+					},
+					{
+						"name": "Brazal",
+						"abbreviation": "Brzal."
+					},
+					{
+						"name": "Bulevar",
+						"abbreviation": "Bulev."
+					},
+					{
+						"name": "Calle",
+						"abbreviation": "C."
+					},
+					{
+						"name": "Calle",
+						"abbreviation": "C/"
+					},
+					{
+						"name": "Calle",
+						"abbreviation": "Cl."
+					},
+					{
+						"name": "Calleja",
+						"abbreviation": "Cllja."
+					},
+					{
+						"name": "Callejón",
+						"abbreviation": "Callej."
+					},
+					{
+						"name": "Callejón",
+						"abbreviation": "Cjon."
+					},
+					{
+						"name": "Callejón",
+						"abbreviation": "Cllon."
+					},
+					{
+						"name": "Callejuela",
+						"abbreviation": "Cjla."
+					},
+					{
+						"name": "Callizo",
+						"abbreviation": "Cllzo."
+					},
+					{
+						"name": "Calzada",
+						"abbreviation": "Czada."
+					},
+					{
+						"name": "Camino",
+						"abbreviation": "Cno."
+					},
+					{
+						"name": "Camino",
+						"abbreviation": "Cmno."
+					},
+					{
+						"name": "Camino hondo",
+						"abbreviation": "C.H."
+					},
+					{
+						"name": "Camino nuevo",
+						"abbreviation": "C.N."
+					},
+					{
+						"name": "Camino viejo",
+						"abbreviation": "C.V."
+					},
+					{
+						"name": "Camping",
+						"abbreviation": "Campg."
+					},
+					{
+						"name": "Cantera",
+						"abbreviation": "Cantr."
+					},
+					{
+						"name": "Cantina",
+						"abbreviation": "Canti."
+					},
+					{
+						"name": "Cantón",
+						"abbreviation": "Cant."
+					},
+					{
+						"name": "Carrera",
+						"abbreviation": "Cra."
+					},
+					{
+						"name": "Carrero",
+						"abbreviation": "Cro."
+					},
+					{
+						"name": "Carretera",
+						"abbreviation": "Ctra."
+					},
+					{
+						"name": "Carreterín",
+						"abbreviation": "Ctrin."
+					},
+					{
+						"name": "Carretil",
+						"abbreviation": "Crtil."
+					},
+					{
+						"name": "Carril",
+						"abbreviation": "Crril."
+					},
+					{
+						"name": "Caserío",
+						"abbreviation": "Csrio."
+					},
+					{
+						"name": "Chalet",
+						"abbreviation": "Chlet."
+					},
+					{
+						"name": "Cinturón",
+						"abbreviation": "Cint."
+					},
+					{
+						"name": "Circunvalación",
+						"abbreviation": "Ccvcn."
+					},
+					{
+						"name": "Cobertizo",
+						"abbreviation": "Cbtiz."
+					},
+					{
+						"name": "Colonia",
+						"abbreviation": "Col."
+					},
+					{
+						"name": "Complejo",
+						"abbreviation": "Compj."
+					},
+					{
+						"name": "Conjunto",
+						"abbreviation": "Cjto."
+					},
+					{
+						"name": "Convento",
+						"abbreviation": "Cnvto."
+					},
+					{
+						"name": "Cooperativa",
+						"abbreviation": "Coop."
+					},
+					{
+						"name": "Corral",
+						"abbreviation": "Crral."
+					},
+					{
+						"name": "Corralillo",
+						"abbreviation": "Crrlo."
+					},
+					{
+						"name": "Corredor",
+						"abbreviation": "Crrdo."
+					},
+					{
+						"name": "Cortijo",
+						"abbreviation": "Crtjo."
+					},
+					{
+						"name": "Costanilla",
+						"abbreviation": "Cstan."
+					},
+					{
+						"name": "Costera",
+						"abbreviation": "Coste."
+					},
+					{
+						"name": "Cuadra",
+						"abbreviation": "Cuadr."
+					},
+					{
+						"name": "Cuesta",
+						"abbreviation": "Custa."
+					},
+					{
+						"name": "Dehesa",
+						"abbreviation": "Dhsa."
+					},
+					{
+						"name": "Demarcación",
+						"abbreviation": "Demar."
+					},
+					{
+						"name": "Diagonal",
+						"abbreviation": "Diag."
+					},
+					{
+						"name": "Diseminado",
+						"abbreviation": "Disem."
+					},
+					{
+						"name": "Edificio",
+						"abbreviation": "Edifc."
+					},
+					{
+						"name": "Empresa",
+						"abbreviation": "Empr."
+					},
+					{
+						"name": "Entrada",
+						"abbreviation": "Entd."
+					},
+					{
+						"name": "Escalera",
+						"abbreviation": "Esca."
+					},
+					{
+						"name": "Escalinata",
+						"abbreviation": "Escal."
+					},
+					{
+						"name": "Espalda",
+						"abbreviation": "Eslda."
+					},
+					{
+						"name": "Estación",
+						"abbreviation": "Estcn."
+					},
+					{
+						"name": "Estrada",
+						"abbreviation": "Estda."
+					},
+					{
+						"name": "Explanada",
+						"abbreviation": "Expla."
+					},
+					{
+						"name": "Extramuros",
+						"abbreviation": "Extrm."
+					},
+					{
+						"name": "Extrarradio",
+						"abbreviation": "Extrr."
+					},
+					{
+						"name": "Fábrica",
+						"abbreviation": "Fca."
+					},
+					{
+						"name": "Fábrica",
+						"abbreviation": "Fbrca."
+					},
+					{
+						"name": "Galería",
+						"abbreviation": "Gale."
+					},
+					{
+						"name": "Glorieta",
+						"abbreviation": "Gta."
+					},
+					{
+						"name": "Gran Vía",
+						"abbreviation": "G.V."
+					},
+					{
+						"name": "Granja",
+						"abbreviation": "Granj."
+					},
+					{
+						"name": "Hipódromo",
+						"abbreviation": "Hipod."
+					},
+					{
+						"name": "Jardín",
+						"abbreviation": "Jdin."
+					},
+					{
+						"name": "Ladera",
+						"abbreviation": "Ldera."
+					},
+					{
+						"name": "Llanura",
+						"abbreviation": "Llnra."
+					},
+					{
+						"name": "Lote",
+						"abbreviation": "Lt."
+					},
+					{
+						"name": "Malecón",
+						"abbreviation": "Malec."
+					},
+					{
+						"name": "Manzana",
+						"abbreviation": "Mz."
+					},
+					{
+						"name": "Mercado",
+						"abbreviation": "Merc."
+					},
+					{
+						"name": "Mirador",
+						"abbreviation": "Mrdor."
+					},
+					{
+						"name": "Monasterio",
+						"abbreviation": "Mtrio."
+					},
+					{
+						"name": "Muelle",
+						"abbreviation": "Muell."
+					},
+					{
+						"name": "Núcleo",
+						"abbreviation": "Ncleo."
+					},
+					{
+						"name": "Palacio",
+						"abbreviation": "Palac."
+					},
+					{
+						"name": "Pantano",
+						"abbreviation": "Pant."
+					},
+					{
+						"name": "Paraje",
+						"abbreviation": "Praje."
+					},
+					{
+						"name": "Parque",
+						"abbreviation": "Pque."
+					},
+					{
+						"name": "Particular",
+						"abbreviation": "Parti."
+					},
+					{
+						"name": "Partida",
+						"abbreviation": "Ptda."
+					},
+					{
+						"name": "Pasadizo",
+						"abbreviation": "Pzo."
+					},
+					{
+						"name": "Pasaje",
+						"abbreviation": "Psaje."
+					},
+					{
+						"name": "Pasaje",
+						"abbreviation": "Psje."
+					},
+					{
+						"name": "Paseo",
+						"abbreviation": "Ps"
+					},
+					{
+						"name": "Paseo",
+						"abbreviation": "Pº"
+					},
+					{
+						"name": "Paseo marítimo",
+						"abbreviation": "Psmar."
+					},
+					{
+						"name": "Pasillo",
+						"abbreviation": "Psllo."
+					},
+					{
+						"name": "Plaza",
+						"abbreviation": "Pl."
+					},
+					{
+						"name": "Plaza",
+						"abbreviation": "Plza."
+					},
+					{
+						"name": "Plaza",
+						"abbreviation": "Pza."
+					},
+					{
+						"name": "Plazoleta",
+						"abbreviation": "Pzta."
+					},
+					{
+						"name": "Plazuela",
+						"abbreviation": "Plzla."
+					},
+					{
+						"name": "Poblado",
+						"abbreviation": "Pbdo."
+					},
+					{
+						"name": "Polígono",
+						"abbreviation": "Polig."
+					},
+					{
+						"name": "Polígono industrial",
+						"abbreviation": "Pgind."
+					},
+					{
+						"name": "Polígono industrial",
+						"abbreviation": "P.I."
+					},
+					{
+						"name": "Portal",
+						"abbreviation": "Prtal."
+					},
+					{
+						"name": "Pórtico",
+						"abbreviation": "Prtco."
+					},
+					{
+						"name": "Portillo",
+						"abbreviation": "Ptilo."
+					},
+					{
+						"name": "Prazuela",
+						"abbreviation": "Przla."
+					},
+					{
+						"name": "Prolongación",
+						"abbreviation": "Prol."
+					},
+					{
+						"name": "Pueblo",
+						"abbreviation": "Pblo."
+					},
+					{
+						"name": "Puente",
+						"abbreviation": "Pnte."
+					},
+					{
+						"name": "Puerta",
+						"abbreviation": "Pta."
+					},
+					{
+						"name": "Puerto",
+						"abbreviation": "Pto."
+					},
+					{
+						"name": "Punto kilométrico",
+						"abbreviation": "pk"
+					},
+					{
+						"name": "Punto kilométrico",
+						"abbreviation": "p.k."
+					},
+					{
+						"name": "Rambla",
+						"abbreviation": "Rbla."
+					},
+					{
+						"name": "Rampla",
+						"abbreviation": "Rampa."
+					},
+					{
+						"name": "Residencial",
+						"abbreviation": "Resid."
+					},
+					{
+						"name": "Ribera",
+						"abbreviation": "Rbra."
+					},
+					{
+						"name": "Rincón",
+						"abbreviation": "Rcon."
+					},
+					{
+						"name": "Rinconada",
+						"abbreviation": "Rcda."
+					},
+					{
+						"name": "Rotonda",
+						"abbreviation": "Rtda."
+					},
+					{
+						"name": "San",
+						"abbreviation": "S."
+					},
+					{
+						"name": "Sanatorio",
+						"abbreviation": "Sanat."
+					},
+					{
+						"name": "Santa",
+						"abbreviation": "Sta."
+					},
+					{
+						"name": "Santuario",
+						"abbreviation": "Santu."
+					},
+					{
+						"name": "Sector",
+						"abbreviation": "Sect."
+					},
+					{
+						"name": "Sendera",
+						"abbreviation": "Sedra."
+					},
+					{
+						"name": "Sendero",
+						"abbreviation": "Send."
+					},
+					{
+						"name": "Subida",
+						"abbreviation": "Sbida."
+					},
+					{
+						"name": "Torrente",
+						"abbreviation": "Trrnt."
+					},
+					{
+						"name": "Tránsito",
+						"abbreviation": "Trans."
+					},
+					{
+						"name": "Transversal",
+						"abbreviation": "Trval."
+					},
+					{
+						"name": "Trasera",
+						"abbreviation": "Tras."
+					},
+					{
+						"name": "Travesía",
+						"abbreviation": "Trva."
+					},
+					{
+						"name": "Urbanización",
+						"abbreviation": "Urb."
+					},
+					{
+						"name": "Vecindario",
+						"abbreviation": "Vecin."
+					},
+					{
+						"name": "Vereda",
+						"abbreviation": "Vreda."
+					},
+					{
+						"name": "Viaducto",
+						"abbreviation": "Vcto."
+					},
+					{
+						"name": "Viviendas",
+						"abbreviation": "Vvdas."
+					}
+				]
+			},
+			{
+				"Langue": "french",
+				"Abbrev": [{
+						"name": "Abbaye",
+						"abbreviation": "ABE"
+					},
+					{
+						"name": "Agglomeration",
+						"abbreviation": "AGL"
+					},
+					{
+						"name": "Aire",
+						"abbreviation": "AIRE"
+					},
+					{
+						"name": "Allee",
+						"abbreviation": "ALL"
+					},
+
+					{
+						"name": "Ancien chemin",
+						"abbreviation": "ACH"
+					},
+
+					{
+						"name": "APPARTEMENT",
+						"abbreviation": "APT"
+					},
+					{
+						"name": "APPARTEMENT",
+						"abbreviation": "APP"
+					},
+					{
+						"name": "APPARTEMENT",
+						"abbreviation": "APPT"
+					},
+
+					{
+						"name": "Ancienne route",
+						"abbreviation": "ART"
+					},
+					{
+						"name": "Anse",
+						"abbreviation": "ANSE"
+					},
+					{
+						"name": "Arcade",
+						"abbreviation": "ARC"
+					},
+					{
+						"name": "Autoroute",
+						"abbreviation": "AUT"
+					},
+					{
+						"name": "Avenue",
+						"abbreviation": "AVE"
+					},
+					{
+						"name": "Avenue",
+						"abbreviation": "AVE."
+					},
+					{
+						"name": "Avenue",
+						"abbreviation": "AV"
+					},
+					{
+						"name": "Avenue",
+						"abbreviation": "AV."
+					},
+                                        {
+						"name": "Batiment",
+						"abbreviation": "BAT"
+					},
+                                        {
+						"name": "Batiment",
+						"abbreviation": "BAT."
+					},
+					{
+						"name": "Barriere",
+						"abbreviation": "BRE"
+					},
+					{
+						"name": "Bas chemin",
+						"abbreviation": "BCH"
+					},
+					{
+						"name": "Bastide",
+						"abbreviation": "BSTD"
+					},
+					{
+						"name": "Baston",
+						"abbreviation": "BAST"
+					},
+					{
+						"name": "Beguinage",
+						"abbreviation": "BEGI"
+					},
+					{
+						"name": "Berge",
+						"abbreviation": "BER"
+					},
+					{
+						"name": "Bois",
+						"abbreviation": "BOIS"
+					},
+					{
+						"name": "Boucle",
+						"abbreviation": "BCLE"
+					},
+					{
+						"name": "Boulevard",
+						"abbreviation": "BD"
+					},
+					{
+						"name": "Boulevard",
+						"abbreviation": "BD."
+					},
+
+					{
+						"name": "Boulevard",
+						"abbreviation": "BLD"
+					},
+					{
+						"name": "Boulevard",
+						"abbreviation": "BLV"
+					},
+
+					{
+						"name": "Boulevard",
+						"abbreviation": "BLD."
+					},					                               {
+						"name": "Boulevard",
+						"abbreviation": "BVD"
+					},
+{
+						"name": "Boulevard",
+						"abbreviation": "BVD."
+					},
+					{
+						"name": "Boulevard",
+						"abbreviation": "BLVD"
+					},
+					{
+						"name": "Boulevard",
+						"abbreviation": "BLVD."
+					},
+					{
+						"name": "Bourg",
+						"abbreviation": "BRG"
+					},
+					{
+						"name": "BUREAU",
+						"abbreviation": "BUR"
+					},
+					{
+						"name": "Butte",
+						"abbreviation": "BUT"
+					},
+					{
+						"name": "Cite",
+						"abbreviation": "CITE"
+					},
+		
+					{
+						"name": "Cale",
+						"abbreviation": "CALE"
+					},
+					{
+						"name": "Campagne",
+						"abbreviation": "CGNE"
+					},
+					{
+						"name": "Camping",
+						"abbreviation": "CPG"
+					},
+					{
+						"name": "Carreau",
+						"abbreviation": "CAU"
+					},
+					{
+						"name": "Carrefour",
+						"abbreviation": "CAR"
+					},
+					{
+						"name": "Carriere",
+						"abbreviation": "CARE"
+					},
+					{
+						"name": "Carre",
+						"abbreviation": "CARR"
+					},
+					{
+						"name": "Castel",
+						"abbreviation": "CST"
+					},
+					{
+						"name": "Cavee",
+						"abbreviation": "CAV"
+					},
+					{
+						"name": "Centre",
+						"abbreviation": "CTRE"
+					},
+					{
+						"name": "Chalet",
+						"abbreviation": "CHL"
+					},
+					{
+						"name": "Chapelle",
+						"abbreviation": "CHP"
+					},
+					{
+						"name": "Charmille",
+						"abbreviation": "CHI"
+					},
+					{
+						"name": "Chaussee",
+						"abbreviation": "CHS"
+					},
+
+					{
+						"name": "Chemin",
+						"abbreviation": "CHE"
+					},
+					{
+						"name": "Chemin",
+						"abbreviation": "CHEM"
+					},
+					{
+						"name": "Chemin",
+						"abbreviation": "CH"
+					},
+					{
+						"name": "Chemin vicinal",
+						"abbreviation": "CHV"
+					},
+				
+
+					{
+						"name": "Chemins vicinaux",
+						"abbreviation": "CHV"
+					},
+
+					{
+						"name": "Chateau",
+						"abbreviation": "CHT"
+					},
+					{
+						"name": "Cloitre",
+						"abbreviation": "CLOI"
+					},
+					{
+						"name": "Clos",
+						"abbreviation": "CLOS"
+					},
+					{
+						"name": "Col",
+						"abbreviation": "COL"
+					},
+					{
+						"name": "Colline",
+						"abbreviation": "COLI"
+					},
+					{
+						"name": "Contour",
+						"abbreviation": "CTR"
+					},
+					{
+						"name": "Corniche",
+						"abbreviation": "COR"
+					},
+					{
+						"name": "Cottage",
+						"abbreviation": "COTT"
+					},
+
+					{
+						"name": "Cour",
+						"abbreviation": "COUR"
+					},
+					{
+						"name": "Cours",
+						"abbreviation": "CRS"
+					},
+					{
+						"name": "Darse",
+						"abbreviation": "DARS"
+					},
+					{
+						"name": "Degre",
+						"abbreviation": "DEG"
+					},
+					{
+						"name": "Descente",
+						"abbreviation": "DSG"
+					},
+					{
+						"name": "Digue",
+						"abbreviation": "DIG"
+					},
+					{
+						"name": "Domaine",
+						"abbreviation": "DOM"
+					},
+
+					{
+						"name": "ecluse",
+						"abbreviation": "ECL"
+					},
+
+					{
+						"name": "eglise",
+						"abbreviation": "EGL"
+					},
+
+			
+					{
+						"name": "Enclave",
+						"abbreviation": "ENV"
+					},
+					{
+						"name": "Enclos",
+						"abbreviation": "ENC"
+					},
+					{
+						"name": "Escalier",
+						"abbreviation": "ESC"
+					},
+
+					{
+						"name": "Espace",
+						"abbreviation": "ESPA"
+					},
+					{
+						"name": "Esplanade",
+						"abbreviation": "ESP"
+					},
+
+					{
+						"name": "etage",
+						"abbreviation": "ETG"
+					},
+
+					{
+						"name": "etang",
+						"abbreviation": "ETANG"
+					},
+
+					{
+						"name": "Faubourg",
+						"abbreviation": "FG"
+					},
+
+					{
+						"name": "Ferme",
+						"abbreviation": "FRM"
+					},
+
+					{
+						"name": "Fontaine",
+						"abbreviation": "FON"
+					},
+					{
+						"name": "Fort",
+						"abbreviation": "FORT"
+					},
+					{
+						"name": "Forum",
+						"abbreviation": "FORM"
+					},
+					{
+						"name": "Fosse",
+						"abbreviation": "FOS"
+					},
+					{
+						"name": "Foyer",
+						"abbreviation": "FOYR"
+					},
+					{
+						"name": "Galerie",
+						"abbreviation": "GAL"
+					},
+					{
+						"name": "Gare",
+						"abbreviation": "GARE"
+					},
+					{
+						"name": "Garenne",
+						"abbreviation": "GARN"
+					},
+					{
+						"name": "Grand boulevard",
+						"abbreviation": "GBD"
+					},
+					{
+						"name": "Grand ensemble",
+						"abbreviation": "GDEN"
+					},
+					{
+						"name": "Grande rue",
+						"abbreviation": "GR"
+					},
+					{
+						"name": "Grands ensembles",
+						"abbreviation": "GDEN"
+					},
+					{
+						"name": "Grille",
+						"abbreviation": "GRI"
+					},
+					{
+						"name": "Grimpette",
+						"abbreviation": "GRIM"
+					},
+					{
+						"name": "Groupe",
+						"abbreviation": "GPE"
+					},
+					{
+						"name": "Groupement",
+						"abbreviation": "GPT"
+					},
+					{
+						"name": "Halle",
+						"abbreviation": "HLE"
+					},
+
+					{
+						"name": "Hameau",
+						"abbreviation": "HAM"
+					},
+
+					{
+						"name": "Haut chemin",
+						"abbreviation": "HCH"
+					},
+
+					{
+						"name": "Hippodrome",
+						"abbreviation": "HIP"
+					},
+					{
+						"name": "HLM",
+						"abbreviation": "HLM"
+					},
+					{
+						"name": "ile",
+						"abbreviation": "ILE"
+					},
+
+					{
+						"name": "Immeuble",
+						"abbreviation": "IMM"
+					},
+					{
+						"name": "Impasse",
+						"abbreviation": "IMP"
+					},
+					{
+						"name": "Jardin",
+						"abbreviation": "JARD"
+					},
+					{
+						"name": "Jetee",
+						"abbreviation": "JTE"
+					},
+					{
+						"name": "Levee",
+						"abbreviation": "LEVE"
+					},
+
+					{
+						"name": "Lieu dit",
+						"abbreviation": "LD"
+					},
+					{
+						"name": "Lotissement",
+						"abbreviation": "LOT"
+					},
+					{
+						"name": "Mail",
+						"abbreviation": "MAIL"
+					},
+					{
+						"name": "Maison forestiere",
+						"abbreviation": "MF"
+					},
+					{
+						"name": "Manoir",
+						"abbreviation": "MAN"
+					},
+					{
+						"name": "Marche",
+						"abbreviation": "MAR"
+					},
+					{
+						"name": "Mas",
+						"abbreviation": "MAS"
+					},
+					{
+						"name": "Monseigneur",
+						"abbreviation": "Mgr"
+					},
+					{
+						"name": "Mont",
+						"abbreviation": "Mt"
+					},
+					{
+						"name": "Montee",
+						"abbreviation": "MTE"
+					},
+
+					{
+						"name": "Moulin",
+						"abbreviation": "MLN"
+					},
+					{
+						"name": "Musee",
+						"abbreviation": "MUS"
+					},
+					{
+						"name": "Metro",
+						"abbreviation": "MET"
+					},
+					{
+						"name": "Nouvelle route",
+						"abbreviation": "NTE"
+					},
+					{
+						"name": "Numero",
+						"abbreviation": "NR"
+					},
+					{
+						"name": "Numero",
+						"abbreviation": "N"
+					},
+					{
+						"name": "Palais",
+						"abbreviation": "PAL"
+					},
+					{
+						"name": "Parc",
+						"abbreviation": "PARC"
+					},
+					{
+						"name": "Parc d'activite",
+						"abbreviation": "PA"
+					},
+					{
+						"name": "Parc d'activite",
+						"abbreviation": "P.A."
+					},
+
+					{
+						"name": "Parking",
+						"abbreviation": "PKG"
+					},
+					{
+						"name": "Parvis",
+						"abbreviation": "PRV"
+					},
+					{
+						"name": "Passage",
+						"abbreviation": "PAS"
+					},
+					{
+						"name": "Passage",
+						"abbreviation": "Pass"
+					},
+					{
+						"name": "Passage a niveau",
+						"abbreviation": "PN"
+					},
+					{
+						"name": "Passe",
+						"abbreviation": "PASS"
+					},
+					{
+						"name": "Passerelle",
+						"abbreviation": "PLE"
+					},
+					{
+						"name": "Passes",
+						"abbreviation": "PASS"
+					},
+					{
+						"name": "Patio",
+						"abbreviation": "PAT"
+					},
+					{
+						"name": "Pavillon",
+						"abbreviation": "PAV"
+					},
+					{
+						"name": "Petit chemin",
+						"abbreviation": "PCH"
+					},
+					{
+						"name": "Petite allee",
+						"abbreviation": "PTA"
+					},
+					{
+						"name": "Petite avenue",
+						"abbreviation": "PAE"
+					},
+					{
+						"name": "Petite impasse",
+						"abbreviation": "PIM"
+					},
+					{
+						"name": "Petite route",
+						"abbreviation": "PRT"
+					},
+					{
+						"name": "Petite rue",
+						"abbreviation": "PTR"
+					},
+					{
+						"name": "Petites allees",
+						"abbreviation": "PTA"
+					},
+					{
+						"name": "Place",
+						"abbreviation": "PL"
+					},
+
+					{
+						"name": "Placis",
+						"abbreviation": "PLCI"
+					},
+					{
+						"name": "Plage",
+						"abbreviation": "PLAG"
+					},
+					{
+						"name": "Plaine",
+						"abbreviation": "PLN"
+					},
+					{
+						"name": "Plan",
+						"abbreviation": "PLAN"
+					},
+					{
+						"name": "Plateau",
+						"abbreviation": "PLT"
+					},
+					{
+						"name": "Pointe",
+						"abbreviation": "PNT"
+					},
+					{
+						"name": "Pont",
+						"abbreviation": "PONT"
+					},
+
+					{
+						"name": "Porche",
+						"abbreviation": "PCH"
+					},
+					{
+						"name": "Port",
+						"abbreviation": "PORT"
+					},
+					{
+						"name": "Porte",
+						"abbreviation": "PTE"
+					},
+					{
+						"name": "Portique",
+						"abbreviation": "PORQ"
+					},
+
+					{
+						"name": "Poterne",
+						"abbreviation": "POT"
+					},
+					{
+						"name": "Pourtour",
+						"abbreviation": "POUR"
+					},
+					
+					{
+						"name": "Promenade",
+						"abbreviation": "PROM"
+					},
+					{
+						"name": "Pre",
+						"abbreviation": "PRE"
+					},
+
+					{
+						"name": "Peripherique",
+						"abbreviation": "PERI"
+					},
+					{
+						"name": "Peristyle",
+						"abbreviation": "PSTY"
+					},
+					{
+						"name": "Quai",
+						"abbreviation": "QU"
+					},
+
+					{
+						"name": "Quartier",
+						"abbreviation": "QUA"
+					},
+					{
+						"name": "Raccourci",
+						"abbreviation": "RAC"
+					},
+					{
+						"name": "Raidillon",
+						"abbreviation": "RAID"
+					},
+					{
+						"name": "Route nationale",
+						"abbreviation": "RN"
+					},
+					{
+						"name": "Rampe",
+						"abbreviation": "RPE"
+					},
+					{
+						"name": "Rempart",
+						"abbreviation": "REM"
+					},
+					{
+						"name": "Regiment d'infanterie",
+						"abbreviation": "RI"
+					},
+
+					{
+						"name": "Rocade",
+						"abbreviation": "ROC"
+					},
+					{
+						"name": "Rond point",
+						"abbreviation": "RPT"
+					},
+					{
+						"name": "Roquet",
+						"abbreviation": "ROQT"
+					},
+					{
+						"name": "Rotonde",
+						"abbreviation": "RTD"
+					},
+					{
+						"name": "Route",
+						"abbreviation": "RTE"
+					},
+
+					{
+						"name": "Route Nationale",
+						"abbreviation": "R.N."
+					},
+
+					{
+						"name": "Rue",
+						"abbreviation": "R"
+					},
+					{
+						"name": "Ruelle",
+						"abbreviation": "RLE"
+					},
+
+					
+					{
+						"name": "Residence",
+						"abbreviation": "RES"
+					},
+
+					{
+						"name": "Saint",
+						"abbreviation": "St"
+					},
+					{
+						"name": "Sainte",
+						"abbreviation": "Ste"
+					},
+					{
+						"name": "Sente",
+						"abbreviation": "SEN"
+					},
+					{
+						"name": "Sentier",
+						"abbreviation": "SEN"
+					},
+					{
+						"name": "Sentiers",
+						"abbreviation": "SEN"
+					},
+					{
+						"name": "Square",
+						"abbreviation": "SQ"
+					},
+
+					{
+						"name": "Stade",
+						"abbreviation": "STDE"
+					},
+					{
+						"name": "Station",
+						"abbreviation": "STA"
+					},
+					{
+						"name": "Terrain",
+						"abbreviation": "TRN"
+					},
+					{
+						"name": "Terrasse",
+						"abbreviation": "TSSE"
+					},
+
+					{
+						"name": "Terre plein",
+						"abbreviation": "TPL"
+					},
+					{
+						"name": "Tertre",
+						"abbreviation": "TRT"
+					},
+
+					{
+						"name": "Tour",
+						"abbreviation": "TOUR"
+					},
+					{
+						"name": "Traverse",
+						"abbreviation": "TRA"
+					},
+					{
+						"name": "Vallon",
+						"abbreviation": "VAL"
+					},
+					{
+						"name": "Vallee",
+						"abbreviation": "VAL"
+					},
+					{
+						"name": "Venelle",
+						"abbreviation": "VEN"
+					},
+
+					{
+						"name": "Vieille route",
+						"abbreviation": "VTE"
+					},
+					{
+						"name": "Vieux chemin",
+						"abbreviation": "VCHE"
+					},
+					{
+						"name": "Villa",
+						"abbreviation": "VLA"
+					},
+					{
+						"name": "Village",
+						"abbreviation": "VGE"
+					},
+
+					{
+						"name": "Voie",
+						"abbreviation": "VOI"
+					},
+
+					{
+						"name": "Zone artisanale",
+						"abbreviation": "ZA"
+					},
+					{
+						"name": "Zone artisanale",
+						"abbreviation": "Z.A"
+					},
+					{
+						"name": "Zone artisanale",
+						"abbreviation": "Z.A."
+					},
+					{
+						"name": "Zone amenagement differe",
+						"abbreviation": "ZAD"
+					},
+					{
+						"name": "Zone industrielle",
+						"abbreviation": "ZI"
+					},
+					{
+						"name": "Zone industrielle",
+						"abbreviation": "Z.I"
+					},
+					{
+						"name": "Zone industrielle",
+						"abbreviation": "Z.I."
+					},
+
+					{
+						"name": "ZONE PORTUAIRE",
+						"abbreviation": "ZP"
+					},
+					{
+						"name": "Zone a urbaniser en priorite",
+						"abbreviation": "ZUP"
+					}
+				]
+			},
+			{
+				"Langue": "German",
+				"Abbrev": [{
+						"name": "am",
+						"abbreviation": "a."
+					},
+					{
+						"name": "an der",
+						"abbreviation": "a.d."
+					},
+					{
+						"name": "Allgemeines Krankenhaus",
+						"abbreviation": "AKH"
+					},
+					{
+						"name": "Altstoffsammelzentrum",
+						"abbreviation": "ASZ"
+					},
+					{
+						"name": "auf der",
+						"abbreviation": "a.d."
+					},
+					{
+						"name": "Bach",
+						"abbreviation": "B."
+					},
+					{
+						"name": "Bad",
+						"abbreviation": "B."
+					},
+					{
+						"name": "Bahnhof",
+						"abbreviation": "Bhf"
+					},
+					{
+						"name": "Bayerisch, Bayerische, Bayerischer, Bayerisches",
+						"abbreviation": "Bayer."
+					},
+					{
+						"name": "Berg",
+						"abbreviation": "B."
+					},
+					{
+						"name": "...berg",
+						"abbreviation": "bg"
+					},
+					{
+						"name": "Bezirk",
+						"abbreviation": "Bez."
+					},
+					{
+						"name": "Brücke",
+						"abbreviation": "Br."
+					},
+					{
+						"name": "Bundesgymnasium",
+						"abbreviation": "BG"
+					},
+					{
+						"name": "Bundespolizeidirektion",
+						"abbreviation": "BPD"
+					},
+					{
+						"name": "Bundesrealgymnasium",
+						"abbreviation": "BRG"
+					},
+					{
+						"name": "...burg",
+						"abbreviation": "bg"
+					},
+					{
+						"name": "burgenländische, burgenländischer, burgenländisches",
+						"abbreviation": "bgld."
+					},
+					{
+						"name": "Bürgermeister",
+						"abbreviation": "Bgm."
+					},
+					{
+						"name": "Chaussee",
+						"abbreviation": "Ch."
+					},
+					{
+						"name": "Deutsche, Deutscher, Deutsches",
+						"abbreviation": "dt."
+					},
+					{
+						"name": "Deutscher Alpenverein",
+						"abbreviation": "DAV"
+					},
+					{
+						"name": "Deutsch",
+						"abbreviation": "Dt."
+					},
+					{
+						"name": "Denkmal",
+						"abbreviation": "Dkm."
+					},
+					{
+						"name": "Dorf",
+						"abbreviation": "Df."
+					},
+					{
+						"name": "...dorf",
+						"abbreviation": "df."
+					},
+					{
+						"name": "Doktor",
+						"abbreviation": "Dr."
+					},
+					{
+						"name": "ehemalige, ehemaliger, ehemaliges",
+						"abbreviation": "ehem."
+					},
+					{
+						"name": "Fabrik",
+						"abbreviation": "Fb."
+					},
+					{
+						"name": "Fachhochschule",
+						"abbreviation": "FH"
+					},
+					{
+						"name": "Freiwillige Feuerwehr",
+						"abbreviation": "FF"
+					},
+					{
+						"name": "Forsthaus",
+						"abbreviation": "Fh."
+					},
+					{
+						"name": "Gasse",
+						"abbreviation": "G."
+					},
+					{
+						"name": "gasse",
+						"abbreviation": "g."
+					},
+					{
+						"name": "Gasthaus",
+						"abbreviation": "Gh"
+					},
+					{
+						"name": "Gasthof",
+						"abbreviation": "Ghf"
+					},
+					{
+						"name": "Gemeinde",
+						"abbreviation": "Gde."
+					},
+					{
+						"name": "Graben",
+						"abbreviation": "Gr."
+					},
+					{
+						"name": "Großer, Große, Großes",
+						"abbreviation": "Gr., G."
+					},
+					{
+						"name": "Handelsakademie",
+						"abbreviation": "HAK"
+					},
+					{
+						"name": "Handelsschule",
+						"abbreviation": "HASCH"
+					},
+					{
+						"name": "Haltestelle",
+						"abbreviation": "Hst."
+					},
+					{
+						"name": "Hauptbahnhof",
+						"abbreviation": "Hbf"
+					},
+					{
+						"name": "Haus",
+						"abbreviation": "Hs."
+					},
+					{
+						"name": "Heilige, Heiliger, Heiliges",
+						"abbreviation": "Hl."
+					},
+					{
+						"name": "Hintere, Hinterer, Hinteres",
+						"abbreviation": "Ht., Hint."
+					},
+					{
+						"name": "Hinter...",
+						"abbreviation": "Ht., Hint."
+					},
+					{
+						"name": "Hohe, Hoher, Hohes",
+						"abbreviation": "H."
+					},
+					{
+						"name": "Höhle",
+						"abbreviation": "H."
+					},
+					{
+						"name": "Höhere Technische Lehranstalt",
+						"abbreviation": "HTL"
+					},
+					{
+						"name": "Hütte",
+						"abbreviation": "Htt."
+					},
+					{
+						"name": "im",
+						"abbreviation": "i."
+					},
+					{
+						"name": "in",
+						"abbreviation": "i."
+					},
+					{
+						"name": "in der",
+						"abbreviation": "i.d."
+					},
+					{
+						"name": "Ingenieur",
+						"abbreviation": "Ing."
+					},
+					{
+						"name": "Internationale, Internationaler, Internationales",
+						"abbreviation": "Int."
+					},
+					{
+						"name": "Jagdhaus",
+						"abbreviation": "Jh."
+					},
+					{
+						"name": "Jagdhütte",
+						"abbreviation": "Jhtt."
+					},
+					{
+						"name": "Kapelle",
+						"abbreviation": "Kap., Kpl."
+					},
+					{
+						"name": "Katastralgemeinde",
+						"abbreviation": "KG"
+					},
+					{
+						"name": "Kläranlage",
+						"abbreviation": "KA"
+					},
+					{
+						"name": "Kleiner, Kleine, Kleines",
+						"abbreviation": "kl."
+					},
+					{
+						"name": "Klein...",
+						"abbreviation": "Kl."
+					},
+					{
+						"name": "Kleingartenanlage",
+						"abbreviation": "KGA"
+					},
+					{
+						"name": "Kleingartenverein",
+						"abbreviation": "KGV"
+					},
+					{
+						"name": "Kogel",
+						"abbreviation": "Kg."
+					},
+					{
+						"name": "...kogel",
+						"abbreviation": "kg."
+					},
+					{
+						"name": "Konzentrationslager",
+						"abbreviation": "KZ, KL"
+					},
+					{
+						"name": "Krankenhaus",
+						"abbreviation": "KH"
+					},
+					{
+						"name": "Kreuz",
+						"abbreviation": "Kz."
+					},
+					{
+						"name": "...kreuz",
+						"abbreviation": "kz."
+					},
+					{
+						"name": "Landeskrankenhaus",
+						"abbreviation": "LKH"
+					},
+					{
+						"name": "Maria",
+						"abbreviation": "Ma."
+					},
+					{
+						"name": "Magister",
+						"abbreviation": "Mag."
+					},
+					{
+						"name": "Magistratsabteilung",
+						"abbreviation": "MA"
+					},
+					{
+						"name": "Markt",
+						"abbreviation": "Mkt."
+					},
+					{
+						"name": "Müllverbrennungsanlage",
+						"abbreviation": "MVA"
+					},
+					{
+						"name": "Nationalpark",
+						"abbreviation": "NP"
+					},
+					{
+						"name": "Naturschutzgebiet",
+						"abbreviation": "NSG"
+					},
+					{
+						"name": "Neue Mittelschule",
+						"abbreviation": "NMS"
+					},
+					{
+						"name": "Niedere, Niederer, Niederes",
+						"abbreviation": "Nd."
+					},
+					{
+						"name": "Niederösterreichische, Niederösterreichischer, Niederösterreichisches",
+						"abbreviation": "NÖ"
+					},
+					{
+						"name": "nördliche, nördlicher, nördliches",
+						"abbreviation": "nördl."
+					},
+					{
+						"name": "Nummer",
+						"abbreviation": "Nr."
+					},
+					{
+						"name": "ob",
+						"abbreviation": "o."
+					},
+					{
+						"name": "Oberer, Obere, Oberes",
+						"abbreviation": "ob."
+					},
+					{
+						"name": "Ober...",
+						"abbreviation": "Ob."
+					},
+					{
+						"name": "Oberösterreichische, Oberösterreichischer, Oberösterreichisches",
+						"abbreviation": "OÖ"
+					},
+					{
+						"name": "Österreichische, Österreichischer, Österreichisches",
+						"abbreviation": "Öst., Österr."
+					},
+					{
+						"name": "Österreichischer Alpenverein",
+						"abbreviation": "ÖAV"
+					},
+					{
+						"name": "Österreichischer Gebirgsverein",
+						"abbreviation": "ÖGV"
+					},
+					{
+						"name": "Österreichischer Touristenklub",
+						"abbreviation": "ÖTK"
+					},
+					{
+						"name": "östliche, östlicher, östliches",
+						"abbreviation": "östl."
+					},
+					{
+						"name": "Pater",
+						"abbreviation": "P."
+					},
+					{
+						"name": "Pfad",
+						"abbreviation": "P"
+					},
+					{
+						"name": "Platz",
+						"abbreviation": "Pl."
+					},
+					{
+						"name": "...platz",
+						"abbreviation": "pl."
+					},
+					{
+						"name": "Professor",
+						"abbreviation": "Prof."
+					},
+					{
+						"name": "Quelle",
+						"abbreviation": "Q., Qu."
+					},
+					{
+						"name": "Reservoir",
+						"abbreviation": "Res."
+					},
+					{
+						"name": "Rhein",
+						"abbreviation": "Rh."
+					},
+					{
+						"name": "Rundwanderweg",
+						"abbreviation": "RWW"
+					},
+					{
+						"name": "Ruine",
+						"abbreviation": "R."
+					},
+					{
+						"name": "Sandgrube, Schottergrube",
+						"abbreviation": "SG"
+					},
+					{
+						"name": "Salzburg",
+						"abbreviation": "Sbg."
+					},
+					{
+						"name": "Sankt",
+						"abbreviation": "St."
+					},
+					{
+						"name": "Schloss",
+						"abbreviation": "Schl."
+					},
+					{
+						"name": "See",
+						"abbreviation": "S."
+					},
+					{
+						"name": "Siedlung",
+						"abbreviation": "Sdlg."
+					},
+					{
+						"name": "...siedlung",
+						"abbreviation": "sdlg."
+					},
+					{
+						"name": "Sozialmedizinisches Zentrum",
+						"abbreviation": "SMZ"
+					},
+					{
+						"name": "Spitze",
+						"abbreviation": "Sp."
+					},
+					{
+						"name": "Steinbruch",
+						"abbreviation": "Stb."
+					},
+					{
+						"name": "Stiege",
+						"abbreviation": "Stg."
+					},
+					{
+						"name": "...stiege",
+						"abbreviation": "stg."
+					},
+					{
+						"name": "Straße",
+						"abbreviation": "Str."
+					},
+					{
+						"name": "Strasse",
+						"abbreviation": "Str."
+					},
+					{
+						"name": "...straße",
+						"abbreviation": "str."
+					},
+					{
+						"name": "...strasse",
+						"abbreviation": "str."
+					},
+					{
+						"name": "südliche, südlicher, südliches",
+						"abbreviation": "südl."
+					},
+					{
+						"name": "Unterer, Untere, Unteres",
+						"abbreviation": "u., unt."
+					},
+					{
+						"name": "Unter...",
+						"abbreviation": "U."
+					},
+					{
+						"name": "Teich",
+						"abbreviation": "T."
+					},
+					{
+						"name": "Technische Universität",
+						"abbreviation": "TU"
+					},
+					{
+						"name": "Truppenübungsplatz",
+						"abbreviation": "TÜPL, TÜPl"
+					},
+					{
+						"name": "Unfallkrankenhaus",
+						"abbreviation": "UKH"
+					},
+					{
+						"name": "Universität",
+						"abbreviation": "Uni"
+					},
+					{
+						"name": "...universität",
+						"abbreviation": "uni"
+					},
+					{
+						"name": "verfallen",
+						"abbreviation": "verf."
+					},
+					{
+						"name": "von",
+						"abbreviation": "v."
+					},
+					{
+						"name": "Vordere, Vorderer, Vorderes",
+						"abbreviation": "Vd., Vord."
+					},
+					{
+						"name": "Vorder...",
+						"abbreviation": "Vd., Vord."
+					},
+					{
+						"name": "von der",
+						"abbreviation": "v.d."
+					},
+					{
+						"name": "vor der",
+						"abbreviation": "v.d."
+					},
+					{
+						"name": "Volksschule",
+						"abbreviation": "VS"
+					},
+					{
+						"name": "Wald",
+						"abbreviation": "W."
+					},
+					{
+						"name": "Wasserfall",
+						"abbreviation": "Wsf., Wssf."
+					},
+					{
+						"name": "Weg",
+						"abbreviation": "W."
+					},
+					{
+						"name": "...weg",
+						"abbreviation": "w."
+					},
+					{
+						"name": "westliche, westlicher, westliches",
+						"abbreviation": "westl."
+					},
+					{
+						"name": "Wiener",
+						"abbreviation": "Wr."
+					},
+					{
+						"name": "Wiese",
+						"abbreviation": "Ws."
+					},
+					{
+						"name": "...wiese",
+						"abbreviation": "ws."
+					},
+					{
+						"name": "Wirtschaftsuniversität",
+						"abbreviation": "WU"
+					},
+					{
+						"name": "Wirtshaus",
+						"abbreviation": "Wh."
+					},
+					{
+						"name": "zum",
+						"abbreviation": "z."
+					}
+				]
+			},
+			{
+				"Langue": "italian",
+				"Abbrev": [
+
+					{
+						"name": "Calle",
+						"abbreviation": "C.le"
+					},
+					{
+						"name": "Campo",
+						"abbreviation": "C.po"
+					},
+					{
+						"name": "Cascina",
+						"abbreviation": "C.na"
+					},
+					{
+						"name": "Cinque",
+						"abbreviation": 5
+					},
+					{
+						"name": "Corso",
+						"abbreviation": "C.so"
+					},
+					{
+						"name": "Corte",
+						"abbreviation": "C.te"
+					},
+					{
+						"name": "Decima",
+						"abbreviation": "X"
+					},
+					{
+						"name": "Decimo",
+						"abbreviation": "X"
+					},
+					{
+						"name": "Due",
+						"abbreviation": 2
+					},
+					{
+						"name": "Fondamenta",
+						"abbreviation": "F.ta"
+					},
+					{
+						"name": "Largo",
+						"abbreviation": "L.go"
+					},
+					{
+						"name": "Località",
+						"abbreviation": "Loc."
+					},
+					{
+						"name": "Lungomare",
+						"abbreviation": "L.mare"
+					},
+					{
+						"name": "Nona",
+						"abbreviation": "IX"
+					},
+					{
+						"name": "Nono",
+						"abbreviation": "IX"
+					},
+					{
+						"name": "Nove",
+						"abbreviation": 9
+					},
+					{
+						"name": "Otto",
+						"abbreviation": 8
+					},
+					{
+						"name": "Ottava",
+						"abbreviation": "VIII"
+					},
+					{
+						"name": "Ottavo",
+						"abbreviation": "VIII"
+					},
+					{
+						"name": "Piazza",
+						"abbreviation": "P.za"
+					},
+					{
+						"name": "Piazza",
+						"abbreviation": "P.zza"
+					},
+					{
+						"name": "Piazzale",
+						"abbreviation": "P.le"
+					},
+					{
+						"name": "Piazzetta",
+						"abbreviation": "P.ta"
+					},
+					{
+						"name": "Ponte",
+						"abbreviation": "P.te"
+					},
+					{
+						"name": "Porta",
+						"abbreviation": "P.ta"
+					},
+					{
+						"name": "Prima",
+						"abbreviation": "I"
+					},
+					{
+						"name": "Primo",
+						"abbreviation": "I"
+					},
+					{
+						"name": "Primo",
+						"abbreviation": 1
+					},
+					{
+						"name": "Primo",
+						"abbreviation": "1°"
+					},
+					{
+						"name": "Quarta",
+						"abbreviation": "IV"
+					},
+					{
+						"name": "Quarto",
+						"abbreviation": "IV"
+					},
+					{
+						"name": "Quattro",
+						"abbreviation": "IV"
+					},
+					{
+						"name": "Quattro",
+						"abbreviation": 4
+					},
+					{
+						"name": "Quinta",
+						"abbreviation": "V"
+					},
+					{
+						"name": "Quinto",
+						"abbreviation": "V"
+					},
+					{
+						"name": "Salizada",
+						"abbreviation": "S.da"
+					},
+					{
+						"name": "San",
+						"abbreviation": "S."
+					},
+					{
+						"name": "Santa",
+						"abbreviation": "S."
+					},
+					{
+						"name": "Santo",
+						"abbreviation": "S."
+					},
+					{
+						"name": "Sant'",
+						"abbreviation": "S."
+					},
+					{
+						"name": "Santi",
+						"abbreviation": "SS."
+					},
+					{
+						"name": "Santissima",
+						"abbreviation": "SS.ma"
+					},
+					{
+						"name": "Santissime",
+						"abbreviation": "SS.me"
+					},
+					{
+						"name": "Santissimi",
+						"abbreviation": "SS.mi"
+					},
+					{
+						"name": "Santissimo",
+						"abbreviation": "SS.mo"
+					},
+					{
+						"name": "Seconda",
+						"abbreviation": "II"
+					},
+					{
+						"name": "Secondo",
+						"abbreviation": "II"
+					},
+					{
+						"name": "Sei",
+						"abbreviation": 6
+					},
+					{
+						"name": "Sesta",
+						"abbreviation": "VI"
+					},
+					{
+						"name": "Sesto",
+						"abbreviation": "VI"
+					},
+					{
+						"name": "Sette",
+						"abbreviation": 7
+					},
+					{
+						"name": "Settima",
+						"abbreviation": "VII"
+					},
+					{
+						"name": "Settimo",
+						"abbreviation": "VII"
+					},
+					{
+						"name": "Stazione",
+						"abbreviation": "Staz."
+					},
+					{
+						"name": "Strada Comunale",
+						"abbreviation": "SC"
+					},
+					{
+						"name": "Strada Provinciale",
+						"abbreviation": "SP"
+					},
+					{
+						"name": "Strada Regionale",
+						"abbreviation": "SR"
+					},
+					{
+						"name": "Strada Statale",
+						"abbreviation": "SS"
+					},
+					{
+						"name": "Terzo",
+						"abbreviation": "III"
+					},
+					{
+						"name": "Terza",
+						"abbreviation": "III"
+					},
+					{
+						"name": "Tre",
+						"abbreviation": 3
+					},
+					{
+						"name": "Trenta",
+						"abbreviation": "XXX"
+					},
+					{
+						"name": "Un",
+						"abbreviation": 1
+					},
+					{
+						"name": "Una",
+						"abbreviation": 1
+					},
+					{
+						"name": "Venti",
+						"abbreviation": "XX"
+					},
+					{
+						"name": "Venti",
+						"abbreviation": 20
+					},
+					{
+						"name": "Venticinque",
+						"abbreviation": "XXV"
+					},
+					{
+						"name": "Venticinque",
+						"abbreviation": 25
+					},
+					{
+						"name": "Ventiquattro",
+						"abbreviation": "XXIV"
+					},
+					{
+						"name": "Ventitreesimo",
+						"abbreviation": "XXIII"
+					},
+					{
+						"name": "Via",
+						"abbreviation": "V."
+					},
+					{
+						"name": "Viale",
+						"abbreviation": "V.le"
+					},
+					{
+						"name": "Vico",
+						"abbreviation": "V.co"
+					},
+					{
+						"name": "Vicolo",
+						"abbreviation": "V.lo"
+					}
+				]
+			},
+
+			{
+				"Langue": "portugais",
+				"Abbrev": [{
+						"name": "Associação",
+						"abbreviation": "Ass"
+					},
+					{
+						"name": "Alameda",
+						"abbreviation": "Al"
+					},
+					{
+						"name": "Alferes",
+						"abbreviation": "Alf"
+					},
+					{
+						"name": "Almirante",
+						"abbreviation": "Alm"
+					},
+					{
+						"name": "Arquitecto",
+						"abbreviation": "Arq"
+					},
+					{
+						"name": "Arquitecto",
+						"abbreviation": "Arqº"
+					},
+					{
+						"name": "Arquiteto",
+						"abbreviation": "Arq"
+					},
+					{
+						"name": "Arquiteto",
+						"abbreviation": "Arqº"
+					},
+					{
+						"name": "Auto-estrada",
+						"abbreviation": "A"
+					},
+					{
+						"name": "Avenida",
+						"abbreviation": "Av"
+					},
+					{
+						"name": "Avenida",
+						"abbreviation": "Avª"
+					},
+					{
+						"name": "Azinhaga",
+						"abbreviation": "Az"
+					},
+					{
+						"name": "Bairro",
+						"abbreviation": "B"
+					},
+					{
+						"name": "Bairro",
+						"abbreviation": "Bº"
+					},
+					{
+						"name": "Bairro",
+						"abbreviation": "Br"
+					},
+					{
+						"name": "Beco",
+						"abbreviation": "Bc"
+					},
+					{
+						"name": "Beco",
+						"abbreviation": "Bco"
+					},
+					{
+						"name": "Bloco",
+						"abbreviation": "Bl"
+					},
+					{
+						"name": "Bombeiros Voluntários",
+						"abbreviation": "BV"
+					},
+					{
+						"name": "Bombeiros Voluntários",
+						"abbreviation": "B.V."
+					},
+					{
+						"name": "Brigadeiro",
+						"abbreviation": "Brg"
+					},
+					{
+						"name": "Cacique",
+						"abbreviation": "Cac"
+					},
+					{
+						"name": "Calçada",
+						"abbreviation": "Cc"
+					},
+					{
+						"name": "Calçadinha",
+						"abbreviation": "Ccnh"
+					},
+					{
+						"name": "Câmara Municipal",
+						"abbreviation": "CM"
+					},
+					{
+						"name": "Câmara Municipal",
+						"abbreviation": "C.M."
+					},
+					{
+						"name": "Câmara Municipal",
+						"abbreviation": "C. M."
+					},
+					{
+						"name": "Caminho",
+						"abbreviation": "Cam"
+					},
+					{
+						"name": "Capitão",
+						"abbreviation": "Cap"
+					},
+					{
+						"name": "Casal",
+						"abbreviation": "Csl"
+					},
+					{
+						"name": "Cave",
+						"abbreviation": "Cv"
+					},
+					{
+						"name": "Centro Comercial",
+						"abbreviation": "CC"
+					},
+					{
+						"name": "Centro Comercial",
+						"abbreviation": "C.C."
+					},
+					{
+						"name": "Ciclo do Ensino Básico",
+						"abbreviation": "CEB"
+					},
+					{
+						"name": "Ciclo do Ensino Básico",
+						"abbreviation": "C.E.B."
+					},
+					{
+						"name": "Ciclo do Ensino Básico",
+						"abbreviation": "C. E. B."
+					},
+					{
+						"name": "Comandante",
+						"abbreviation": "Cmdt"
+					},
+					{
+						"name": "Comendador",
+						"abbreviation": "Comend"
+					},
+					{
+						"name": "Companhia",
+						"abbreviation": "Cª"
+					},
+					{
+						"name": "Conselheiro",
+						"abbreviation": "Cons"
+					},
+					{
+						"name": "Coronel",
+						"abbreviation": "Cor"
+					},
+					{
+						"name": "Coronel",
+						"abbreviation": "Cel"
+					},
+					{
+						"name": "Corte",
+						"abbreviation": "C.te"
+					},
+					{
+						"name": "De",
+						"abbreviation": "D´"
+					},
+					{
+						"name": "De",
+						"abbreviation": "D'"
+					},
+					{
+						"name": "Departamento",
+						"abbreviation": "Dept"
+					},
+					{
+						"name": "Deputado",
+						"abbreviation": "Dep"
+					},
+					{
+						"name": "Direito",
+						"abbreviation": "Dto"
+					},
+					{
+						"name": "Dom",
+						"abbreviation": "D"
+					},
+					{
+						"name": "Dona",
+						"abbreviation": "D"
+					},
+					{
+						"name": "Dona",
+						"abbreviation": "Dª"
+					},
+					{
+						"name": "Doutor",
+						"abbreviation": "Dr"
+					},
+					{
+						"name": "Doutora",
+						"abbreviation": "Dr"
+					},
+					{
+						"name": "Doutora",
+						"abbreviation": "Drª"
+					},
+					{
+						"name": "Doutora",
+						"abbreviation": "Dra"
+					},
+					{
+						"name": "Duque",
+						"abbreviation": "Dq"
+					},
+					{
+						"name": "Edifício",
+						"abbreviation": "Ed"
+					},
+					{
+						"name": "Edifício",
+						"abbreviation": "Edf"
+					},
+					{
+						"name": "Embaixador",
+						"abbreviation": "Emb"
+					},
+					{
+						"name": "Empresa Pública",
+						"abbreviation": "EP"
+					},
+					{
+						"name": "Empresa Pública",
+						"abbreviation": "E.P."
+					},
+					{
+						"name": "Enfermeiro",
+						"abbreviation": "Enfo"
+					},
+					{
+						"name": "Enfermeiro",
+						"abbreviation": "Enfº"
+					},
+					{
+						"name": "Enfermeiro",
+						"abbreviation": "Enf"
+					},
+					{
+						"name": "Engenheiro",
+						"abbreviation": "Eng"
+					},
+					{
+						"name": "Engenheiro",
+						"abbreviation": "Engº"
+					},
+					{
+						"name": "Engenheira",
+						"abbreviation": "Eng"
+					},
+					{
+						"name": "Engenheira",
+						"abbreviation": "Engª"
+					},
+					{
+						"name": "Escadas",
+						"abbreviation": "Esc"
+					},
+					{
+						"name": "Escadinhas",
+						"abbreviation": "Escnh"
+					},
+					{
+						"name": "Escola Básica",
+						"abbreviation": "EB"
+					},
+					{
+						"name": "Escola Básica",
+						"abbreviation": "E.B."
+					},
+					{
+						"name": "Escola Básica",
+						"abbreviation": "E. B."
+					},
+					{
+						"name": "Esquerdo",
+						"abbreviation": "Esq"
+					},
+					{
+						"name": "Estação de Tratamento de Águas Residuais",
+						"abbreviation": "ETAR"
+					},
+					{
+						"name": "Estação de Tratamento de Águas Residuais",
+						"abbreviation": "E.T.A.R."
+					},
+					{
+						"name": "Estrada",
+						"abbreviation": "Estr"
+					},
+					{
+						"name": "Estrada Municipal",
+						"abbreviation": "EM"
+					},
+					{
+						"name": "Estrada Nacional",
+						"abbreviation": "EN"
+					},
+					{
+						"name": "Estrada Regional",
+						"abbreviation": "ER"
+					},
+					{
+						"name": "Frei",
+						"abbreviation": "Fr"
+					},
+					{
+						"name": "Frente",
+						"abbreviation": "Ft"
+					},
+					{
+						"name": "Futebol Clube",
+						"abbreviation": "FC"
+					},
+					{
+						"name": "Futebol Clube",
+						"abbreviation": "F.C."
+					},
+					{
+						"name": "Futebol Clube",
+						"abbreviation": "F. C."
+					},
+					{
+						"name": "Guarda Nacional Republicana",
+						"abbreviation": "GNR"
+					},
+					{
+						"name": "Guarda Nacional Republicana",
+						"abbreviation": "G.N.R."
+					},
+					{
+						"name": "General",
+						"abbreviation": "Gen"
+					},
+					{
+						"name": "General",
+						"abbreviation": "Gal"
+					},
+					{
+						"name": "Habitação",
+						"abbreviation": "Hab"
+					},
+					{
+						"name": "Infante",
+						"abbreviation": "Inf"
+					},
+					{
+						"name": "Instituto",
+						"abbreviation": "Inst"
+					},
+					{
+						"name": "Irmã",
+						"abbreviation": "Ima"
+					},
+					{
+						"name": "Irmã",
+						"abbreviation": "Imª"
+					},
+					{
+						"name": "Irmã",
+						"abbreviation": "Im"
+					},
+					{
+						"name": "Irmão",
+						"abbreviation": "Imo"
+					},
+					{
+						"name": "Irmão",
+						"abbreviation": "Imº"
+					},
+					{
+						"name": "Irmão",
+						"abbreviation": "Im"
+					},
+					{
+						"name": "Itinerário Complementar",
+						"abbreviation": "IC"
+					},
+					{
+						"name": "Itinerário Principal",
+						"abbreviation": "IP"
+					},
+					{
+						"name": "Jardim",
+						"abbreviation": "Jrd"
+					},
+					{
+						"name": "Júnior",
+						"abbreviation": "Jr"
+					},
+					{
+						"name": "Largo",
+						"abbreviation": "Lg"
+					},
+					{
+						"name": "Limitada",
+						"abbreviation": "Lda"
+					},
+					{
+						"name": "Loja",
+						"abbreviation": "Lj"
+					},
+					{
+						"name": "Lote",
+						"abbreviation": "Lt"
+					},
+					{
+						"name": "Loteamento",
+						"abbreviation": "Loteam"
+					},
+					{
+						"name": "Lugar",
+						"abbreviation": "Lg"
+					},
+					{
+						"name": "Lugar",
+						"abbreviation": "Lug"
+					},
+					{
+						"name": "Maestro",
+						"abbreviation": "Mto"
+					},
+					{
+						"name": "Major",
+						"abbreviation": "Maj"
+					},
+					{
+						"name": "Marechal",
+						"abbreviation": "Mal"
+					},
+					{
+						"name": "Marquês",
+						"abbreviation": "Mq"
+					},
+					{
+						"name": "Madre",
+						"abbreviation": "Me"
+					},
+					{
+						"name": "Mestre",
+						"abbreviation": "Me"
+					},
+					{
+						"name": "Ministério",
+						"abbreviation": "Min"
+					},
+					{
+						"name": "Monsenhor",
+						"abbreviation": "Mons"
+					},
+					{
+						"name": "Municipal",
+						"abbreviation": "M"
+					},
+					{
+						"name": "Nacional",
+						"abbreviation": "N"
+					},
+					{
+						"name": "Nossa",
+						"abbreviation": "N"
+					},
+					{
+						"name": "Nossa",
+						"abbreviation": "Nª"
+					},
+					{
+						"name": "Nossa Senhora",
+						"abbreviation": "Ns"
+					},
+					{
+						"name": "Nosso",
+						"abbreviation": "N"
+					},
+					{
+						"name": "Número",
+						"abbreviation": "N"
+					},
+					{
+						"name": "Número",
+						"abbreviation": "Nº"
+					},
+					{
+						"name": "Padre",
+						"abbreviation": "Pe"
+					},
+					{
+						"name": "Parque",
+						"abbreviation": "Pq"
+					},
+					{
+						"name": "Particular",
+						"abbreviation": "Part"
+					},
+					{
+						"name": "Pátio",
+						"abbreviation": "Pto"
+					},
+					{
+						"name": "Pavilhão",
+						"abbreviation": "Pav"
+					},
+					{
+						"name": "Polícia de Segurança Pública",
+						"abbreviation": "PSP"
+					},
+					{
+						"name": "Polícia de Segurança Pública",
+						"abbreviation": "P.S.P."
+					},
+					{
+						"name": "Polícia Judiciária",
+						"abbreviation": "PJ"
+					},
+					{
+						"name": "Polícia Judiciária",
+						"abbreviation": "P.J."
+					},
+					{
+						"name": "Praça",
+						"abbreviation": "Pc"
+					},
+					{
+						"name": "Praça",
+						"abbreviation": "Pç"
+					},
+					{
+						"name": "Praça",
+						"abbreviation": "Pr"
+					},
+					{
+						"name": "Praceta",
+						"abbreviation": "Pct"
+					},
+					{
+						"name": "Praceta",
+						"abbreviation": "Pctª"
+					},
+					{
+						"name": "Presidente",
+						"abbreviation": "Presid"
+					},
+					{
+						"name": "Primeiro",
+						"abbreviation": "1º"
+					},
+					{
+						"name": "Professor",
+						"abbreviation": "Prof"
+					},
+					{
+						"name": "Professora",
+						"abbreviation": "Prof"
+					},
+					{
+						"name": "Professora",
+						"abbreviation": "Profª"
+					},
+					{
+						"name": "Projectada",
+						"abbreviation": "Proj"
+					},
+					{
+						"name": "Projetada",
+						"abbreviation": "Proj"
+					},
+					{
+						"name": "Prolongamento",
+						"abbreviation": "Prolng"
+					},
+					{
+						"name": "Quadra",
+						"abbreviation": "Q"
+					},
+					{
+						"name": "Quadra",
+						"abbreviation": "Qd"
+					},
+					{
+						"name": "Quinta",
+						"abbreviation": "Qta"
+					},
+					{
+						"name": "Regional",
+						"abbreviation": "R"
+					},
+					{
+						"name": "Rés-do-chão",
+						"abbreviation": "R/c"
+					},
+					{
+						"name": "Rés-do-chão",
+						"abbreviation": "Rc"
+					},
+					{
+						"name": "Rotunda",
+						"abbreviation": "Rot"
+					},
+					{
+						"name": "Ribeira",
+						"abbreviation": "Rª"
+					},
+					{
+						"name": "Ribeira",
+						"abbreviation": "Rib"
+					},
+					{
+						"name": "Ribeira",
+						"abbreviation": "Ribª"
+					},
+					{
+						"name": "Rio",
+						"abbreviation": "R"
+					},
+					{
+						"name": "Rua",
+						"abbreviation": "R"
+					},
+					{
+						"name": "Santa",
+						"abbreviation": "Sta"
+					},
+					{
+						"name": "Santa",
+						"abbreviation": "Stª"
+					},
+					{
+						"name": "Santo",
+						"abbreviation": "St"
+					},
+					{
+						"name": "Santo",
+						"abbreviation": "Sto"
+					},
+					{
+						"name": "Santo",
+						"abbreviation": "Stº"
+					},
+					{
+						"name": "São",
+						"abbreviation": "S"
+					},
+					{
+						"name": "Sargento",
+						"abbreviation": "Sarg"
+					},
+					{
+						"name": "Sem Número",
+						"abbreviation": "S/n"
+					},
+					{
+						"name": "Sem Número",
+						"abbreviation": "Sn"
+					},
+					{
+						"name": "Senhor",
+						"abbreviation": "S"
+					},
+					{
+						"name": "Senhor",
+						"abbreviation": "Sr"
+					},
+					{
+						"name": "Senhora",
+						"abbreviation": "S"
+					},
+					{
+						"name": "Senhora",
+						"abbreviation": "Sª"
+					},
+					{
+						"name": "Senhora",
+						"abbreviation": "Srª"
+					},
+					{
+						"name": "Senhora",
+						"abbreviation": "Sr.ª"
+					},
+					{
+						"name": "Senhora",
+						"abbreviation": "S.ra"
+					},
+					{
+						"name": "Senhora",
+						"abbreviation": "Sra"
+					},
+					{
+						"name": "Sobre-Loja",
+						"abbreviation": "Slj"
+					},
+					{
+						"name": "Sociedade",
+						"abbreviation": "Soc"
+					},
+					{
+						"name": "Sociedade Anónima",
+						"abbreviation": "SA"
+					},
+					{
+						"name": "Sociedade Anónima",
+						"abbreviation": "S.A."
+					},
+					{
+						"name": "Sport Clube",
+						"abbreviation": "SC"
+					},
+					{
+						"name": "Sport Clube",
+						"abbreviation": "S.C."
+					},
+					{
+						"name": "Sport Clube",
+						"abbreviation": "S. C."
+					},
+					{
+						"name": "Sub-Cave",
+						"abbreviation": "Scv"
+					},
+					{
+						"name": "Superquadra",
+						"abbreviation": "Sq"
+					},
+					{
+						"name": "Tenente",
+						"abbreviation": "Ten"
+					},
+					{
+						"name": "Torre",
+						"abbreviation": "Tr"
+					},
+					{
+						"name": "Transversal",
+						"abbreviation": "Transv"
+					},
+					{
+						"name": "Travessa",
+						"abbreviation": "Trav"
+					},
+					{
+						"name": "Travessa",
+						"abbreviation": "Trv"
+					},
+					{
+						"name": "Travessa",
+						"abbreviation": "Tv"
+					},
+					{
+						"name": "Universidade",
+						"abbreviation": "Univ"
+					},
+					{
+						"name": "Urbanização",
+						"abbreviation": "Urb"
+					},
+					{
+						"name": "Vila",
+						"abbreviation": "Vl"
+					},
+					{
+						"name": "Visconde",
+						"abbreviation": "Visc"
+					},
+					{
+						"name": "Vivenda",
+						"abbreviation": "Vv"
+					},
+					{
+						"name": "Zona",
+						"abbreviation": "Zn"
+					}
+				]
+			},
+			{
+				"Langue": "turkish",
+				"Abbrev": [{
+						"name": "Sokak",
+						"abbreviation": "Sk"
+					},
+					{
+						"name": "Sokak",
+						"abbreviation": "Sok"
+					},
+					{
+						"name": "Soka%u011F%u0131",
+						"abbreviation": "Sk"
+					},
+					{
+						"name": "Soka%u011F%u0131",
+						"abbreviation": "Sok"
+					},
+					{
+						"name": "Cadde",
+						"abbreviation": "Cd"
+					},
+					{
+						"name": "Caddesi",
+						"abbreviation": "Cd"
+					},
+					{
+						"name": "Bulvar",
+						"abbreviation": "Bl"
+					},
+					{
+						"name": "Bulvar",
+						"abbreviation": "Blv"
+					},
+					{
+						"name": "Bulvar%u0131",
+						"abbreviation": "Bl"
+					},
+					{
+						"name": "Mahalle",
+						"abbreviation": "Mh"
+					},
+					{
+						"name": "Mahalle",
+						"abbreviation": "Mah"
+					}
+				]
+			}
+		],
+		"stateAbbrev": [{
+				"Country": "USA",
+				"Abbrev": [{
+						"name": "Alabama",
+						"abbreviation": "AL"
+					},
+					{
+						"name": "Alaska",
+						"abbreviation": "AK"
+					},
+					{
+						"name": "American Samoa",
+						"abbreviation": "AS"
+					},
+					{
+						"name": "Arizona",
+						"abbreviation": "AZ"
+					},
+					{
+						"name": "Arkansas",
+						"abbreviation": "AR"
+					},
+					{
+						"name": "California",
+						"abbreviation": "CA"
+					},
+					{
+						"name": "Colorado",
+						"abbreviation": "CO"
+					},
+					{
+						"name": "Connecticut",
+						"abbreviation": "CT"
+					},
+					{
+						"name": "Delaware",
+						"abbreviation": "DE"
+					},
+					{
+						"name": "District Of Columbia",
+						"abbreviation": "DC"
+					},
+					{
+						"name": "Federated States Of Micronesia",
+						"abbreviation": "FM"
+					},
+					{
+						"name": "Florida",
+						"abbreviation": "FL"
+					},
+					{
+						"name": "Georgia",
+						"abbreviation": "GA"
+					},
+					{
+						"name": "Guam",
+						"abbreviation": "GU"
+					},
+					{
+						"name": "Hawaii",
+						"abbreviation": "HI"
+					},
+					{
+						"name": "Idaho",
+						"abbreviation": "ID"
+					},
+					{
+						"name": "Illinois",
+						"abbreviation": "IL"
+					},
+					{
+						"name": "Indiana",
+						"abbreviation": "IN"
+					},
+					{
+						"name": "Iowa",
+						"abbreviation": "IA"
+					},
+					{
+						"name": "Kansas",
+						"abbreviation": "KS"
+					},
+					{
+						"name": "Kentucky",
+						"abbreviation": "KY"
+					},
+					{
+						"name": "Louisiana",
+						"abbreviation": "LA"
+					},
+					{
+						"name": "Maine",
+						"abbreviation": "ME"
+					},
+					{
+						"name": "Marshall Islands",
+						"abbreviation": "MH"
+					},
+					{
+						"name": "Maryland",
+						"abbreviation": "MD"
+					},
+					{
+						"name": "Massachusetts",
+						"abbreviation": "MA"
+					},
+					{
+						"name": "Michigan",
+						"abbreviation": "MI"
+					},
+					{
+						"name": "Minnesota",
+						"abbreviation": "MN"
+					},
+					{
+						"name": "Mississippi",
+						"abbreviation": "MS"
+					},
+					{
+						"name": "Missouri",
+						"abbreviation": "MO"
+					},
+					{
+						"name": "Montana",
+						"abbreviation": "MT"
+					},
+					{
+						"name": "Nebraska",
+						"abbreviation": "NE"
+					},
+					{
+						"name": "Nevada",
+						"abbreviation": "NV"
+					},
+					{
+						"name": "New Hampshire",
+						"abbreviation": "NH"
+					},
+					{
+						"name": "New Jersey",
+						"abbreviation": "NJ"
+					},
+					{
+						"name": "New Mexico",
+						"abbreviation": "NM"
+					},
+					{
+						"name": "New York",
+						"abbreviation": "NY"
+					},
+					{
+						"name": "North Carolina",
+						"abbreviation": "NC"
+					},
+					{
+						"name": "North Dakota",
+						"abbreviation": "ND"
+					},
+					{
+						"name": "Northern Mariana Islands",
+						"abbreviation": "MP"
+					},
+					{
+						"name": "Ohio",
+						"abbreviation": "OH"
+					},
+					{
+						"name": "Oklahoma",
+						"abbreviation": "OK"
+					},
+					{
+						"name": "Oregon",
+						"abbreviation": "OR"
+					},
+					{
+						"name": "Palau",
+						"abbreviation": "PW"
+					},
+					{
+						"name": "Pennsylvania",
+						"abbreviation": "PA"
+					},
+					{
+						"name": "Puerto Rico",
+						"abbreviation": "PR"
+					},
+					{
+						"name": "Rhode Island",
+						"abbreviation": "RI"
+					},
+					{
+						"name": "South Carolina",
+						"abbreviation": "SC"
+					},
+					{
+						"name": "South Dakota",
+						"abbreviation": "SD"
+					},
+					{
+						"name": "Tennessee",
+						"abbreviation": "TN"
+					},
+					{
+						"name": "Texas",
+						"abbreviation": "TX"
+					},
+					{
+						"name": "Utah",
+						"abbreviation": "UT"
+					},
+					{
+						"name": "Vermont",
+						"abbreviation": "VT"
+					},
+					{
+						"name": "Virgin Islands",
+						"abbreviation": "VI"
+					},
+					{
+						"name": "Virginia",
+						"abbreviation": "VA"
+					},
+					{
+						"name": "Washington",
+						"abbreviation": "WA"
+					},
+					{
+						"name": "West Virginia",
+						"abbreviation": "WV"
+					},
+					{
+						"name": "Wisconsin",
+						"abbreviation": "WI"
+					},
+					{
+						"name": "Wyoming",
+						"abbreviation": "WY"
+					}
+				]
+			},
+
+			{
+				"Country": "Canada",
+				"Abbrev": [{
+						"name": "Alberta",
+						"abbreviation": "AB"
+					},
+					{
+						"name": "British Columbia",
+						"abbreviation": "BC"
+					},
+					{
+						"name": "Manitoba",
+						"abbreviation": "MB"
+					},
+					{
+						"name": "New Brunswick",
+						"abbreviation": "NB"
+					},
+					{
+						"name": "Newfoundland and Labrador",
+						"abbreviation": "NL"
+					},
+					{
+						"name": "Northwest Territories",
+						"abbreviation": "NT"
+					},
+					{
+						"name": "Nova Scotia",
+						"abbreviation": "NS"
+					},
+					{
+						"name": "Nunavut",
+						"abbreviation": "NU"
+					},
+					{
+						"name": "Ontario",
+						"abbreviation": "ON"
+					},
+					{
+						"name": "Prince Edward Island",
+						"abbreviation": "PE"
+					},
+					{
+						"name": "Quebec",
+						"abbreviation": "QC"
+					},
+					{
+						"name": "Saskatchewan",
+						"abbreviation": "SK"
+					},
+					{
+						"name": "Yukon",
+						"abbreviation": "YT"
+					}
+
+				]
+			},
+
+			{
+				"Country": "Brazil",
+				"Abbrev": [{
+						"name": "Acre",
+						"abbreviation": "AC"
+					},
+					{
+						"name": "Alagoas",
+						"abbreviation": "AL"
+					},
+					{
+						"name": "Amapa",
+						"abbreviation": "AP"
+					},
+					{
+						"name": "Amazonas",
+						"abbreviation": "AM"
+					},
+					{
+						"name": "Bahia",
+						"abbreviation": "BA"
+					},
+					{
+						"name": "Ceara",
+						"abbreviation": "CE"
+					},
+					{
+						"name": "Distrito Federal",
+						"abbreviation": "DF"
+					},
+					{
+						"name": "Espirito Santo",
+						"abbreviation": "ES"
+					},
+					{
+						"name": "Goias",
+						"abbreviation": "GO"
+					},
+					{
+						"name": "Maranhao",
+						"abbreviation": "MA"
+					},
+					{
+						"name": "Mato Grosso",
+						"abbreviation": "MT"
+					},
+					{
+						"name": "Mato Grosso do Sul",
+						"abbreviation": "MS"
+					},
+					{
+						"name": "Minas Gerais",
+						"abbreviation": "MG"
+					},
+					{
+						"name": "Para",
+						"abbreviation": "PA"
+					},
+					{
+						"name": "Paraiba",
+						"abbreviation": "PB"
+					},
+					{
+						"name": "Parana",
+						"abbreviation": "PR"
+					},
+					{
+						"name": "Pernambuco",
+						"abbreviation": "PE"
+					},
+					{
+						"name": "Piaui",
+						"abbreviation": "PI"
+					},
+					{
+						"name": "Rio de Janeiro",
+						"abbreviation": "RJ"
+					},
+					{
+						"name": "Rio Grande do Norte",
+						"abbreviation": "RN"
+					},
+					{
+						"name": "Rio Grande do Sul",
+						"abbreviation": "RS"
+					},
+					{
+						"name": "Rondonia",
+						"abbreviation": "RO"
+					},
+					{
+						"name": "Roraima",
+						"abbreviation": "RR"
+					},
+					{
+						"name": "Santa Catarina",
+						"abbreviation": "SC"
+					},
+					{
+						"name": "Sao Paulo",
+						"abbreviation": "SP"
+					},
+					{
+						"name": "Sergipe",
+						"abbreviation": "SE"
+					},
+					{
+						"name": "Tocantins",
+						"abbreviation": "TO"
+					}
+				]
+			},
+			{
+				"Country": "China",
+				"Abbrev": [{
+						"state": "Beijing Municipality",
+						"abbreviation": "BJ"
+					},
+					{
+						"state": "Tianjin Municipality",
+						"abbreviation": "TJ"
+					},
+					{
+						"state": "Hebei Province",
+						"abbreviation": "HE"
+					},
+					{
+						"state": "Shanxi Province",
+						"abbreviation": "SX"
+					},
+					{
+						"state": "Inner Mongolia Autonomous Region",
+						"abbreviation": "NM"
+					},
+					{
+						"state": "Liaoning Province",
+						"abbreviation": "LN"
+					},
+					{
+						"state": "Jilin Province",
+						"abbreviation": "JL"
+					},
+					{
+						"state": "Heilongjiang Province",
+						"abbreviation": "HL"
+					},
+					{
+						"state": "Shanghai Municipality",
+						"abbreviation": "SH"
+					},
+					{
+						"state": "Jiangsu Province",
+						"abbreviation": "JS"
+					},
+					{
+						"state": "Zhejiang Province",
+						"abbreviation": "ZJ"
+					},
+					{
+						"state": "Anhui Province",
+						"abbreviation": "AH"
+					},
+					{
+						"state": "Fujian Province[e]",
+						"abbreviation": "FJ"
+					},
+					{
+						"state": "Jiangxi Province",
+						"abbreviation": "JX"
+					},
+					{
+						"state": "Shandong Province",
+						"abbreviation": "SD"
+					},
+					{
+						"state": "Henan Province",
+						"abbreviation": "HA"
+					},
+					{
+						"state": "Hubei Province",
+						"abbreviation": "HB"
+					},
+					{
+						"state": "Hunan Province",
+						"abbreviation": "HN"
+					},
+					{
+						"state": "Guangdong Province",
+						"abbreviation": "GD"
+					},
+					{
+						"state": "Guangxi Zhuang Autonomous Region",
+						"abbreviation": "GX"
+					},
+					{
+						"state": "Hainan Province",
+						"abbreviation": "HI"
+					},
+					{
+						"state": "Chongqing Municipality",
+						"abbreviation": "CQ"
+					},
+					{
+						"state": "Sichuan Province",
+						"abbreviation": "SC"
+					},
+					{
+						"state": "Guizhou Province",
+						"abbreviation": "GZ"
+					},
+					{
+						"state": "Yunnan Province",
+						"abbreviation": "YN"
+					},
+					{
+						"state": "Tibet Autonomous Region",
+						"abbreviation": "XZ"
+					},
+					{
+						"state": "Shaanxi Province",
+						"abbreviation": "SN"
+					},
+					{
+						"state": "Gansu Province",
+						"abbreviation": "GS"
+					},
+					{
+						"state": "Qinghai Province",
+						"abbreviation": "QH"
+					},
+					{
+						"state": "Ningxia Hui Autonomous Region",
+						"abbreviation": "NX"
+					},
+					{
+						"state": "Xinjiang Uyghur Autonomous Region",
+						"abbreviation": "XJ"
+					},
+					{
+						"state": "Taiwan Province[g]",
+						"abbreviation": "TW"
+					},
+					{
+						"state": "Hong Kong Special Administrative Region",
+						"abbreviation": "HK"
+					},
+					{
+						"state": "Macau Special Administrative Region",
+						"abbreviation": "MO"
+					}
+				]
+			},
+			{
+				"Country": "India",
+				"Abbrev": [{
+						"name": "Andaman and Nicobar Islands",
+						"abbreviation": "AN"
+					},
+					{
+						"name": "Andhra Pradesh",
+						"abbreviation": "AP"
+					},
+					{
+						"name": "Arunachal Pradesh",
+						"abbreviation": "AR"
+					},
+					{
+						"name": "Assam",
+						"abbreviation": "AS"
+					},
+					{
+						"name": "Bihar",
+						"abbreviation": "BR"
+					},
+					{
+						"name": "Chandigarh",
+						"abbreviation": "CH"
+					},
+					{
+						"name": "Chhattisgarh",
+						"abbreviation": "CT"
+					},
+					{
+						"name": "Dadra and Nagar Haveli",
+						"abbreviation": "DN"
+					},
+					{
+						"name": "Daman and Diu",
+						"abbreviation": "DD"
+					},
+					{
+						"name": "Delhi",
+						"abbreviation": "DL"
+					},
+					{
+						"name": "Goa",
+						"abbreviation": "GA"
+					},
+					{
+						"name": "Gujarat",
+						"abbreviation": "GJ"
+					},
+					{
+						"name": "Haryana",
+						"abbreviation": "HR"
+					},
+					{
+						"name": "Himachal Pradesh",
+						"abbreviation": "HP"
+					},
+					{
+						"name": "Jammu and Kashmir",
+						"abbreviation": "JK"
+					},
+					{
+						"name": "Jharkhand",
+						"abbreviation": "JH"
+					},
+					{
+						"name": "Karnataka",
+						"abbreviation": "KA"
+					},
+					{
+						"name": "Kerala",
+						"abbreviation": "KL"
+					},
+					{
+						"name": "Lakshadweep",
+						"abbreviation": "LD"
+					},
+					{
+						"name": "Madhya Pradesh",
+						"abbreviation": "MP"
+					},
+					{
+						"name": "Maharashtra",
+						"abbreviation": "MH"
+					},
+					{
+						"name": "Manipur",
+						"abbreviation": "MN"
+					},
+					{
+						"name": "Meghalaya",
+						"abbreviation": "ML"
+					},
+					{
+						"name": "Mizoram",
+						"abbreviation": "MZ"
+					},
+					{
+						"name": "Nagaland",
+						"abbreviation": "NL"
+					},
+					{
+						"name": "Odisha",
+						"abbreviation": "OR"
+					},
+					{
+						"name": "Puducherry",
+						"abbreviation": "PY"
+					},
+					{
+						"name": "Punjab",
+						"abbreviation": "PB"
+					},
+					{
+						"name": "Rajasthan",
+						"abbreviation": "RJ"
+					},
+					{
+						"name": "Sikkim",
+						"abbreviation": "SK"
+					},
+					{
+						"name": "Tamil Nadu",
+						"abbreviation": "TN"
+					},
+					{
+						"name": "Telangana",
+						"abbreviation": "TG"
+					},
+					{
+						"name": "Tripura",
+						"abbreviation": "TR"
+					},
+					{
+						"name": "Uttar Pradesh",
+						"abbreviation": "UP"
+					},
+					{
+						"name": "West Bengal",
+						"abbreviation": "WB"
+					}
+				]
+			},
+			{
+				"Country": "Mexico",
+				"Abbrev": [{
+						"name": "Aguascalientes",
+						"abbreviation": "AG"
+					},
+					{
+						"name": "Baja California Norte",
+						"abbreviation": "BC"
+					},
+					{
+						"name": "Baja California Sur",
+						"abbreviation": "BS"
+					},
+					{
+						"name": "Chihuahua",
+						"abbreviation": "CH"
+					},
+					{
+						"name": "Colima",
+						"abbreviation": "CL"
+					},
+					{
+						"name": "Campeche",
+						"abbreviation": "CM"
+					},
+					{
+						"name": "Coahuila",
+						"abbreviation": "CO"
+					},
+					{
+						"name": "Chiapas",
+						"abbreviation": "CS"
+					},
+					{
+						"name": "Distrito Federal",
+						"abbreviation": "DF"
+					},
+					{
+						"name": "Durango",
+						"abbreviation": "DG"
+					},
+					{
+						"name": "Guerrero",
+						"abbreviation": "GR"
+					},
+					{
+						"name": "Guanajuato",
+						"abbreviation": "GT"
+					},
+					{
+						"name": "Hidalgo",
+						"abbreviation": "HG"
+					},
+					{
+						"name": "Jalisco",
+						"abbreviation": "JA"
+					},
+					{
+						"name": "Michoacan",
+						"abbreviation": "MI"
+					},
+					{
+						"name": "Morelos",
+						"abbreviation": "MO"
+					},
+					{
+						"name": "Nayarit",
+						"abbreviation": "NA"
+					},
+					{
+						"name": "Nuevo Leon",
+						"abbreviation": "NL"
+					},
+					{
+						"name": "Oaxaca",
+						"abbreviation": "OA"
+					},
+					{
+						"name": "Puebla",
+						"abbreviation": "PU"
+					},
+					{
+						"name": "Quintana Roo",
+						"abbreviation": "QR"
+					},
+					{
+						"name": "Queretaro",
+						"abbreviation": "QT"
+					},
+					{
+						"name": "Sinaloa",
+						"abbreviation": "SI"
+					},
+					{
+						"name": "San Luis Potosi",
+						"abbreviation": "SL"
+					},
+					{
+						"name": "Sonora",
+						"abbreviation": "SO"
+					},
+					{
+						"name": "Tabasco",
+						"abbreviation": "TB"
+					},
+					{
+						"name": "Tlaxcala",
+						"abbreviation": "TL"
+					},
+					{
+						"name": "Tamaulipas",
+						"abbreviation": "TM"
+					},
+					{
+						"name": "Veracruz",
+						"abbreviation": "VE"
+					},
+					{
+						"name": "Yucatan",
+						"abbreviation": "YU"
+					},
+					{
+						"name": "Zacatecas",
+						"abbreviation": "ZA"
+					},
+					{
+						"name": "Mexico",
+						"abbreviation": "EM"
+					}
+				]
+			}
+		],
+
+		"CountryAbbrev": [{
+				"country": "Afghanistan",
+				"abbreviation": "AF"
+			},
+			{
+				"country": "land Islands",
+				"abbreviation": "AX"
+			},
+			{
+				"country": "Albania",
+				"abbreviation": "AL"
+			},
+			{
+				"country": "Algeria",
+				"abbreviation": "DZ"
+			},
+			{
+				"country": "American Samoa",
+				"abbreviation": "AS"
+			},
+			{
+				"country": "Andorra",
+				"abbreviation": "AD"
+			},
+			{
+				"country": "Angola",
+				"abbreviation": "AO"
+			},
+			{
+				"country": "Anguilla",
+				"abbreviation": "AI"
+			},
+			{
+				"country": "Antarctica",
+				"abbreviation": "AQ"
+			},
+			{
+				"country": "Antigua and Barbuda",
+				"abbreviation": "AG"
+			},
+			{
+				"country": "Argentina",
+				"abbreviation": "AR"
+			},
+			{
+				"country": "Armenia",
+				"abbreviation": "AM"
+			},
+			{
+				"country": "Aruba",
+				"abbreviation": "AW"
+			},
+			{
+				"country": "Australia",
+				"abbreviation": "AU"
+			},
+			{
+				"country": "Austria",
+				"abbreviation": "AT"
+			},
+			{
+				"country": "Azerbaijan",
+				"abbreviation": "AZ"
+			},
+			{
+				"country": "Bahamas",
+				"abbreviation": "BS"
+			},
+			{
+				"country": "Bahrain",
+				"abbreviation": "BH"
+			},
+			{
+				"country": "Bangladesh",
+				"abbreviation": "BD"
+			},
+			{
+				"country": "Barbados",
+				"abbreviation": "BB"
+			},
+			{
+				"country": "Belarus",
+				"abbreviation": "BY"
+			},
+			{
+				"country": "Belgium",
+				"abbreviation": "BE"
+			},
+			{
+				"country": "Belize",
+				"abbreviation": "BZ"
+			},
+			{
+				"country": "Benin",
+				"abbreviation": "BJ"
+			},
+			{
+				"country": "Bermuda",
+				"abbreviation": "BM"
+			},
+			{
+				"country": "Bhutan",
+				"abbreviation": "BT"
+			},
+			{
+				"country": "Bolivia",
+				"abbreviation": "BO"
+			},
+			{
+				"country": "Bonaire, Sint Eustatius and Saba",
+				"abbreviation": "BQ"
+			},
+			{
+				"country": "Bosnia and Herzegovina",
+				"abbreviation": "BA"
+			},
+			{
+				"country": "Botswana",
+				"abbreviation": "BW"
+			},
+			{
+				"country": "Brazil",
+				"abbreviation": "BR"
+			},
+			{
+				"country": "British Indian Ocean Territory",
+				"abbreviation": "IO"
+			},
+			{
+				"country": "Brunei Darussalam",
+				"abbreviation": "BN"
+			},
+			{
+				"country": "Bulgaria",
+				"abbreviation": "BG"
+			},
+			{
+				"country": "Burkina Faso",
+				"abbreviation": "BF"
+			},
+			{
+				"country": "Burundi",
+				"abbreviation": "BI"
+			},
+			{
+				"country": "Cambodia",
+				"abbreviation": "KH"
+			},
+			{
+				"country": "Cameroon",
+				"abbreviation": "CM"
+			},
+			{
+				"country": "Canada",
+				"abbreviation": "CA"
+			},
+			{
+				"country": "Cape Verde",
+				"abbreviation": "CV"
+			},
+			{
+				"country": "Cayman Islands",
+				"abbreviation": "KY"
+			},
+			{
+				"country": "Central African Republic",
+				"abbreviation": "CF"
+			},
+			{
+				"country": "Chad",
+				"abbreviation": "TD"
+			},
+			{
+				"country": "Chile",
+				"abbreviation": "CL"
+			},
+			{
+				"country": "China",
+				"abbreviation": "CN"
+			},
+			{
+				"country": "Christmas Island",
+				"abbreviation": "CX"
+			},
+			{
+				"country": "Cocos (Keeling) Islands",
+				"abbreviation": "CC"
+			},
+			{
+				"country": "Colombia",
+				"abbreviation": "CO"
+			},
+			{
+				"country": "Comoros",
+				"abbreviation": "KM"
+			},
+			{
+				"country": "Congo",
+				"abbreviation": "CG"
+			},
+			{
+				"country": "Congo, The Democratic Republic of the",
+				"abbreviation": "CD"
+			},
+			{
+				"country": "Cook Islands",
+				"abbreviation": "CK"
+			},
+			{
+				"country": "Costa Rica",
+				"abbreviation": "CR"
+			},
+			{
+				"country": "Cte d'Ivoire",
+				"abbreviation": "CI"
+			},
+			{
+				"country": "Croatia",
+				"abbreviation": "HR"
+			},
+			{
+				"country": "Cuba",
+				"abbreviation": "CU"
+			},
+			{
+				"country": "Curaao",
+				"abbreviation": "CW"
+			},
+			{
+				"country": "Cyprus",
+				"abbreviation": "CY"
+			},
+			{
+				"country": "Czech Republic",
+				"abbreviation": "CZ"
+			},
+			{
+				"country": "Denmark",
+				"abbreviation": "DK"
+			},
+			{
+				"country": "Djibouti",
+				"abbreviation": "DJ"
+			},
+			{
+				"country": "Dominica",
+				"abbreviation": "DM"
+			},
+			{
+				"country": "Dominican Republic",
+				"abbreviation": "DO"
+			},
+			{
+				"country": "Ecuador",
+				"abbreviation": "EC"
+			},
+			{
+				"country": "Egypt",
+				"abbreviation": "EG"
+			},
+			{
+				"country": "El Salvador",
+				"abbreviation": "SV"
+			},
+			{
+				"country": "Equatorial Guinea",
+				"abbreviation": "GQ"
+			},
+			{
+				"country": "Eritrea",
+				"abbreviation": "ER"
+			},
+			{
+				"country": "Estonia",
+				"abbreviation": "EE"
+			},
+			{
+				"country": "Ethiopia",
+				"abbreviation": "ET"
+			},
+			{
+				"country": "Falkland Islands (Malvinas)",
+				"abbreviation": "FK"
+			},
+			{
+				"country": "Faroe Islands",
+				"abbreviation": "FO"
+			},
+			{
+				"country": "Fiji",
+				"abbreviation": "FJ"
+			},
+			{
+				"country": "Finland",
+				"abbreviation": "FI"
+			},
+			{
+				"country": "France",
+				"abbreviation": "FR"
+			},
+			{
+				"country": "French Guiana",
+				"abbreviation": "GF"
+			},
+			{
+				"country": "French Polynesia",
+				"abbreviation": "PF"
+			},
+			{
+				"country": "French Southern Territories",
+				"abbreviation": "TF"
+			},
+			{
+				"country": "Gabon",
+				"abbreviation": "GA"
+			},
+			{
+				"country": "Gambia",
+				"abbreviation": "GM"
+			},
+			{
+				"country": "Georgia",
+				"abbreviation": "GE"
+			},
+			{
+				"country": "Germany",
+				"abbreviation": "DE"
+			},
+			{
+				"country": "Ghana",
+				"abbreviation": "GH"
+			},
+			{
+				"country": "Gibraltar",
+				"abbreviation": "GI"
+			},
+			{
+				"country": "Greece",
+				"abbreviation": "GR"
+			},
+			{
+				"country": "Greenland",
+				"abbreviation": "GL"
+			},
+			{
+				"country": "Grenada",
+				"abbreviation": "GD"
+			},
+			{
+				"country": "Guadeloupe",
+				"abbreviation": "GP"
+			},
+			{
+				"country": "Guam",
+				"abbreviation": "GU"
+			},
+			{
+				"country": "Guatemala",
+				"abbreviation": "GT"
+			},
+			{
+				"country": "Guernsey",
+				"abbreviation": "GG"
+			},
+			{
+				"country": "Guinea",
+				"abbreviation": "GN"
+			},
+			{
+				"country": "Guinea-Bissau",
+				"abbreviation": "GW"
+			},
+			{
+				"country": "Guyana",
+				"abbreviation": "GY"
+			},
+			{
+				"country": "Haiti",
+				"abbreviation": "HT"
+			},
+			{
+				"country": "Heard Island and McDonald Islands",
+				"abbreviation": "HM"
+			},
+			{
+				"country": "Holy See (Vatican City State)",
+				"abbreviation": "VA"
+			},
+			{
+				"country": "Honduras",
+				"abbreviation": "HN"
+			},
+			{
+				"country": "Hong Kong",
+				"abbreviation": "HK"
+			},
+			{
+				"country": "Hungary",
+				"abbreviation": "HU"
+			},
+			{
+				"country": "Iceland",
+				"abbreviation": "IS"
+			},
+			{
+				"country": "India",
+				"abbreviation": "IN"
+			},
+			{
+				"country": "Indonesia",
+				"abbreviation": "ID"
+			},
+			{
+				"country": "Installations in International Waters",
+				"abbreviation": "XZ"
+			},
+			{
+				"country": "Iran, Islamic Republic of",
+				"abbreviation": "IR"
+			},
+			{
+				"country": "Iraq",
+				"abbreviation": "IQ"
+			},
+			{
+				"country": "Ireland",
+				"abbreviation": "IE"
+			},
+			{
+				"country": "Isle of Man",
+				"abbreviation": "IM"
+			},
+			{
+				"country": "Israel",
+				"abbreviation": "IL"
+			},
+			{
+				"country": "Italy",
+				"abbreviation": "IT"
+			},
+			{
+				"country": "Jamaica",
+				"abbreviation": "JM"
+			},
+			{
+				"country": "Japan",
+				"abbreviation": "JP"
+			},
+			{
+				"country": "Jersey",
+				"abbreviation": "JE"
+			},
+			{
+				"country": "Jordan",
+				"abbreviation": "JO"
+			},
+			{
+				"country": "Kazakhstan",
+				"abbreviation": "KZ"
+			},
+			{
+				"country": "Kenya",
+				"abbreviation": "KE"
+			},
+			{
+				"country": "Kiribati",
+				"abbreviation": "KI"
+			},
+			{
+				"country": "Korea, Democratic People's Republic of",
+				"abbreviation": "KP"
+			},
+			{
+				"country": "Korea, Republic of",
+				"abbreviation": "KR"
+			},
+			{
+				"country": "Kuwait",
+				"abbreviation": "KW"
+			},
+			{
+				"country": "Kyrgyzstan",
+				"abbreviation": "KG"
+			},
+			{
+				"country": "Lao People's Democratic Republic",
+				"abbreviation": "LA"
+			},
+			{
+				"country": "Latvia",
+				"abbreviation": "LV"
+			},
+			{
+				"country": "Lebanon",
+				"abbreviation": "LB"
+			},
+			{
+				"country": "Lesotho",
+				"abbreviation": "LS"
+			},
+			{
+				"country": "Liberia",
+				"abbreviation": "LR"
+			},
+			{
+				"country": "Libya",
+				"abbreviation": "LY"
+			},
+			{
+				"country": "Liechtenstein",
+				"abbreviation": "LI"
+			},
+			{
+				"country": "Lithuania",
+				"abbreviation": "LT"
+			},
+			{
+				"country": "Luxembourg",
+				"abbreviation": "LU"
+			},
+			{
+				"country": "Macao",
+				"abbreviation": "MO"
+			},
+			{
+				"country": "Macedonia, The former Yugoslav Republic of",
+				"abbreviation": "MK"
+			},
+			{
+				"country": "Madagascar",
+				"abbreviation": "MG"
+			},
+			{
+				"country": "Malawi",
+				"abbreviation": "MW"
+			},
+			{
+				"country": "Malaysia",
+				"abbreviation": "MY"
+			},
+			{
+				"country": "Maldives",
+				"abbreviation": "MV"
+			},
+			{
+				"country": "Mali",
+				"abbreviation": "ML"
+			},
+			{
+				"country": "Malta",
+				"abbreviation": "MT"
+			},
+			{
+				"country": "Marshall Islands",
+				"abbreviation": "MH"
+			},
+			{
+				"country": "Martinique",
+				"abbreviation": "MQ"
+			},
+			{
+				"country": "Mauritania",
+				"abbreviation": "MR"
+			},
+			{
+				"country": "Mauritius",
+				"abbreviation": "MU"
+			},
+			{
+				"country": "Mayotte",
+				"abbreviation": "YT"
+			},
+			{
+				"country": "Mexico",
+				"abbreviation": "MX"
+			},
+			{
+				"country": "Micronesia, Federated States of",
+				"abbreviation": "FM"
+			},
+			{
+				"country": "Moldova, Republic of",
+				"abbreviation": "MD"
+			},
+			{
+				"country": "Monaco",
+				"abbreviation": "MC"
+			},
+			{
+				"country": "Mongolia",
+				"abbreviation": "MN"
+			},
+			{
+				"country": "Montenegro",
+				"abbreviation": "ME"
+			},
+			{
+				"country": "Montserrat",
+				"abbreviation": "MS"
+			},
+			{
+				"country": "Morocco",
+				"abbreviation": "MA"
+			},
+			{
+				"country": "Mozambique",
+				"abbreviation": "MZ"
+			},
+			{
+				"country": "Myanmar",
+				"abbreviation": "MM"
+			},
+			{
+				"country": "Namibia",
+				"abbreviation": "NA"
+			},
+			{
+				"country": "Nauru",
+				"abbreviation": "NR"
+			},
+			{
+				"country": "Nepal",
+				"abbreviation": "NP"
+			},
+			{
+				"country": "Netherlands",
+				"abbreviation": "NL"
+			},
+			{
+				"country": "New Caledonia",
+				"abbreviation": "NC"
+			},
+			{
+				"country": "New Zealand",
+				"abbreviation": "NZ"
+			},
+			{
+				"country": "Nicaragua",
+				"abbreviation": "NI"
+			},
+			{
+				"country": "Niger",
+				"abbreviation": "NE"
+			},
+			{
+				"country": "Nigeria",
+				"abbreviation": "NG"
+			},
+			{
+				"country": "Niue",
+				"abbreviation": "NU"
+			},
+			{
+				"country": "Norfolk Island",
+				"abbreviation": "NF"
+			},
+			{
+				"country": "Northern Mariana Islands",
+				"abbreviation": "MP"
+			},
+			{
+				"country": "Norway",
+				"abbreviation": "NO"
+			},
+			{
+				"country": "Oman",
+				"abbreviation": "OM"
+			},
+			{
+				"country": "Pakistan",
+				"abbreviation": "PK"
+			},
+			{
+				"country": "Palau",
+				"abbreviation": "PW"
+			},
+			{
+				"country": "Palestine, State of",
+				"abbreviation": "PS"
+			},
+			{
+				"country": "Panama",
+				"abbreviation": "PA"
+			},
+			{
+				"country": "Papua New Guinea",
+				"abbreviation": "PG"
+			},
+			{
+				"country": "Paraguay",
+				"abbreviation": "PY"
+			},
+			{
+				"country": "Peru",
+				"abbreviation": "PE"
+			},
+			{
+				"country": "Philippines",
+				"abbreviation": "PH"
+			},
+			{
+				"country": "Pitcairn",
+				"abbreviation": "PN"
+			},
+			{
+				"country": "Poland",
+				"abbreviation": "PL"
+			},
+			{
+				"country": "Portugal",
+				"abbreviation": "PT"
+			},
+			{
+				"country": "Puerto Rico",
+				"abbreviation": "PR"
+			},
+			{
+				"country": "Qatar",
+				"abbreviation": "QA"
+			},
+			{
+				"country": "Reunion",
+				"abbreviation": "RE"
+			},
+			{
+				"country": "Romania",
+				"abbreviation": "RO"
+			},
+			{
+				"country": "Russian Federation",
+				"abbreviation": "RU"
+			},
+			{
+				"country": "Rwanda",
+				"abbreviation": "RW"
+			},
+			{
+				"country": "Saint Barthlemy",
+				"abbreviation": "BL"
+			},
+			{
+				"country": "Saint Helena, Ascension and Tristan Da Cunha",
+				"abbreviation": "SH"
+			},
+			{
+				"country": "Saint Kitts and Nevis",
+				"abbreviation": "KN"
+			},
+			{
+				"country": "Saint Lucia",
+				"abbreviation": "LC"
+			},
+			{
+				"country": "Saint Martin (French Part)",
+				"abbreviation": "MF"
+			},
+			{
+				"country": "Saint Pierre and Miquelon",
+				"abbreviation": "PM"
+			},
+			{
+				"country": "Saint Vincent and the Grenadines",
+				"abbreviation": "VC"
+			},
+			{
+				"country": "Samoa",
+				"abbreviation": "WS"
+			},
+			{
+				"country": "San Marino",
+				"abbreviation": "SM"
+			},
+			{
+				"country": "Sao Tome and Principe",
+				"abbreviation": "ST"
+			},
+			{
+				"country": "Saudi Arabia",
+				"abbreviation": "SA"
+			},
+			{
+				"country": "Senegal",
+				"abbreviation": "SN"
+			},
+			{
+				"country": "Serbia",
+				"abbreviation": "RS"
+			},
+			{
+				"country": "Seychelles",
+				"abbreviation": "SC"
+			},
+			{
+				"country": "Sierra Leone",
+				"abbreviation": "SL"
+			},
+			{
+				"country": "Singapore",
+				"abbreviation": "SG"
+			},
+			{
+				"country": "Sint Maarten (Dutch Part)",
+				"abbreviation": "SX"
+			},
+			{
+				"country": "Slovakia",
+				"abbreviation": "SK"
+			},
+			{
+				"country": "Slovenia",
+				"abbreviation": "SI"
+			},
+			{
+				"country": "Solomon Islands",
+				"abbreviation": "SB"
+			},
+			{
+				"country": "Somalia",
+				"abbreviation": "SO"
+			},
+			{
+				"country": "South Africa",
+				"abbreviation": "ZA"
+			},
+			{
+				"country": "South Georgia and the South Sandwich Islands",
+				"abbreviation": "GS"
+			},
+			{
+				"country": "South Sudan",
+				"abbreviation": "SS"
+			},
+			{
+				"country": "Spain",
+				"abbreviation": "ES"
+			},
+			{
+				"country": "Sri Lanka",
+				"abbreviation": "LK"
+			},
+			{
+				"country": "Sudan",
+				"abbreviation": "SD"
+			},
+			{
+				"country": "Suriname",
+				"abbreviation": "SR"
+			},
+			{
+				"country": "Svalbard and Jan Mayen",
+				"abbreviation": "SJ"
+			},
+			{
+				"country": "Swaziland",
+				"abbreviation": "SZ"
+			},
+			{
+				"country": "Sweden",
+				"abbreviation": "SE"
+			},
+			{
+				"country": "Switzerland",
+				"abbreviation": "CH"
+			},
+			{
+				"country": "Syrian Arab Republic",
+				"abbreviation": "SY"
+			},
+			{
+				"country": "Taiwan, Province of China",
+				"abbreviation": "TW"
+			},
+			{
+				"country": "Tajikistan",
+				"abbreviation": "TJ"
+			},
+			{
+				"country": "Tanzania, United Republic of",
+				"abbreviation": "TZ"
+			},
+			{
+				"country": "Thailand",
+				"abbreviation": "TH"
+			},
+			{
+				"country": "Timor-Leste",
+				"abbreviation": "TL"
+			},
+			{
+				"country": "Togo",
+				"abbreviation": "TG"
+			},
+			{
+				"country": "Tokelau",
+				"abbreviation": "TK"
+			},
+			{
+				"country": "Tonga",
+				"abbreviation": "TO"
+			},
+			{
+				"country": "Trinidad and Tobago",
+				"abbreviation": "TT"
+			},
+			{
+				"country": "Tunisia",
+				"abbreviation": "TN"
+			},
+			{
+				"country": "Turkey",
+				"abbreviation": "TR"
+			},
+			{
+				"country": "Turkmenistan",
+				"abbreviation": "TM"
+			},
+			{
+				"country": "Turks and Caicos Islands",
+				"abbreviation": "TC"
+			},
+			{
+				"country": "Tuvalu",
+				"abbreviation": "TV"
+			},
+			{
+				"country": "Uganda",
+				"abbreviation": "UG"
+			},
+			{
+				"country": "Ukraine",
+				"abbreviation": "UA"
+			},
+			{
+				"country": "United Arab Emirates",
+				"abbreviation": "AE"
+			},
+			{
+				"country": "United Kingdom",
+				"abbreviation": "UK"
+			},
+			{
+				"country": "United States",
+				"abbreviation": "US"
+			},
+			{
+				"country": "United States Minor Outlying Islands",
+				"abbreviation": "UM"
+			},
+			{
+				"country": "Uruguay",
+				"abbreviation": "UY"
+			},
+			{
+				"country": "Uzbekistan",
+				"abbreviation": "UZ"
+			},
+			{
+				"country": "Vanuatu",
+				"abbreviation": "VU"
+			},
+			{
+				"country": "Venezuela",
+				"abbreviation": "VE"
+			},
+			{
+				"country": "Viet Nam",
+				"abbreviation": "VN"
+			},
+			{
+				"country": "Virgin Islands, British",
+				"abbreviation": "VG"
+			},
+			{
+				"country": "Virgin Islands, U.S.",
+				"abbreviation": "VI"
+			},
+			{
+				"country": "Wallis and Futuna",
+				"abbreviation": "WF"
+			},
+			{
+				"country": "Western Sahara",
+				"abbreviation": "EH"
+			},
+			{
+				"country": "Yemen",
+				"abbreviation": "YE"
+			},
+			{
+				"country": "Zambia",
+				"abbreviation": "ZM"
+			},
+			{
+				"country": "Zimbabwe",
+				"abbreviation": "ZW"
+			}
+		]
+	}
+}

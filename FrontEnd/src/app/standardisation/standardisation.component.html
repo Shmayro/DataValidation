@@ -4,17 +4,121 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title ">Unit Standardization</h4>
+                        <h4 class="card-title">Unit Standardization</h4>
                     </div>
                     <div class="card-body">
-                        <form novalidate="" ng-reflect-form="[object Object]" class="ng-untouched ng-pristine ng-invalid">
+                        <form ng-reflect-form="[object Object]" class="ng-untouched ng-pristine ng-invalid">
                             <div class="form-group">
-                                <label for="firstName">Unit Adress : </label>
-                                <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="Unitaire" type="text" ng-reflect-klass="form-control" ng-reflect-name="Unitaire" />
-                                <button mat-raised-button (click)="unitStand()" class="btn pull-right">Standardize</button> </div>
+                                <label for="firstName">Unit Adress :</label>
+                                <input matInput class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="Address" type="text" id="inlineFormInputName" placeholder="Address" name="AddressU" [(ngModel)]="selectedAddress.addressU" ng-reflect-klass="form-control" ng-reflect-name="AdressU"
+                                    required />
+                                <button mat-raised-button type="submit" (click)="createAdress()" class="btn pull-right">
+                  Standardize
+                </button>
+                            </div>
+                        </form>
+                        <form [formGroup]="form" class="example-section">
+                            <label for="firstName">Choose columns to visualize :</label>
+                            <br/>
+                            <mat-checkbox *ngFor="let cd of columnDefinitions" [formControlName]="cd.def">
+                                {{ cd.label }}
+                            </mat-checkbox>
                         </form>
                     </div>
                 </div>
+                <table mat-table class="mat-elevation-z8 table-hover table" [dataSource]="dataSource" [hidden]="dataSource.data.length === 0">
+                    <!--<ng-container matColumnDef="SOCIETY_NAME">
+                        <th mat-header-cell *matHeaderCellDef>
+                            SOCIETY NAME
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{ element.SOCIETY_NAME }}
+                        </td>
+                    </ng-container>-->
+
+                    <ng-container matColumnDef="INBUILDING">
+                        <th mat-header-cell *matHeaderCellDef>
+                            INBUILDING
+                        </th>
+                        <td mat-cell *matCellDef="let element">{{ element.INBUILDING }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="EXTBUILDING">
+                        <th mat-header-cell *matHeaderCellDef>
+                            EXTBUILDING
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{ element.EXTBUILDING }}
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="POI_LOGISTIC">
+                        <th mat-header-cell *matHeaderCellDef>
+                            POI LOGISTIC
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{ element.POI_LOGISTIC }}
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="ZONE">
+                        <th mat-header-cell *matHeaderCellDef>
+                            ZONE
+                        </th>
+                        <td mat-cell *matCellDef="let element">{{ element.ZONE }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="HOUSENUM">
+                        <th mat-header-cell *matHeaderCellDef>
+                            HOUSE NUM
+                        </th>
+                        <td mat-cell *matCellDef="let element">{{ element.HOUSENUM }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="ROADNAME">
+                        <th mat-header-cell *matHeaderCellDef>
+                            ROADNAME
+                        </th>
+                        <td mat-cell *matCellDef="let element">{{ element.ROADNAME }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="POBOX">
+                        <th mat-header-cell *matHeaderCellDef>
+                            POBOX
+                        </th>
+                        <td mat-cell *matCellDef="let element">{{ element.POBOX }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="ZIPCODE">
+                        <th mat-header-cell *matHeaderCellDef>
+                            ZIPCODE
+                        </th>
+                        <td mat-cell *matCellDef="let element">{{ element.ZIPCODE }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="CITY">
+                        <th mat-header-cell *matHeaderCellDef>
+                            CITY
+                        </th>
+                        <td mat-cell *matCellDef="let element">{{ element.CITY }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="COUNTRY">
+                        <th mat-header-cell *matHeaderCellDef>
+                            COUNTRY
+                        </th>
+                        <td mat-cell *matCellDef="let element">{{ element.COUNTRY }}</td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="getDisplayedColumns()"></tr>
+                    <tr mat-row *matRowDef="let row; columns: getDisplayedColumns()"></tr>
+
+                    <tr class="mat-row" *matNoDataRow>
+                        <td class="mat-cell" colspan="4 ">
+                            No data matching the filter
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
