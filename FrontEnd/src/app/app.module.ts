@@ -13,6 +13,7 @@ import { RegisterComponent } from './register/register.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableExporterModule } from 'mat-table-exporter';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox'
 import { CommonModule } from '@angular/common';
@@ -36,6 +37,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     MatPaginatorModule,
     MatFormFieldModule,
     MatCheckboxModule,
+    MatTableExporterModule,
     CommonModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCxg05fjMIeYZMN-dRl-_WKhj2tR7AZ9U4'

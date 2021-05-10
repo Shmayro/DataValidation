@@ -1,17 +1,11 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { FormControl } from '@angular/forms';
+import { merge, Observable } from 'rxjs';
+import { FormControl, FormGroup } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { NgxCsvParser } from 'ngx-csv-parser';
-import { NgxCSVParserError } from 'ngx-csv-parser';
-import DataFrame from 'dataframe-js';
-import * as FileSaver from 'file-saver';
-import { parseHostBindings } from '@angular/compiler';
-import { HttpRequest } from '@angular/common/http';
+import { ngxCsv } from 'ngx-csv/ngx-csv';
 
 @Injectable({
   providedIn: 'root'
@@ -29,7 +23,7 @@ export class ApiStandartization {
     var header = new HttpHeaders();
     header.append('Content-Type', 'multipart/form-data');
 
-    return this.http.post(this.baseurl + '/table-list/', formData,{ headers: header })
+    return this.http.post(this.baseurl + '/table-list/', formData, { headers: header })
   }
 }
 export interface StandData {
@@ -54,25 +48,27 @@ export interface StandData {
 
 export class TableListComponent implements AfterViewInit {
 
+  renderedData: any;
+
   HiddenSN = false;
   HiddenCity = false;
   HiddenCode = false;
   HiddenCountry = false;
 
-  displayedColumns: string[] = ['SOCIETY_NAME', 'INBUIDING', 'EXTBUILDING', 'POI_LOGISTIC', 'ZONE', 'HOUSENUM', 'ROADNAME', 'POBOX', 'ZIPCODE', 'CITY', 'COUNTRY'];
+  displayedColumns: string[] = ['INBUIDING', 'EXTBUILDING', 'POI_LOGISTIC', 'ZONE', 'HOUSENUM', 'ROADNAME', 'POBOX', 'ZIPCODE', 'CITY', 'COUNTRY','ADDITIONAL'];
   dataSource: MatTableDataSource<StandData>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
 
-  SOCIETY_NAME = new FormControl('');
+  //_SOCIETY_NAME = new FormControl('');
   ZIPCODE = new FormControl('');
   CITY = new FormControl('');
   COUNTRY = new FormControl('');
+
   df;
 
   filterValues = {
-    SOCIETY_NAME: '',
+    // _SOCIETY_NAME: '',
     ZIPCODE: '',
     CITY: '',
     COUNTRY: ''
@@ -82,29 +78,30 @@ export class TableListComponent implements AfterViewInit {
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource([]);
-    this.dataSource.filterPredicate = this.createFilter();
+    //this.dataSource.filterPredicate = this.createFilter();
 
   }
 
   createFilter(): (data: any, filter: string) => boolean {
     let filterFunction = function (data, filter): boolean {
       let searchTerms = JSON.parse(filter);
-      return data.SOCIETY_NAME.toLowerCase().indexOf(searchTerms.SOCIETY_NAME) !== -1
-        && data.ZIPCODE.toString().toLowerCase().indexOf(searchTerms.ZIPCODE) !== -1
-        && data.CITY.toLowerCase().indexOf(searchTerms.CITY) !== -1
-        && data.COUNTRY.toLowerCase().indexOf(searchTerms.COUNTRY) !== -1;
+      //data.SOCIETY_NAME.toLowerCase().indexOf(searchTerms.SOCIETY_NAME) !== -1 &&
+      return data.ZIPCODE.toString().toLowerCase().indexOf(searchTerms.ZIPCODE.toString().toLowerCase()) !== -1
+        && data.CITY.toString().toLowerCase().indexOf(searchTerms.CITY.toString().toLowerCase()) !== -1
+        && data.COUNTRY.toString().toLowerCase().indexOf(searchTerms.COUNTRY.toString().toLowerCase()) !== -1;
     }
     return filterFunction;
   }
 
-  ngOnInit() {
-    this.SOCIETY_NAME.valueChanges
+  // function that executed
+  ExecuteFilter() {
+    /*this._SOCIETY_NAME.valueChanges
       .subscribe(
         SOCIETY_NAME => {
-          this.filterValues.SOCIETY_NAME = SOCIETY_NAME;
+          this.filterValues._SOCIETY_NAME = SOCIETY_NAME;
           this.dataSource.filter = JSON.stringify(this.filterValues);
         }
-      )
+      )*/
     this.ZIPCODE.valueChanges
       .subscribe(
         ZIPCODE => {
@@ -128,30 +125,140 @@ export class TableListComponent implements AfterViewInit {
       )
   }
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-    
+
   }
 
-  @ViewChild('fileImportInput') fileImportInput: any;
-
+// function executed when file is changed
   fileChangeListener($event: any): void {
     console.log($event.target.files[0])
     this.df = $event.target.files[0]
   }
+
+  // function executed when user click on standardize button
   createFile = () => {
-    this.DATACLEANING.sendFile(this.df).subscribe(
-      data => {
-        this.dataSource = new MatTableDataSource(data);
-        this.dataSource.filterPredicate = this.createFilter();
-        this.ngOnInit();
-        this.dataSource.paginator = this.paginator;
-        //this.dataSource.sort = this.sort;
-        console.log(this.dataSource)
-      },
-      error => {
-        console.log("error ", error);
-      }
-    );
+    if (this.df != null) {
+      this.DATACLEANING.sendFile(this.df).subscribe(
+        data => {
+          // to choose witch data gonna be showing
+          this.InitializeVisualization();
+          // puts data into the datasource table
+          this.dataSource = new MatTableDataSource(data);
+          // add filter for data
+          this.dataSource.filterPredicate = this.createFilter();
+          //  execute the filter function
+          this.ExecuteFilter();
+          // execute the visualisation function
+          this.executeVisualisation();
+          // put Data into a rendered Data to export
+          this.dataSource.connect().subscribe(d => this.renderedData = d);
+          // add paginator to the data
+          this.dataSource.paginator = this.paginator;
+          console.log(this.dataSource)
+        },
+        error => {
+          console.log("error ", error);
+        }
+      );
+    }
+
+  }
+
+  // to export data table (not for all data just the showing data)
+  export() {
+    new ngxCsv(this.renderedData, 'Output');
+  }
+
+  //observable for the checkBox execute every time the checkBox is changed
+  executeVisualisation() {
+    let c1: Observable<boolean> = this.INB.valueChanges;
+    let c2: Observable<boolean> = this.EXTB.valueChanges;
+    let c3: Observable<boolean> = this.POI.valueChanges;
+    let c4: Observable<boolean> = this._ZONE.valueChanges;
+    let c5: Observable<boolean> = this._HOUSENUM.valueChanges;
+    let c6: Observable<boolean> = this._ROADNAME.valueChanges;
+    let c7: Observable<boolean> = this._POBOX.valueChanges;
+    let c8: Observable<boolean> = this._ZIPCODE.valueChanges;
+    let c9: Observable<boolean> = this._CITY.valueChanges;
+    let c10: Observable<boolean> = this._COUNTRY.valueChanges;
+    let c11: Observable<boolean> = this.ADDITIONAL.valueChanges;
+    merge(c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11).subscribe(v => {
+      this.columnDefinitions[0].show = this.INB.value;
+      this.columnDefinitions[1].show = this.EXTB.value;
+      this.columnDefinitions[2].show = this.POI.value;
+      this.columnDefinitions[3].show = this._ZONE.value;
+      this.columnDefinitions[4].show = this._HOUSENUM.value;
+      this.columnDefinitions[5].show = this._ROADNAME.value;
+      this.columnDefinitions[6].show = this._POBOX.value;
+      this.columnDefinitions[7].show = this._ZIPCODE.value;
+      this.columnDefinitions[8].show = this._CITY.value;
+      this.columnDefinitions[9].show = this._COUNTRY.value;
+      this.columnDefinitions[10].show = this.ADDITIONAL.value;
+      console.log(this.columnDefinitions);
+    });
+  }
+
+  // to initialize the visualisation with user's checkBox
+  InitializeVisualization() {
+    this.columnDefinitions = [
+      { def: 'INBUILDING', label: 'INBUILDING', show: this.INB.value },
+      { def: 'EXTBUILDING', label: 'EXTBUILDING', show: this.EXTB.value },
+      { def: 'POI_LOGISTIC', label: 'POI_LOGISTIC', show: this.POI.value },
+      { def: 'ZONE', label: 'ZONE', show: this._ZONE.value },
+      { def: 'HOUSENUM', label: 'HOUSENUM', show: this._HOUSENUM.value },
+      { def: 'ROADNAME', label: 'ROADNAME', show: this._ROADNAME.value },
+      { def: 'POBOX', label: 'POBOX', show: this._POBOX.value },
+      { def: 'ZIPCODE', label: 'ZIPCODE', show: this._ZIPCODE.value },
+      { def: 'CITY', label: 'CITY', show: this._CITY.value },
+      { def: 'COUNTRY', label: 'COUNTRY', show: this._COUNTRY.value },
+      { def: 'ADDITIONAL', label: 'ADDITIONAL', show: this.ADDITIONAL.value }
+    ]
+  }
+
+  // declaring a form group for the checkBoxes
+  form: FormGroup = new FormGroup({
+    INBUILDING: new FormControl(true),
+    EXTBUILDING: new FormControl(true),
+    POI_LOGISTIC: new FormControl(true),
+    ZONE: new FormControl(true),
+    HOUSENUM: new FormControl(true),
+    ROADNAME: new FormControl(true),
+    POBOX: new FormControl(true),
+    ZIPCODE: new FormControl(true),
+    CITY: new FormControl(true),
+    COUNTRY: new FormControl(true),
+    ADDITIONAL: new FormControl(true)
+  });
+
+  // geting the checkBox
+  INB = this.form.get('INBUILDING');
+  EXTB = this.form.get('EXTBUILDING');
+  POI = this.form.get('POI_LOGISTIC');
+  _ZONE = this.form.get('ZONE');
+  _HOUSENUM = this.form.get('HOUSENUM');
+  _ROADNAME = this.form.get('ROADNAME');
+  _POBOX = this.form.get('POBOX');
+  _ZIPCODE = this.form.get('ZIPCODE');
+  _CITY = this.form.get('CITY');
+  _COUNTRY = this.form.get('COUNTRY');
+  ADDITIONAL=this.form.get('ADDITIONAL');
+
+  //Control column ordering and which columns are displayed.
+  columnDefinitions = [
+    { def: 'INBUILDING', label: 'INBUILDING', show: this.INB.value },
+    { def: 'EXTBUILDING', label: 'EXTBUILDING', show: this.EXTB.value },
+    { def: 'POI_LOGISTIC', label: 'POI_LOGISTIC', show: this.POI.value },
+    { def: 'ZONE', label: 'ZONE', show: this._ZONE.value },
+    { def: 'HOUSENUM', label: 'HOUSENUM', show: this._HOUSENUM.value },
+    { def: 'ROADNAME', label: 'ROADNAME', show: this._ROADNAME.value },
+    { def: 'POBOX', label: 'POBOX', show: this._POBOX.value },
+    { def: 'ZIPCODE', label: 'ZIPCODE', show: this._ZIPCODE.value },
+    { def: 'CITY', label: 'CITY', show: this._CITY.value },
+    { def: 'COUNTRY', label: 'COUNTRY', show: this._COUNTRY.value },
+    { def: 'ADDITIONAL', label: 'ADDITIONAL', show: this.ADDITIONAL.value }
+  ]
+
+  // Filter data in witch columns is checked
+  getDisplayedColumns(): string[] {
+    return this.columnDefinitions.filter(cd => cd.show).map(cd => cd.def);
   }
 }

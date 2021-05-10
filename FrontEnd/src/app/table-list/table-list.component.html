@@ -7,94 +7,73 @@
                         <h4 class="card-title">File Adress Standardization</h4>
                     </div>
                     <div class="card-body">
-                        <form novalidate="" ng-reflect-form="[object Object]" class="ng-untouched ng-pristine ng-invalid">
+                        <form ng-reflect-form="[object Object]" class="ng-untouched ng-pristine ng-invalid">
                             <div>
-                                <label for="firstName">File :</label>
+                                <label for="file">File :</label>
                                 <input type="file" #fileInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)" accept=".csv" />
                                 <button mat-raised-button (click)="createFile()" class="btn pull-right">
                   Standardize
                 </button>
                             </div>
                         </form>
+                        <form [formGroup]="form" class="example-section">
+                            <label for="file">Choose columns to visualize :</label>
+                            <br/>
+                            <mat-checkbox *ngFor="let cd of columnDefinitions" [formControlName]="cd.def">
+                                {{ cd.label }}
+                            </mat-checkbox>
+                        </form>
                         <br />
 
                         <div class="table-responsive" [hidden]="dataSource.data.length === 0">
-                            <!-- Visualization -->
-                            <mat-label>Visualization :</mat-label>
-                            <section class="example-section">
-                                <mat-checkbox [(ngModel)]="HiddenSN" [checked]="step.checked">
-                                    SOCIETY NAME
-                                </mat-checkbox>
-                                <mat-checkbox [(ngModel)]="HiddenIN">
-                                    INBUILDING
-                                </mat-checkbox>
-                                <mat-checkbox [(ngModel)]="HiddenEXT">EXTBUILDING</mat-checkbox>
-                                <mat-checkbox [(ngModel)]="HiddenPOI">
-                                    POI LOGISTIC
-                                </mat-checkbox>
-                                <mat-checkbox [(ngModel)]="HiddenZONE">
-                                    ZONE
-                                </mat-checkbox>
-                                <mat-checkbox [(ngModel)]="HiddenHOUSE">HOUSE NUM</mat-checkbox>
-                                <mat-checkbox [(ngModel)]="HiddenROADNAME">
-                                    ROADNAME
-                                </mat-checkbox>
-                                <mat-checkbox [(ngModel)]="HiddenPOBOX">
-                                    POBOX
-                                </mat-checkbox>
 
-                                <mat-checkbox [(ngModel)]="HiddenCode">ZIPCODE</mat-checkbox>
-                                <mat-checkbox [(ngModel)]="HiddenCity">CITY</mat-checkbox>
-                                <mat-checkbox [(ngModel)]="HiddenCountry">
-                                    COUNTRY
-                                </mat-checkbox>
-                            </section>
                             <!-- Filtrage -->
                             <mat-label>Filter By :</mat-label>
                             <section class="example-section">
-                                <mat-checkbox [(ngModel)]="HiddenSN">
+                                <!--<mat-checkbox [(ngModel)]="HiddenSN">
                                     SOCIETY NAME
-                                </mat-checkbox>
+                                </mat-checkbox>-->
                                 <mat-checkbox [(ngModel)]="HiddenCode">ZIPCODE</mat-checkbox>
                                 <mat-checkbox [(ngModel)]="HiddenCity">CITY</mat-checkbox>
                                 <mat-checkbox [(ngModel)]="HiddenCountry">
                                     COUNTRY
                                 </mat-checkbox>
                             </section>
-
+                            <!--
                             <mat-form-field name="SOCIETY_NAME" ngDefaultControl [(ngModel)]="any" *ngIf="HiddenSN" class="filter" floatLabel="never">
                                 <mat-label>Search the society name</mat-label>
-                                <input matInput [formControl]="SOCIETY_NAME" />
+                                <input matInput [formControl]="_SOCIETY_NAME" />
                             </mat-form-field>
-
-                            <mat-form-field name="ZIPCODE" ngDefaultControl [(ngModel)]="any" *ngIf="HiddenCode" class="filter" floatLabel="never">
+-->
+                            <mat-form-field name="ZIPCODE" *ngIf="HiddenCode" class="filter" floatLabel="never">
                                 <mat-label>Search the zip code</mat-label>
                                 <input matInput [formControl]="ZIPCODE" />
                             </mat-form-field>
 
-                            <mat-form-field name="CITY" ngDefaultControl [(ngModel)]="any" *ngIf="HiddenCity" class="filter" floatLabel="never">
+                            <mat-form-field name="CITY" *ngIf="HiddenCity" class="filter" floatLabel="never">
                                 <mat-label>Search the city</mat-label>
                                 <input matInput [formControl]="CITY" />
                             </mat-form-field>
-
-                            <mat-form-field name="COUNTRY" ngDefaultControl [(ngModel)]="any" *ngIf="HiddenCountry" class="filter" floatLabel="never">
+                            <!--onkeyup="this.value = this.value.toLowerCase();"-->
+                            <mat-form-field name="COUNTRY" *ngIf="HiddenCountry" class="filter" floatLabel="never">
                                 <mat-label>Search the country</mat-label>
                                 <input matInput [formControl]="COUNTRY" />
                             </mat-form-field>
                             <br />
                             <!--Table-->
-                            <table mat-table class="mat-elevation-z8 table-hover table" [dataSource]="dataSource" matSort>
+                            <table mat-table matTableExporter bordered="true" class="mat-elevation-z8 table-hover table" #exporter="matTableExporter" [dataSource]="dataSource">
+                                <!--
                                 <ng-container matColumnDef="SOCIETY_NAME">
-                                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                                    <th mat-header-cell *matHeaderCellDef>
                                         SOCIETY NAME
                                     </th>
                                     <td mat-cell *matCellDef="let element">
                                         {{ element.SOCIETY_NAME }}
                                     </td>
-                                </ng-container>
+                                </ng-container>-->
 
-                                <ng-container matColumnDef="INBUIDING">
-                                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                                <ng-container matColumnDef="INBUILDING">
+                                    <th mat-header-cell *matHeaderCellDef>
                                         INBUILDING
                                     </th>
                                     <td mat-cell *matCellDef="let element">
@@ -103,7 +82,7 @@
                                 </ng-container>
 
                                 <ng-container matColumnDef="EXTBUILDING">
-                                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                                    <th mat-header-cell *matHeaderCellDef>
                                         EXTBUILDING
                                     </th>
                                     <td mat-cell *matCellDef="let element">
@@ -112,8 +91,8 @@
                                 </ng-container>
 
                                 <ng-container matColumnDef="POI_LOGISTIC">
-                                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
-                                        POI LOGISTIC
+                                    <th mat-header-cell *matHeaderCellDef>
+                                        POI
                                     </th>
                                     <td mat-cell *matCellDef="let element">
                                         {{ element.POI_LOGISTIC }}
@@ -121,14 +100,14 @@
                                 </ng-container>
 
                                 <ng-container matColumnDef="ZONE">
-                                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                                    <th mat-header-cell *matHeaderCellDef>
                                         ZONE
                                     </th>
                                     <td mat-cell *matCellDef="let element">{{ element.ZONE }}</td>
                                 </ng-container>
 
                                 <ng-container matColumnDef="HOUSENUM">
-                                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                                    <th mat-header-cell *matHeaderCellDef>
                                         HOUSE NUM
                                     </th>
                                     <td mat-cell *matCellDef="let element">
@@ -137,8 +116,8 @@
                                 </ng-container>
 
                                 <ng-container matColumnDef="ROADNAME">
-                                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
-                                        ROADNAME
+                                    <th mat-header-cell *matHeaderCellDef>
+                                        ROAD NAME
                                     </th>
                                     <td mat-cell *matCellDef="let element">
                                         {{ element.ROADNAME }}
@@ -146,7 +125,7 @@
                                 </ng-container>
 
                                 <ng-container matColumnDef="POBOX">
-                                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                                    <th mat-header-cell *matHeaderCellDef>
                                         POBOX
                                     </th>
                                     <td mat-cell *matCellDef="let element">
@@ -155,7 +134,7 @@
                                 </ng-container>
 
                                 <ng-container matColumnDef="ZIPCODE">
-                                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                                    <th mat-header-cell *matHeaderCellDef>
                                         ZIPCODE
                                     </th>
                                     <td mat-cell *matCellDef="let element">
@@ -164,14 +143,14 @@
                                 </ng-container>
 
                                 <ng-container matColumnDef="CITY">
-                                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                                    <th mat-header-cell *matHeaderCellDef>
                                         CITY
                                     </th>
                                     <td mat-cell *matCellDef="let element">{{ element.CITY }}</td>
                                 </ng-container>
 
                                 <ng-container matColumnDef="COUNTRY">
-                                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                                    <th mat-header-cell *matHeaderCellDef>
                                         COUNTRY
                                     </th>
                                     <td mat-cell *matCellDef="let element">
@@ -179,12 +158,23 @@
                                     </td>
                                 </ng-container>
 
-                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                                <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+                                <ng-container matColumnDef="ADDITIONAL">
+                                    <th mat-header-cell *matHeaderCellDef>
+                                        ADDITIONAL
+                                    </th>
+                                    <td mat-cell *matCellDef="let element">
+                                        {{ element.ADDITIONAL }}
+                                    </td>
+                                </ng-container>
+                                <tr mat-header-row *matHeaderRowDef="getDisplayedColumns()"></tr>
+                                <tr mat-row *matRowDef="let row; columns: getDisplayedColumns()"></tr>
                             </table>
                             <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
-                            <button mat-raised-button (click)="unitStand()" class="btn pull-right">
-                Export
+                            <button mat-raised-button (click)="exporter.exportTable('csv')" class="btn pull-right">
+                Export Table
+              </button>
+                            <button mat-raised-button (click)="export()" class="btn pull-right">
+                Export All
               </button>
                             <button mat-raised-button (click)="unitStand()" class="btn pull-right">
                 Statistics

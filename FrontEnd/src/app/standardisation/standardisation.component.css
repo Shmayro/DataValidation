@@ -1,3 +1,19 @@
 .example-section mat-checkbox {
     margin: 0px 20px 0px 3px;
 }
+
+.mat-header-cell {
+    background-color: rgb(94, 165, 223);
+    text-align: center;
+    text-decoration-color: black;
+    font-weight: bold;
+}
+
+.mat-row:nth-child(even) {
+    text-align: center;
+    background-color: rgb(221, 222, 240);
+}
+
+.mat-row:nth-child(odd) {
+    text-align: center;
+}

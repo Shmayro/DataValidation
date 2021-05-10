@@ -11,6 +11,7 @@ import re
 import numpy as np
 import unicodedata
 import requests
+import time
 from unidecode import unidecode
 import os
 
@@ -153,6 +154,7 @@ def separateNum(tab):
     LL.insert(0, ad)
     LL.insert(1, Diff)
     return LL
+
 
 def bdrules(tab):
     TT = False
@@ -1312,6 +1314,8 @@ def Address_Standardization(Address):
     return Final
 
 # Unit standardization with Django
+
+
 def StandUnit(request):
     if request.method == 'GET':
         Address = request.GET.get('Address')
@@ -1375,93 +1379,98 @@ def StandUnit(request):
         se42 = pd.Series(extraL)
         df['Extra'] = se42.values
         #t = df.to_dict('records')
-        #print(t)
+        # print(t)
     return HttpResponse(df.to_json(orient='records'))
-    #return render(request, 'standardisation.html', {'rows': t})
+    # return render(request, 'standardisation.html', {'rows': t})
 
 
 def file_Standardization(df):
-    INBUILDINGL=[]
-    EXTBUILDINGL=[]
-    ExtraL=[]
-    POILOGISTICL=[]
-    ZONEL=[]
-    HouseNumL=[]
-    RoadNameL=[]
-    POBOXL=[]
-    ZIPCODEL=[]
-    CITYL=[] 
-    COUNTRYL=[]
-    print("************",df)
-    for i in range(0,len(df)):
-        #print(i)
+    INBUILDINGL = []
+    EXTBUILDINGL = []
+    ExtraL = []
+    POILOGISTICL = []
+    ZONEL = []
+    HouseNumL = []
+    RoadNameL = []
+    POBOXL = []
+    ZIPCODEL = []
+    CITYL = []
+    COUNTRYL = []
+    print("************", df)
+    for i in range(0, len(df)):
+        # print(i)
         try:
-            R=Address_Standardization(df['ADDRESS'][i])
+            R = Address_Standardization(df['ADDRESS'][i])
             print(R)
-            INBUILDINGL.insert(i,R[1])
-            EXTBUILDINGL.insert(i,R[2])
-            POILOGISTICL.insert(i,R[4])
-            ZONEL.insert(i,R[5])
-            HouseNumL.insert(i,R[6])
-            RoadNameL.insert(i,R[7])
-            POBOXL.insert(i,R[8])
-            ZIPCODEL.insert(i,R[9])
-            CITYL.insert(i,R[10])
-            COUNTRYL.insert(i,R[11])
-            ExtraL.insert(i,R[3])
+            INBUILDINGL.insert(i, R[1])
+            EXTBUILDINGL.insert(i, R[2])
+            POILOGISTICL.insert(i, R[4])
+            ZONEL.insert(i, R[5])
+            HouseNumL.insert(i, R[6])
+            RoadNameL.insert(i, R[7])
+            POBOXL.insert(i, R[8])
+            ZIPCODEL.insert(i, R[9])
+            CITYL.insert(i, R[10])
+            COUNTRYL.insert(i, R[11])
+            ExtraL.insert(i, R[3])
 
         except:
-            #print('eeeeeeeeeeeeeeeeeeeeeeeeeee')
-            INBUILDINGL.insert(i,'NONE')
-            EXTBUILDINGL.insert(i,'NONE')
-            POILOGISTICL.insert(i,'NONE')
-            ZONEL.insert(i,'NONE')
-            HouseNumL.insert(i,'NONE')
-            RoadNameL.insert(i,'NONE')
-            POBOXL.insert(i,'NONE')
-            ZIPCODEL.insert(i,'NONE')
-            CITYL.insert(i,'NONE')
-            COUNTRYL.insert(i,'NONE')
-            ExtraL.insert(i,'NONE')
+            # print('eeeeeeeeeeeeeeeeeeeeeeeeeee')
+            INBUILDINGL.insert(i, 'NONE')
+            EXTBUILDINGL.insert(i, 'NONE')
+            POILOGISTICL.insert(i, 'NONE')
+            ZONEL.insert(i, 'NONE')
+            HouseNumL.insert(i, 'NONE')
+            RoadNameL.insert(i, 'NONE')
+            POBOXL.insert(i, 'NONE')
+            ZIPCODEL.insert(i, 'NONE')
+            CITYL.insert(i, 'NONE')
+            COUNTRYL.insert(i, 'NONE')
+            ExtraL.insert(i, 'NONE')
     #data = pd.DataFrame()
-    se21= pd.Series(INBUILDINGL)
+    se21 = pd.Series(INBUILDINGL)
     df['INBUILDING'] = se21.values
-    se22= pd.Series(EXTBUILDINGL)
+    se22 = pd.Series(EXTBUILDINGL)
     df['EXTBUILDING'] = se22.values
-    se23= pd.Series(POILOGISTICL)
+    se23 = pd.Series(POILOGISTICL)
     df['POI_LOGISTIC'] = se23.values
-    se24= pd.Series(ZONEL)
+    se24 = pd.Series(ZONEL)
     df['ZONE'] = se24.values
-    se25= pd.Series(HouseNumL)
+    se25 = pd.Series(HouseNumL)
     df['HOUSENUM'] = se25.values
-    se26= pd.Series(RoadNameL)
+    se26 = pd.Series(RoadNameL)
     df['ROADNAME'] = se26.values
-    se27= pd.Series(POBOXL)
+    se27 = pd.Series(POBOXL)
     df['POBOX'] = se27.values
-    se28= pd.Series(ZIPCODEL)
+    se28 = pd.Series(ZIPCODEL)
     df['ZIPCODE'] = se28.values
-    se29= pd.Series(CITYL)
+    se29 = pd.Series(CITYL)
     df['CITY'] = se29.values
-    se30= pd.Series(COUNTRYL)
-    df['COUNTRY'] = se30.values 
-    se31= pd.Series(ExtraL)
+    se30 = pd.Series(COUNTRYL)
+    df['COUNTRY'] = se30.values
+    se31 = pd.Series(ExtraL)
     df['ADDITIONAL'] = se31.values
     return df
 
 # File standardization with Django
+
+
 def StandFile(request):
+    start_time = time.time()
     if request.method == 'POST':
-        File=request.FILES["file"]
+        File = request.FILES["file"]
         df = pd.read_csv(File)
         # Standardization
-        print("size ********",len(df))
-        data=file_Standardization(df)
+        print("size ********", len(df))
+        data = file_Standardization(df)
+    total=time.time()-start_time
+    print(total)
     return HttpResponse(data.to_json(orient='records'))
 
 # File Standardization
 
 #df = file_Standardization(df)
-#df.to_csv('Input_Stand.csv')
+# df.to_csv('Input_Stand.csv')
 
 # Unit Address Standardization
 # address=''
