@@ -19,7 +19,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { HomeComponent } from 'app/home/home.component';
-import { MatCheckboxModule } from '@angular/material/checkbox'
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 @NgModule({
@@ -39,7 +39,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox'
     MatExpansionModule,
     MatTableExporterModule,
     MatCheckboxModule,
-    ],
+  ],
   declarations: [
     HomeComponent,
     DashboardComponent,

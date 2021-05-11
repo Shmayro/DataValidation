@@ -99,7 +99,7 @@ export class StandardisationComponent {
     this.columnDefinitions = [
       { def: 'INBUILDING', label: 'INBUILDING', show: this.INB.value },
       { def: 'EXTBUILDING', label: 'EXTBUILDING', show: this.EXTB.value },
-      { def: 'POI_LOGISTIC', label: 'POI_LOGISTIC', show: this.POI.value },
+      { def: 'POI_LOGISTIC', label: 'POI', show: this.POI.value },
       { def: 'ZONE', label: 'ZONE', show: this._ZONE.value },
       { def: 'HOUSENUM', label: 'HOUSENUM', show: this._HOUSENUM.value },
       { def: 'ROADNAME', label: 'ROADNAME', show: this._ROADNAME.value },
@@ -143,7 +143,7 @@ export class StandardisationComponent {
   columnDefinitions = [
     { def: 'INBUILDING', label: 'INBUILDING', show: this.INB.value },
     { def: 'EXTBUILDING', label: 'EXTBUILDING', show: this.EXTB.value },
-    { def: 'POI_LOGISTIC', label: 'POI_LOGISTIC', show: this.POI.value },
+    { def: 'POI_LOGISTIC', label: 'POI', show: this.POI.value },
     { def: 'ZONE', label: 'ZONE', show: this._ZONE.value },
     { def: 'HOUSENUM', label: 'HOUSENUM', show: this._HOUSENUM.value },
     { def: 'ROADNAME', label: 'ROADNAME', show: this._ROADNAME.value },

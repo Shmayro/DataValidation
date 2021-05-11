@@ -165,7 +165,8 @@ export class TableListComponent implements AfterViewInit {
 
   // to export data table (not for all data just the showing data)
   export() {
-    new ngxCsv(this.renderedData, 'Output');
+
+    new ngxCsv(this.dataSource, 'Output');
   }
 
   //observable for the checkBox execute every time the checkBox is changed
@@ -202,7 +203,7 @@ export class TableListComponent implements AfterViewInit {
     this.columnDefinitions = [
       { def: 'INBUILDING', label: 'INBUILDING', show: this.INB.value },
       { def: 'EXTBUILDING', label: 'EXTBUILDING', show: this.EXTB.value },
-      { def: 'POI_LOGISTIC', label: 'POI_LOGISTIC', show: this.POI.value },
+      { def: 'POI_LOGISTIC', label: 'POI', show: this.POI.value },
       { def: 'ZONE', label: 'ZONE', show: this._ZONE.value },
       { def: 'HOUSENUM', label: 'HOUSENUM', show: this._HOUSENUM.value },
       { def: 'ROADNAME', label: 'ROADNAME', show: this._ROADNAME.value },
@@ -246,7 +247,7 @@ export class TableListComponent implements AfterViewInit {
   columnDefinitions = [
     { def: 'INBUILDING', label: 'INBUILDING', show: this.INB.value },
     { def: 'EXTBUILDING', label: 'EXTBUILDING', show: this.EXTB.value },
-    { def: 'POI_LOGISTIC', label: 'POI_LOGISTIC', show: this.POI.value },
+    { def: 'POI_LOGISTIC', label: 'POI', show: this.POI.value },
     { def: 'ZONE', label: 'ZONE', show: this._ZONE.value },
     { def: 'HOUSENUM', label: 'HOUSENUM', show: this._HOUSENUM.value },
     { def: 'ROADNAME', label: 'ROADNAME', show: this._ROADNAME.value },
@@ -260,5 +261,10 @@ export class TableListComponent implements AfterViewInit {
   // Filter data in witch columns is checked
   getDisplayedColumns(): string[] {
     return this.columnDefinitions.filter(cd => cd.show).map(cd => cd.def);
+  }
+
+  // Get Statistics forms
+  statistics(){
+
   }
 }
