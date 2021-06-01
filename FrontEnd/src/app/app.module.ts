@@ -16,7 +16,14 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableExporterModule } from 'mat-table-exporter';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox'
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { CommonModule } from '@angular/common';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { MatSortModule } from '@angular/material/sort'
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 
 import {
   AgmCoreModule
@@ -30,15 +37,22 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     ReactiveFormsModule,
     HttpClientModule,
     ComponentsModule,
+    MatIconModule,
+    MatDialogModule,
     RouterModule,
+    MatMenuModule,
     AppRoutingModule,
     MatButtonModule,
     MatTableModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
     MatPaginatorModule,
     MatFormFieldModule,
     MatCheckboxModule,
     MatTableExporterModule,
     CommonModule,
+    MatSlideToggleModule,
+    MatSelectModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCxg05fjMIeYZMN-dRl-_WKhj2tR7AZ9U4'
     })
@@ -47,7 +61,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     AppComponent,
     AdminLayoutComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

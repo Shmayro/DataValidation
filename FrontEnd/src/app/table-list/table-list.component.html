@@ -7,7 +7,19 @@
                         <h4 class="card-title">File Adress Standardization</h4>
                     </div>
                     <div class="card-body">
-                        <form ng-reflect-form="[object Object]" class="ng-untouched ng-pristine ng-invalid">
+                        <mat-expansion-panel class="example-section" [formGroup]="form">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Choose columns to visualize
+                                </mat-panel-title>
+                                <mat-panel-description></mat-panel-description>
+                            </mat-expansion-panel-header>
+                            <mat-checkbox *ngFor="let cd of columnDefinitions" [formControlName]="cd.def">
+                                {{ cd.label }}
+                            </mat-checkbox>
+                        </mat-expansion-panel>
+                        <br />
+                        <form class="ng-untouched ng-pristine ng-invalid">
                             <div>
                                 <label for="file">File :</label>
                                 <input type="file" #fileInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)" accept=".csv" />
@@ -16,61 +28,67 @@
                 </button>
                             </div>
                         </form>
-                        <form [formGroup]="form" class="example-section">
+
+                        <!--<form [formGroup]="form" class="example-section">
                             <label for="file">Choose columns to visualize :</label>
                             <br/>
+
                             <mat-checkbox *ngFor="let cd of columnDefinitions" [formControlName]="cd.def">
                                 {{ cd.label }}
                             </mat-checkbox>
-                        </form>
+                        </form>-->
+
+                        <!--<mat-form-field appearance="fill">
+                            <mat-label>Choose columns to visualize :</mat-label>
+                            <mat-select formControl="cd" multiple>
+                                <mat-option *ngFor="let cd of columnDefinitions" [value]="cd">{{cd.label}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>-->
                         <br />
 
                         <div class="table-responsive" [hidden]="dataSource.data.length === 0">
-
                             <!-- Filtrage -->
                             <mat-label>Filter By :</mat-label>
                             <section class="example-section">
-                                <!--<mat-checkbox [(ngModel)]="HiddenSN">
-                                    SOCIETY NAME
-                                </mat-checkbox>-->
-                                <mat-checkbox [(ngModel)]="HiddenCode">ZIPCODE</mat-checkbox>
-                                <mat-checkbox [(ngModel)]="HiddenCity">CITY</mat-checkbox>
+                                <mat-checkbox [(ngModel)]="HiddenSN">Society</mat-checkbox>
+                                <mat-checkbox [(ngModel)]="HiddenCode">ZipCode</mat-checkbox>
+                                <mat-checkbox [(ngModel)]="HiddenCity">City</mat-checkbox>
                                 <mat-checkbox [(ngModel)]="HiddenCountry">
-                                    COUNTRY
+                                    Country
                                 </mat-checkbox>
                             </section>
-                            <!--
-                            <mat-form-field name="SOCIETY_NAME" ngDefaultControl [(ngModel)]="any" *ngIf="HiddenSN" class="filter" floatLabel="never">
+
+                            <mat-form-field name="Society" *ngIf="HiddenSN" class="filter" floatLabel="never">
                                 <mat-label>Search the society name</mat-label>
-                                <input matInput [formControl]="_SOCIETY_NAME" />
-                            </mat-form-field>
--->
-                            <mat-form-field name="ZIPCODE" *ngIf="HiddenCode" class="filter" floatLabel="never">
-                                <mat-label>Search the zip code</mat-label>
-                                <input matInput [formControl]="ZIPCODE" />
+                                <input matInput [formControl]="Society" />
                             </mat-form-field>
 
-                            <mat-form-field name="CITY" *ngIf="HiddenCity" class="filter" floatLabel="never">
+                            <mat-form-field name="ZipCode" *ngIf="HiddenCode" class="filter" floatLabel="never">
+                                <mat-label>Search the zip code</mat-label>
+                                <input matInput [formControl]="ZipCode" />
+                            </mat-form-field>
+
+                            <mat-form-field name="City" *ngIf="HiddenCity" class="filter" floatLabel="never">
                                 <mat-label>Search the city</mat-label>
-                                <input matInput [formControl]="CITY" />
+                                <input matInput [formControl]="City" />
                             </mat-form-field>
                             <!--onkeyup="this.value = this.value.toLowerCase();"-->
-                            <mat-form-field name="COUNTRY" *ngIf="HiddenCountry" class="filter" floatLabel="never">
+                            <mat-form-field name="Country" *ngIf="HiddenCountry" class="filter" floatLabel="never">
                                 <mat-label>Search the country</mat-label>
-                                <input matInput [formControl]="COUNTRY" />
+                                <input matInput [formControl]="Country" />
                             </mat-form-field>
                             <br />
                             <!--Table-->
                             <table mat-table matTableExporter bordered="true" class="mat-elevation-z8 table-hover table" #exporter="matTableExporter" [dataSource]="dataSource">
-                                <!--
+
                                 <ng-container matColumnDef="SOCIETY_NAME">
                                     <th mat-header-cell *matHeaderCellDef>
                                         SOCIETY NAME
                                     </th>
                                     <td mat-cell *matCellDef="let element">
-                                        {{ element.SOCIETY_NAME }}
+                                        {{ element.company }}
                                     </td>
-                                </ng-container>-->
+                                </ng-container>
 
                                 <ng-container matColumnDef="INBUILDING">
                                     <th mat-header-cell *matHeaderCellDef>
@@ -166,6 +184,12 @@
                                         {{ element.ADDITIONAL }}
                                     </td>
                                 </ng-container>
+                                <ng-container matColumnDef="Statistics">
+                                    <th mat-header-cell *matHeaderCellDef> Statistics </th>
+                                    <td mat-cell *matCellDef="let element">
+                                        <mat-icon (click)="dashboardElement(element)">dashboard</mat-icon>
+                                    </td>
+                                </ng-container>
                                 <tr mat-header-row *matHeaderRowDef="getDisplayedColumns()"></tr>
                                 <tr mat-row *matRowDef="let row; columns: getDisplayedColumns()"></tr>
                             </table>
@@ -177,8 +201,12 @@
                 Export All
               </button>
                             <button mat-raised-button (click)="statistics()" class="btn pull-right">
+                Profiling
+              </button>
+                            <button mat-raised-button (click)="dashboard(dataSource)" class="btn pull-right">
                 Statistics
               </button>
+
                         </div>
                     </div>
                 </div>

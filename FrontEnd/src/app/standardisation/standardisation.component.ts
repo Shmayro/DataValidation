@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { MatTableDataSource } from '@angular/material/table';
 import { merge, Observable } from 'rxjs';
 import { FormControl, FormGroup } from '@angular/forms';
@@ -41,7 +41,7 @@ export interface StandData {
 })
 export class StandardisationComponent {
   dataSource: MatTableDataSource<StandData>;
-  displayedColumns: string[] = ['INBUILDING', 'EXTBUILDING', 'POI_LOGISTIC', 'ZONE', 'HOUSENUM', 'ROADNAME', 'POBOX', 'ZIPCODE', 'CITY', 'COUNTRY','Extra'];
+  displayedColumns: string[] = ['INBUILDING', 'EXTBUILDING', 'POI_LOGISTIC', 'ZONE', 'HOUSENUM', 'ROADNAME', 'POBOX', 'ZIPCODE', 'CITY', 'COUNTRY','ADDITIONAL'];
   selectedAddress: any;
 
   constructor(private DATACLEANING: ApiStandartization) {
@@ -50,6 +50,7 @@ export class StandardisationComponent {
   }
 
   createAdress = () => {
+    console.log(this.selectedAddress)
     this.DATACLEANING.sendAddress(this.selectedAddress).subscribe(
       data => {
         // to choose witch data gonna be showing
@@ -77,7 +78,7 @@ export class StandardisationComponent {
     let c8: Observable<boolean> = this._ZIPCODE.valueChanges;
     let c9: Observable<boolean> = this._CITY.valueChanges;
     let c10: Observable<boolean> = this._COUNTRY.valueChanges;
-    let c11: Observable<boolean> = this.Extra.valueChanges;
+    let c11: Observable<boolean> = this.ADDITIONAL.valueChanges;
     merge(c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11).subscribe(v => {
       this.columnDefinitions[0].show = this.INB.value;
       this.columnDefinitions[1].show = this.EXTB.value;
@@ -89,7 +90,7 @@ export class StandardisationComponent {
       this.columnDefinitions[7].show = this._ZIPCODE.value;
       this.columnDefinitions[8].show = this._CITY.value;
       this.columnDefinitions[9].show = this._COUNTRY.value;
-      this.columnDefinitions[10].show = this.Extra.value;
+      this.columnDefinitions[10].show = this.ADDITIONAL.value;
       console.log(this.columnDefinitions);
     });
   }
@@ -107,7 +108,7 @@ export class StandardisationComponent {
       { def: 'ZIPCODE', label: 'ZIPCODE', show: this._ZIPCODE.value },
       { def: 'CITY', label: 'CITY', show: this._CITY.value },
       { def: 'COUNTRY', label: 'COUNTRY', show: this._COUNTRY.value },
-      { def: 'Extra', label: 'Extra', show: this.Extra.value }
+      { def: 'ADDITIONAL', label: 'ADDITIONAL', show: this.ADDITIONAL.value }
     ]
   }
 
@@ -123,7 +124,7 @@ export class StandardisationComponent {
     ZIPCODE: new FormControl(true),
     CITY: new FormControl(true),
     COUNTRY: new FormControl(true),
-    Extra: new FormControl(true)
+    ADDITIONAL: new FormControl(true)
   });
 
   // geting the checkBox
@@ -137,7 +138,7 @@ export class StandardisationComponent {
   _ZIPCODE = this.form.get('ZIPCODE');
   _CITY = this.form.get('CITY');
   _COUNTRY = this.form.get('COUNTRY');
-  Extra=this.form.get('Extra');
+  ADDITIONAL=this.form.get('ADDITIONAL');
 
   //Control column ordering and which columns are displayed.
   columnDefinitions = [
@@ -151,7 +152,7 @@ export class StandardisationComponent {
     { def: 'ZIPCODE', label: 'ZIPCODE', show: this._ZIPCODE.value },
     { def: 'CITY', label: 'CITY', show: this._CITY.value },
     { def: 'COUNTRY', label: 'COUNTRY', show: this._COUNTRY.value },
-    { def: 'Extra', label: 'Extra', show: this.Extra.value }
+    { def: 'ADDITIONAL', label: 'ADDITIONAL', show: this.ADDITIONAL.value }
   ]
 
   // Filter data in witch columns is checked

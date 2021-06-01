@@ -1,0 +1,72 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">File Verification</h4>
+                    </div>
+                    <div class="card-body">
+                        <form class="ng-untouched ng-pristine ng-invalid">
+                            <div class="form-group">
+                                <label>Type your Company name :</label>
+                                <input matInput class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="Company" type="text" id="inlineFormInputName" placeholder="Company" name="CompanyU" [(ngModel)]="selectedAddress.companyU" ng-reflect-klass="form-control" ng-reflect-name="CompanyU"
+                                />
+                                <label>Type your Adress :</label>
+                                <input matInput class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="Address" type="text" id="inlineFormInputName" placeholder="Address" name="AddressU" [(ngModel)]="selectedAddress.addressU" ng-reflect-klass="form-control" ng-reflect-name="AdressU"
+                                />
+                                <button mat-raised-button type="submit" (click)="verify()" class="btn pull-right">
+                  Verify
+                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <table mat-table class="mat-elevation-z8 table-hover table" [dataSource]="dataSource" [hidden]="dataSource.data.length === 0">
+                    <ng-container matColumnDef="companyINPUT">
+                        <th mat-header-cell *matHeaderCellDef>
+                            company INPUT
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{ element.companyINPUT }}
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="AddressINPUT">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Address INPUT
+                        </th>
+                        <td mat-cell *matCellDef="let element">{{ element.AddressINPUT }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="companyOUTPUT">
+                        <th mat-header-cell *matHeaderCellDef>
+                            company OUTPUT
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{ element.companyOUTPUT }}
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="AddressOUTPUT">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Address OUTPUT
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{ element.AddressOUTPUT }}
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="getDisplayedColumns()"></tr>
+                    <tr mat-row *matRowDef="let row; columns: getDisplayedColumns()"></tr>
+
+                    <tr class="mat-row" *matNoDataRow>
+                        <td class="mat-cell" colspan="4">
+                            No data matching the filter
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

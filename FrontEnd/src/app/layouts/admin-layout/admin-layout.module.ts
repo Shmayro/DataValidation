@@ -7,6 +7,8 @@ import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { UserProfileComponent } from '../../user-profile/user-profile.component';
 import { TableListComponent } from '../../table-list/table-list.component';
 import { StandardisationComponent } from 'app/standardisation/standardisation.component';
+import {UnitverifComponent} from 'app/unitverif/unitverif.component'
+import {FileverifComponent} from 'app/fileverif/fileverif.component'
 import { MapsComponent } from '../../maps/maps.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
@@ -20,7 +22,13 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { HomeComponent } from 'app/home/home.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { MatSortModule} from '@angular/material/sort'
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import { SafePipe } from '../../dashboard/safe.pipe';
 
 @NgModule({
   imports: [
@@ -28,25 +36,34 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
     ReactiveFormsModule,
+    MatIconModule,
     MatButtonModule,
     MatRippleModule,
+    MatDialogModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatMenuModule,
     MatTooltipModule,
     MatTableModule,
     MatPaginatorModule,
     MatExpansionModule,
     MatTableExporterModule,
     MatCheckboxModule,
+    MatSlideToggleModule,
   ],
   declarations: [
+    SafePipe,
     HomeComponent,
     DashboardComponent,
     UserProfileComponent,
     TableListComponent,
     StandardisationComponent,
     MapsComponent,
+    UnitverifComponent,
+    FileverifComponent,
   ]
 })
 

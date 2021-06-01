@@ -1,0 +1,58 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Unit Verification</h4>
+                    </div>
+                    <div class="card-body">
+                        <form class="ng-untouched ng-pristine ng-invalid">
+                            <div class="form-group">
+                                <label>Type your Company name :</label>
+                                <input matInput class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="Company" type="text" id="inlineFormInputName" placeholder="Company" name="CompanyU" [(ngModel)]="selectedAddress.companyU" ng-reflect-klass="form-control" ng-reflect-name="CompanyU"
+                                />
+                                <label>Type your Adress :</label>
+                                <input matInput class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="Address" type="text" id="inlineFormInputName" placeholder="Address" name="AddressU" [(ngModel)]="selectedAddress.addressU" ng-reflect-klass="form-control" ng-reflect-name="AdressU"
+                                />
+                                <button mat-raised-button type="submit" (click)="verify()" class="btn pull-right">
+                  Verify
+                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card" *ngIf="showing">
+                    <div class="card-body container" [class.show]="show">
+                        <label>{{ companyINPUT }}</label>
+                        <br />
+                        <label>{{ AddressOUTPUT }}</label>
+                        <br />
+                        <label><b>INBUILDING : </b>{{ INBUILDINGOUTPUT }}</label>
+                        <br />
+                        <label><b>EXTBUILDING : </b>{{ EXTBUILDINGOUTPUT }}</label>
+                        <br />
+                        <label><b>POILOGISTIC : </b>{{ POILOGISTICOUTPUT }}</label>
+                        <br />
+                        <label><b>ZONE : </b>{{ ZONEOUTPUT }}</label>
+                        <br />
+                        <label><b>HOUSENUM : </b>{{ HouseNumOUTPUT }}</label>
+                        <br />
+                        <label><b>ROADNAME : </b>{{ RoadNameOUTPUT }}</label>
+                        <br />
+                        <label><b>POBOX : </b>{{ POBOXOUTPUT }}</label>
+                        <br />
+                        <label><b>ZIPCODE : </b>{{ zipcodeOUTPUT }}</label>
+                        <br />
+                        <label><b>CITY : </b>{{ cityOUTPUT }}</label>
+                        <br />
+                        <label><b>COUNTRY : </b>{{ countryOUTPUT }}</label>
+                    </div>
+                    <button mat-raised-button (click)="show = !show">
+            {{ show ? 'Show less' : 'Show More' }}
+          </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

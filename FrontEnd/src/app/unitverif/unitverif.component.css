@@ -1,0 +1,16 @@
+.container {
+    font-size: 18px;
+    line-height: 10px;
+    height: 70px;
+    overflow: hidden;
+    margin-left: 0%;
+}
+
+.container label {
+    color: black;
+}
+
+.show {
+    overflow: visible;
+    height: auto;
+}

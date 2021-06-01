@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,6 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 
 # Application definition
 
@@ -43,6 +46,7 @@ INSTALLED_APPS = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
+
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:4200",
 ]
@@ -68,7 +72,7 @@ ROOT_URLCONF = 'DataValidation.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -87,10 +91,18 @@ WSGI_APPLICATION = 'DataValidation.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'TransportRefDB92'
+    }
+}
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'TransportRefDB92',
     }
 }
 
@@ -130,7 +142,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/

@@ -7,22 +7,36 @@
                         <h4 class="card-title">Unit Standardization</h4>
                     </div>
                     <div class="card-body">
-                        <form ng-reflect-form="[object Object]" class="ng-untouched ng-pristine ng-invalid">
+                        <!--<form [formGroup]="form" class="example-section">
+                            <label>Choose columns to visualize :</label>
+                            <br />
+                            <mat-checkbox *ngFor="let cd of columnDefinitions" [formControlName]="cd.def">
+                                {{ cd.label }}
+                            </mat-checkbox>
+                        </form>-->
+                        <mat-expansion-panel class="example-section" [formGroup]="form">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Choose columns to visualize
+                                </mat-panel-title>
+                                <mat-panel-description>
+
+                                </mat-panel-description>
+                            </mat-expansion-panel-header>
+                            <mat-checkbox *ngFor="let cd of columnDefinitions" [formControlName]="cd.def">
+                                {{ cd.label }}
+                            </mat-checkbox>
+                        </mat-expansion-panel>
+                        <br/>
+                        <form class="ng-untouched ng-pristine ng-invalid">
                             <div class="form-group">
-                                <label for="firstName">Unit Adress :</label>
+                                <label for="firstName">Type your Adress :</label>
                                 <input matInput class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="Address" type="text" id="inlineFormInputName" placeholder="Address" name="AddressU" [(ngModel)]="selectedAddress.addressU" ng-reflect-klass="form-control" ng-reflect-name="AdressU"
                                 />
                                 <button mat-raised-button type="submit" (click)="createAdress()" class="btn pull-right">
                   Standardize
                 </button>
                             </div>
-                        </form>
-                        <form [formGroup]="form" class="example-section">
-                            <label for="firstName">Choose columns to visualize :</label>
-                            <br/>
-                            <mat-checkbox *ngFor="let cd of columnDefinitions" [formControlName]="cd.def">
-                                {{ cd.label }}
-                            </mat-checkbox>
                         </form>
                     </div>
                 </div>
@@ -110,12 +124,12 @@
                         <td mat-cell *matCellDef="let element">{{ element.COUNTRY }}</td>
                     </ng-container>
 
-                    <ng-container matColumnDef="Extra">
+                    <ng-container matColumnDef="ADDITIONAL">
                         <th mat-header-cell *matHeaderCellDef>
-                            EXTRA
+                            ADDITIONAL
                         </th>
                         <td mat-cell *matCellDef="let element">
-                            {{ element.Extra }}
+                            {{ element.ADDITIONAL }}
                         </td>
                     </ng-container>
 
