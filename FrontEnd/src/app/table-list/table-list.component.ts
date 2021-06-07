@@ -100,6 +100,7 @@ export class TableListComponent {
     City: '',
     Country: ''
   };
+  value: number;
 
   constructor(private DATACLEANING: ApiStandartization, public dialog: MatDialog, private router: Router) {
 
@@ -109,7 +110,7 @@ export class TableListComponent {
   }
   // function returns tha data of the choosing filter
   createFilter(): (data: any, filter: string) => boolean {
-    let filterFunction = function (data, filter): boolean {
+    let filterFunction = function (data: any, filter: any): boolean {
       let searchTerms = JSON.parse(filter);
       return data.company.toString().toLowerCase().indexOf(searchTerms.Society.toString().toLowerCase()) !== -1
         && data.ZIPCODE.toString().toLowerCase().indexOf(searchTerms.ZipCode.toString().toLowerCase()) !== -1
@@ -125,7 +126,6 @@ export class TableListComponent {
           data => {
             this.nbAbr = data[0].nb;
             resolve(this.nbAbr)
-            console.log(this.nbAbr)
           }
         )
       }, 100);
@@ -139,20 +139,18 @@ export class TableListComponent {
           data => {
             this.nbCorr = data[0].nbtot;
             resolve(this.nbCorr)
-            console.log(this.nbCorr)
           }
         )
       }, 100);
     });
   }
-  getOptions(nbAbr: number, nbCorr: number) {
-    console.log(nbAbr, nbCorr)
+  getOptions(nbAbr: number, nbCorr: number, txt: string) {
     this.options = {
       chart: {
         type: 'column',
       },
       title: {
-        text: 'Number of abbreviation & TypeErrorCorrection in this adress ',
+        text: txt,
       },
       subtitle: {
         text: 'statistics'
@@ -199,7 +197,6 @@ export class TableListComponent {
         }
       }]
     }
-    console.log(nbAbr)
     return this.options
   }
 
@@ -209,8 +206,8 @@ export class TableListComponent {
 
     nbAbr = await this.getNbAbr(element)
     nbCorr = await this.getNbCorr(element)
-
-    this.getOptions(nbAbr, nbCorr)
+    let txt = 'Number of abbreviation & TypeErrorCorrection in this adress'
+    this.getOptions(nbAbr, nbCorr, txt)
 
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
       width: '600px',
@@ -220,16 +217,19 @@ export class TableListComponent {
   }
 
   // dashboard element
-  async dashboar(element: any) {
-    let nbAbr: any, nbCorr: any
+  dashboard() {
 
-    nbAbr = await this.getNbAbr(element)
-    nbCorr = await this.getNbCorr(element)
-
-    this.getOptions(nbAbr, nbCorr)
+    let nbArr = 0
+    let nbCorr = 0
+    let txt = 'Number of abbreviation & TypeErrorCorrection in all the table'
+    for (let index = 0; index < this.dataFrame.length; index++) {
+      nbArr += this.dataFrame[index].nbArr
+      nbCorr += this.dataFrame[index].nbCorr
+    }
+    this.getOptions(nbArr, nbCorr, txt)
 
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      width: '600px',
+      width: '800px',
       data: this.options
     });
     Highcharts.chart('container', this.options)
@@ -274,16 +274,18 @@ export class TableListComponent {
   // function executed when user click on standardize button
   createFile = () => {
     if (this.df != null) {
+      this.value = 0
       this.DATACLEANING.sendFile(this.df).subscribe(
         data => {
+          this.value = 10
           this.dataFrame = data;
-          // to choose witch data gonna be showing
+          // to choose witch data gonna be showing in the table
           this.InitializeVisualization();
           // puts data into the datasource table
           this.dataSource = new MatTableDataSource(data);
           // add filter for data
           this.dataSource.filterPredicate = this.createFilter();
-          //  execute the filter function
+          // execute the filter function
           this.ExecuteFilter();
           // execute the visualisation function
           this.executeVisualisation();
@@ -302,7 +304,7 @@ export class TableListComponent {
 
   // to export data table 
   export() {
-    const replacer = (key, value) => value === null ? '' : value; // specify how you want to handle null values here
+    const replacer = (key: any, value: any) => value === null ? '' : value; // specify how you want to handle null values here
     const header = Object.keys(this.dataSource.data[0]);
     let csv = this.dataSource.data.map(row => header.map(fieldName => JSON.stringify(row[fieldName], replacer)).join(','));
     csv.unshift(header.join(','));

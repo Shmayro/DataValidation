@@ -15,7 +15,8 @@ import os
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+print("base :: ",BASE_DIR)
 
 
 # Quick-start development settings - unsuitable for production
@@ -29,8 +30,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-#SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
-
+SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
+print("setting path :: ",SETTINGS_PATH)
 # Application definition
 
 INSTALLED_APPS = [
@@ -91,7 +92,7 @@ WSGI_APPLICATION = 'DataValidation.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -104,8 +105,14 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'TransportRefDB92',
     }
-}
+}'''
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': 'http://127.0.0.1:8000/',
+    }
+}
 DEFAULT_AUTHENTICATION_CLASSES= (
     'rest_framework.authentication.SessionAuthentication',
     'rest_framework.authentication.BasicAuthentication'

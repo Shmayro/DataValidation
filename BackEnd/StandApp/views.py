@@ -14,10 +14,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
-from rest_framework.response import Response
 from pandas_profiling import ProfileReport
-from unidecode import unidecode
-from bs4 import BeautifulSoup
 import matplotlib
 matplotlib.use('agg')
 
@@ -578,18 +575,18 @@ def HouseSearch(L):
 def ExtractLocality(Addr, dfcity):
     Addr = Addr.upper()
     Lfinal = []
-    TT=False
-    L = Addr.split()                 
+    TT = False
+    L = Addr.split()
     FF = False
     TOTO = False
     pos = []
     t = 0
-    ZipCode='NONE'
-    CITY='NONE'
-    Country='NONE'
-    cityL=get_list_city(dfcity)
-    if len(Addr.split())==1:
-        if Addr in cityL :
+    ZipCode = 'NONE'
+    CITY = 'NONE'
+    Country = 'NONE'
+    cityL = get_list_city(dfcity)
+    if len(Addr.split()) == 1:
+        if Addr in cityL:
 
             Lfinal.insert(0, 'NONE')
             Lfinal.insert(1, Addr)
@@ -600,85 +597,90 @@ def ExtractLocality(Addr, dfcity):
         for j in range(0, len(L)):
             if L[j].isdigit():
                 if len(L[j]) == 5 and L[j - 1] != 'BP' and L[j - 1] != 'PO' and L[j - 1] != 'BOX':
-                                    
+
                     ZipCode = L[j]
                     TOTO = True
                     pos.insert(t, j)
-                    t = t + 1              
+                    t = t + 1
                     try:
-                            C = L[j + 1] + ' ' + L[j + 2]+' ' + L[j + 3] + ' ' + L[j + 4]+ ' ' + L[j + 5]
-                            FF=False
-                            k=0
-                            while k<len(cityL) and FF==False:
-                                if C == cityL[k]:
-                                    FF = True
-                                    D = L[j + 1] + ' ' + L[j + 2] + ' ' + L[j + 3] + ' ' + L[j + 4] + ' ' + L[j + 5] 
-                                    CITY = D 
-                                else :
-                                    k=k+1
+                        C = L[j + 1] + ' ' + L[j + 2]+' ' + \
+                            L[j + 3] + ' ' + L[j + 4] + ' ' + L[j + 5]
+                        FF = False
+                        k = 0
+                        while k < len(cityL) and FF == False:
+                            if C == cityL[k]:
+                                FF = True
+                                D = L[j + 1] + ' ' + L[j + 2] + ' ' + \
+                                    L[j + 3] + ' ' + L[j + 4] + ' ' + L[j + 5]
+                                CITY = D
+                            else:
+                                k = k+1
                     except:
                         pass
 
                     if FF == False:
                         try:
-                            C = L[j + 1] + ' ' + L[j + 2] +' ' + L[j + 3] + ' ' + L[j + 4]
-                            FF=False
-                            k=0
-                            while k<len(cityL) and FF==False:
+                            C = L[j + 1] + ' ' + L[j + 2] + \
+                                ' ' + L[j + 3] + ' ' + L[j + 4]
+                            FF = False
+                            k = 0
+                            while k < len(cityL) and FF == False:
                                 if C == cityL[k]:
                                     FF = True
-                                    D = L[j + 1] + ' ' + L[j + 2] + ' ' + L[j + 3] + ' ' + L[j + 4] 
+                                    D = L[j + 1] + ' ' + L[j + 2] + \
+                                        ' ' + L[j + 3] + ' ' + L[j + 4]
                                     CITY = D
                                 else:
-                                    k=k+1
+                                    k = k+1
                         except:
                             pass
 
                     if FF == False:
                         try:
-                            C = L[j + 1] + ' ' + L[j + 2] +' ' + L[j + 3] 
-                            FF=False
-                            k=0
-                            while k<len(cityL) and FF==False:
+                            C = L[j + 1] + ' ' + L[j + 2] + ' ' + L[j + 3]
+                            FF = False
+                            k = 0
+                            while k < len(cityL) and FF == False:
                                 if C == cityL[k]:
                                     FF = True
-                                    D = L[j + 1] + ' ' + L[j + 2] + ' ' + L[j + 3]
+                                    D = L[j + 1] + ' ' + \
+                                        L[j + 2] + ' ' + L[j + 3]
                                     CITY = D
                                 else:
-                                    k=k+1
+                                    k = k+1
                         except:
                             pass
 
                     if FF == False:
                         try:
-                            C = L[j + 1] + ' ' + L[j + 2] 
-                            FF=False
-                            k=0
-                            while k<len(cityL) and FF==False:
+                            C = L[j + 1] + ' ' + L[j + 2]
+                            FF = False
+                            k = 0
+                            while k < len(cityL) and FF == False:
                                 if C == cityL[k]:
                                     FF = True
                                     D = L[j + 1] + ' ' + L[j + 2]
                                     CITY = D
                                 else:
-                                    k=k+1
+                                    k = k+1
                         except:
                             pass
                     if FF == False:
-                            try:
-                                C=L[j + 1]
-                                FF=False
-                                k=0
-                                while k<len(cityL) and FF==False:
-                                    if C == cityL[k]:
-                                        FF = True
-                                        CITY = L[j + 1]
-                                    else:
-                                        k=k+1
-                            except:
-                                pass 
-        if FF==False:
-            CITY='NONE'
-                                
+                        try:
+                            C = L[j + 1]
+                            FF = False
+                            k = 0
+                            while k < len(cityL) and FF == False:
+                                if C == cityL[k]:
+                                    FF = True
+                                    CITY = L[j + 1]
+                                else:
+                                    k = k+1
+                        except:
+                            pass
+        if FF == False:
+            CITY = 'NONE'
+
         leng = len(L)
         C = leng - 1
         C1 = leng - 2
@@ -692,21 +694,21 @@ def ExtractLocality(Addr, dfcity):
             t = t + 1
         else:
             Country = 'NONE'
-        if ZipCode !='NONE' and CITY !='NONE' and Country !='NONE' :
-                C=ZipCode+' '+CITY+' '+Country
-                Addr=Addr.replace(C,' ')
-        elif CITY !='NONE' and Country !='NONE' :
-                C=CITY+' '+Country
-                Addr=Addr.replace(C,' ')
-        elif ZipCode !='NONE' and Country !='NONE' :
-                C=ZipCode+' '+Country
-                Addr=Addr.replace(C,' ')
-        elif ZipCode !='NONE' and CITY !='NONE' and Country == 'NONE':
-                C=ZipCode+' '+CITY
-                Addr=Addr.replace(C,' ')
-        elif ZipCode =='NONE' and CITY !='NONE' and Country == 'NONE':
-                C=CITY
-                Addr=Addr.replace(C,' ')
+        if ZipCode != 'NONE' and CITY != 'NONE' and Country != 'NONE':
+            C = ZipCode+' '+CITY+' '+Country
+            Addr = Addr.replace(C, ' ')
+        elif CITY != 'NONE' and Country != 'NONE':
+            C = CITY+' '+Country
+            Addr = Addr.replace(C, ' ')
+        elif ZipCode != 'NONE' and Country != 'NONE':
+            C = ZipCode+' '+Country
+            Addr = Addr.replace(C, ' ')
+        elif ZipCode != 'NONE' and CITY != 'NONE' and Country == 'NONE':
+            C = ZipCode+' '+CITY
+            Addr = Addr.replace(C, ' ')
+        elif ZipCode == 'NONE' and CITY != 'NONE' and Country == 'NONE':
+            C = CITY
+            Addr = Addr.replace(C, ' ')
     Addr = re.sub("\s\s+", " ", Addr)
     Addr = Addr.strip()
     Lfinal.insert(0, ZipCode)
@@ -1352,6 +1354,8 @@ def StandUnit(request):
         extraL = []
         confidenceL = []
         IND = []
+        nbArr = []
+        nbCorr = []
         j = 0
         Add.insert(j, cv[0])
         INBUILDINGL.insert(j, cv[1])
@@ -1365,6 +1369,8 @@ def StandUnit(request):
         zipcodeL.insert(j, cv[9])
         cityL.insert(j, cv[10])
         countryL.insert(j, cv[11])
+        nbArr.insert(j, cv[13])
+        nbCorr.insert(j, cv[14])
         j = j+1
         df = pd.DataFrame()
         se30 = pd.Series(company)
@@ -1393,6 +1399,10 @@ def StandUnit(request):
         df['COUNTRY'] = se41.values
         se42 = pd.Series(extraL)
         df['ADDITIONAL'] = se42.values
+        se43 = pd.Series(nbArr)
+        df['nbArr'] = se43.values
+        se44 = pd.Series(nbCorr)
+        df['nbCorr'] = se44.values
         # t = df.to_dict('records')
         # print(t)
     return HttpResponse(df.to_json(orient='records'))
@@ -1404,6 +1414,8 @@ def pandasProfiling(request):
         File = JSONParser().parse(request)
         newdf1 = pd.DataFrame(File)
         # print("3333", newdf1)
+        del newdf1['nbArr']
+        del newdf1['nbCorr']
         newdf1.columns = ['company', 'ADDRESS', 'INBUILDING', 'EXTBUILDING', 'POI_LOGISTIC',
                           'ZONE', 'HOUSENUM', 'ROADNAME', 'POBOX', 'ZIPCODE', 'CITY', 'COUNTRY', 'ADDITIONAL']
         print(newdf1)
@@ -1411,11 +1423,11 @@ def pandasProfiling(request):
         # profile = ProfileReport(newdf1, title="Pandas Profiling Report", minimal=True)
         profile = ProfileReport(newdf1, title="Data Standardization Report")
         # profile
-        profile.to_file(output_file="templates/profiling.html")
-        html = open('templates/profiling.html', 'r')
+        profile.to_file(output_file="../../FrontEnd/profiling.html")
+        html = open('../../FrontEnd/profiling.html', 'r')
         mystr = html.read()
         # print(mystr)
-        template = loader.get_template('profiling.html')
+        template = loader.get_template('../../FrontEnd/profiling.html')
         # print(template.read())
     # return redirect('profiling.html')
     # return render(request, 'profiling.html', content_type='application/xhtml+xml')
@@ -1453,7 +1465,7 @@ def getAbbreviation(request):
 def getTypoErrorCorrection(request):
     if request.method == 'GET':
         Address = request.GET.get('Address')
-        print("adress : ",Address)
+        print("adress : ", Address)
         Address = Address.upper()
         # typoerrorcorrection
         cv = typoerrorcorrection(Address)
@@ -1481,8 +1493,10 @@ def getNbStand(request):
         df = pd.DataFrame()
         se30 = pd.Series(Address)
         df['adresse'] = se30.values
+        '''
         se32 = pd.Series(nbtot)
         df['nbtot'] = se32.values
+        '''
 
     return HttpResponse(df.to_json(orient='records'))
 
@@ -1499,6 +1513,8 @@ def file_Standardization(df):
     ZIPCODEL = []
     CITYL = []
     COUNTRYL = []
+    nbArr = []
+    nbCorr = []
     print("************", df)
     for i in range(0, len(df)):
         # print(i)
@@ -1516,6 +1532,8 @@ def file_Standardization(df):
             CITYL.insert(i, R[10])
             COUNTRYL.insert(i, R[11])
             ExtraL.insert(i, R[3])
+            nbArr.insert(i, R[13])
+            nbCorr.insert(i, R[14])
 
         except:
             # print('eeeeeeeeeeeeeeeeeeeeeeeeeee')
@@ -1530,6 +1548,8 @@ def file_Standardization(df):
             CITYL.insert(i, 'NONE')
             COUNTRYL.insert(i, 'NONE')
             ExtraL.insert(i, 'NONE')
+            nbArr.insert(i, 0)
+            nbCorr.insert(i, 0)
     # data = pd.DataFrame()
     se21 = pd.Series(INBUILDINGL)
     df['INBUILDING'] = se21.values
@@ -1553,6 +1573,10 @@ def file_Standardization(df):
     df['COUNTRY'] = se30.values
     se31 = pd.Series(ExtraL)
     df['ADDITIONAL'] = se31.values
+    se32 = pd.Series(nbArr)
+    df['nbArr'] = se32.values
+    se33 = pd.Series(nbCorr)
+    df['nbCorr'] = se33.values
     return df
 
 # File standardization with Django
@@ -1578,124 +1602,120 @@ client = MongoClient('localhost', 27017)
 
 # Nom de la base = TransportRefDB92
 # Nom de la collection = Companies92
-db = client['TransportRefDB92']
-collection = db['Companies92']
+db = client['TransportRefDB93']
+collection = db['companies93']
 
 
 # MAtching avec la base de reference
 def RefDBMatching(CompanyName, Addr, INBUILDING, EXTBUILDING, POILOGISTIC, ZONE, HouseNum, RoadName, POBOX, city, country, ADDITIONAL):
-
-    # R = ExtractLocality(Addr,dfcity)
-    # city = R[1]
-    # country = R[2]
-    # print(db)
-    print(CompanyName, city)
-    print(collection.find({'company': CompanyName}).count())
-    print(CompanyName, Addr, INBUILDING, EXTBUILDING, POILOGISTIC, ZONE, HouseNum, RoadName, POBOX, city, country)
-    z = collection.find({'company': CompanyName, 'INBUILDING': INBUILDING,
-                         'EXTBUILDING': EXTBUILDING,
-                         'POILOGISTIC': POILOGISTIC, 'ZONE': ZONE,
-                         'HouseNum': HouseNum,
-                         'RoadName': RoadName, 'POBOX': POBOX,
-                         'city': city, 'country': country})
+    #R = ExtractLocality(Addr,dfcity)
+    #city = R[1]
+    #country = R[2]
+    print("test", db)
+    print(collection.find({'company.Name': {'$regex': CompanyName}}).count())
+    z = collection.find({'company.Name': {'$regex': CompanyName}, 'company.Address.INBUILDING': INBUILDING,
+                         'company.Address.EXTBUILDING': EXTBUILDING,
+                         'company.Address.POILOGISTIC': POILOGISTIC, 'company.Address.ZONE': ZONE,
+                         'company.Address.HouseNum': HouseNum,
+                         'company.Address.RoadName': RoadName, 'company.Address.POBOX': POBOX,
+                         'company.Address.city': city, 'company.Address.country': country})
     # 2
-    print("test : ",z.count())
     if (INBUILDING != 'NONE' and EXTBUILDING != 'NONE' and
         POILOGISTIC != 'NONE' and ZONE != 'NONE' and HouseNum != 'NONE'
             and RoadName != 'NONE' and POBOX != 'NONE' and city != 'NONE') or (z.count() == 0):
-        z = collection.find({'company': CompanyName, 'INBUILDING': INBUILDING,
-                             'EXTBUILDING': EXTBUILDING,
-                             'POILOGISTIC': POILOGISTIC, 'ZONE': ZONE,
-                             'HouseNum': HouseNum,
-                             'RoadName': RoadName, 'POBOX': POBOX,
-                             'city': city, 'country': country})
+        z = collection.find({'company.Name': {'$regex': CompanyName}, 'company.Address.INBUILDING': INBUILDING,
+                             'company.Address.EXTBUILDING': EXTBUILDING,
+                             'company.Address.POILOGISTIC': POILOGISTIC, 'company.Address.ZONE': ZONE,
+                             'company.Address.HouseNum': HouseNum,
+                             'company.Address.RoadName': RoadName, 'company.Address.POBOX': POBOX,
+                             'company.Address.city': city, 'company.Address.country': country})
     # 3
     if (INBUILDING != 'NONE' and EXTBUILDING != 'NONE' and
         POILOGISTIC != 'NONE' and ZONE != 'NONE' and HouseNum != 'NONE'
             and RoadName != 'NONE' and city != 'NONE') or (z.count() == 0):
-        z = collection.find({'company': CompanyName, 'INBUILDING': INBUILDING,
-                             'EXTBUILDING': EXTBUILDING,
-                             'POILOGISTIC': POILOGISTIC, 'ZONE': ZONE,
-                             'HouseNum': HouseNum,
-                             'RoadName': RoadName, 'city': city,
-                             'country': country})
+        z = collection.find({'company.Name': {'$regex': CompanyName}, 'company.Address.INBUILDING': INBUILDING,
+                             'company.Address.EXTBUILDING': EXTBUILDING,
+                             'company.Address.POILOGISTIC': POILOGISTIC, 'company.Address.ZONE': ZONE,
+                             'company.Address.HouseNum': HouseNum,
+                             'company.Address.RoadName': RoadName, 'company.Address.city': city,
+                             'company.Address.country': country})
     # 4
     if (INBUILDING != 'NONE' and EXTBUILDING != 'NONE' and
         POILOGISTIC != 'NONE' and HouseNum != 'NONE' and RoadName != 'NONE' and
             city != 'NONE') or (z.count() == 0):
-        z = collection.find({'company': CompanyName, 'INBUILDING': INBUILDING,
-                             'EXTBUILDING': EXTBUILDING,
-                             'POILOGISTIC': POILOGISTIC, 'HouseNum': HouseNum,
-                             'RoadName': RoadName, 'city': city,
-                             'country': country})
+        z = collection.find({'company.Name': {'$regex': CompanyName}, 'company.Address.INBUILDING': INBUILDING,
+                             'company.Address.EXTBUILDING': EXTBUILDING,
+                             'company.Address.POILOGISTIC': POILOGISTIC, 'company.Address.HouseNum': HouseNum,
+                             'company.Address.RoadName': RoadName, 'company.Address.city': city,
+                             'company.Address.country': country})
     # 5
     if (INBUILDING != 'NONE' and EXTBUILDING != 'NONE' and
             HouseNum != 'NONE' and RoadName != 'NONE' and city != 'NONE') or (z.count() == 0):
-        z = collection.find({'company': CompanyName, 'INBUILDING': INBUILDING,
-                             'EXTBUILDING': EXTBUILDING,
-                             'HouseNum': HouseNum, 'RoadName': RoadName,
-                             'city': city, 'country': country})
+        z = collection.find({'company.Name': {'$regex': CompanyName}, 'company.Address.INBUILDING': INBUILDING,
+                             'company.Address.EXTBUILDING': EXTBUILDING,
+                             'company.Address.HouseNum': HouseNum, 'company.Address.RoadName': RoadName,
+                             'company.Address.city': city, 'company.Address.country': country})
     # 6
     if (EXTBUILDING != 'NONE' and HouseNum != 'NONE' and RoadName != 'NONE'
             and city != 'NONE') or (z.count() == 0):
-        z = collection.find({'company': CompanyName, 'EXTBUILDING': EXTBUILDING,
-                             'HouseNum': HouseNum, 'RoadName': RoadName,
-                             'city': city, 'country': country})
+        z = collection.find({'company.Name': {'$regex': CompanyName}, 'company.Address.EXTBUILDING': EXTBUILDING,
+                             'company.Address.HouseNum': HouseNum, 'company.Address.RoadName': RoadName,
+                             'company.Address.city': city, 'company.Address.country': country})
 
     # 7
     if (INBUILDING != 'NONE' and HouseNum != 'NONE' and RoadName != 'NONE'
             and city != 'NONE') or (z.count() == 0):
-        z = collection.find({'company': CompanyName, 'INBUILDING': INBUILDING,
-                             'HouseNum': HouseNum, 'RoadName': RoadName,
-                             'city': city, 'country': country})
+        z = collection.find({'company.Name': {'$regex': CompanyName}, 'company.Address.INBUILDING': INBUILDING,
+                             'company.Address.HouseNum': HouseNum, 'company.Address.RoadName': RoadName,
+                             'company.Address.city': city, 'company.Address.country': country})
     # 8
     if (ZONE != 'NONE' and HouseNum != 'NONE' and RoadName != 'NONE'
             and city != 'NONE') or (z.count() == 0):
-        z = collection.find({'company': CompanyName, 'ZONE': ZONE,
-                             'HouseNum': HouseNum, 'RoadName': RoadName,
-                             'city': city, 'country': country})
+        z = collection.find({'company.Name': {'$regex': CompanyName}, 'company.Address.ZONE': ZONE,
+                             'company.Address.HouseNum': HouseNum, 'company.Address.RoadName': RoadName,
+                             'company.Address.city': city, 'company.Address.country': country})
 
     # 9
     if (ZONE != 'NONE' and city != 'NONE') or (z.count() == 0):
-        z = collection.find({'company': CompanyName, 'ZONE': ZONE,
-                            'city': city, 'country': country})
+        z = collection.find({'company.Name': {'$regex': CompanyName}, 'company.Address.ZONE': ZONE,
+                            'company.Address.city': city, 'company.Address.country': country})
 
     # 10
     if (HouseNum != 'NONE' and RoadName != 'NONE' and city != 'NONE') or (z.count() == 0):
-        z = collection.find({'company': CompanyName, 'HouseNum': HouseNum,
-                             'RoadName': RoadName, 'city': city,
-                             'country': country})
+        z = collection.find({'company.Name': {'$regex': CompanyName}, 'company.Address.HouseNum': HouseNum,
+                             'company.Address.RoadName': RoadName, 'company.Address.city': city,
+                             'company.Address.country': country})
 
     # 11
     if (RoadName != 'NONE' and city != 'NONE') or (z.count() == 0):
-        z = collection.find({'company': CompanyName,
-                             'RoadName': RoadName, 'city': city,
-                             'country': country})
+        z = collection.find({'company.Name': {'$regex': CompanyName},
+                             'company.Address.RoadName': RoadName, 'company.Address.city': city,
+                             'company.Address.country': country})
     # 12
     if (city != 'NONE') or (z.count() == 0):
         z = collection.find(
-            {'company': CompanyName,  'city': city})
+            {'company.Name': {'$regex': CompanyName},  'company.Address.city': city})
     # if (z.count()==0):
-    #	z = collection.find({'company': CompanyName})
+    #	z = collection.find({'company.Name': {'$regex': CompanyName}})
     D = 'NONE'
     Nbr = z.count()
     LLIST = []
     if Nbr > 0:
         for k in range(0, Nbr):
-            D = {'CompanyName': z[k]['company'], 'INBUILDING': z[k]['INBUILDING'],
-                 'EXTBUILDING': z[k]['EXTBUILDING'],
-                 'POILOGISTIC': z[k]['POILOGISTIC'], 'ZONE': z[k]['ZONE'],
-                 'HouseNum': z[k]['HouseNum'], 'RoadName': z[k]['RoadName'],
-                 'POBOX': z[k]['POBOX'], 'zipcode': z[k]['zipcode'],
-                 'city': z[k]['city'], 'country': z[k]['country'], 'ADDITIONAL': z[k]['ADDITIONAL']}
+            D = {'CompanyName': z[k]['company']['Name'], 'INBUILDING': z[k]['company']['Address']['INBUILDING'],
+                 'EXTBUILDING': z[k]['company']['Address']['EXTBUILDING'],
+                 'POILOGISTIC': z[k]['company']['Address']['POILOGISTIC'], 'ZONE': z[k]['company']['Address']['ZONE'],
+                 'HouseNum': z[k]['company']['Address']['HouseNum'], 'RoadName': z[k]['company']['Address']['RoadName'],
+                 'POBOX': z[k]['company']['Address']['POBOX'], 'zipcode': z[k]['company']['Address']['zipcode'],
+                 'city': z[k]['company']['Address']['city'], 'country': z[k]['company']['Address']['country'], 'ADDITIONAL': z[k]['company']['Address']['ADDITIONAL']}
             LLIST.insert(k, D)
     return LLIST
 
 
 # verification unitaire
 def UNITSEARCH(CompanyName, Address):
-    print("company : ",CompanyName)
-    print("adress : ",Address)
+    print("company : ", CompanyName)
+    print("adress : ", Address)
     AddL = []
     RES = Address_Standardization(Address)
     ADDRESS_ST = RES[0]
@@ -1741,7 +1761,7 @@ def UNITSEARCH(CompanyName, Address):
     return Tab
 
 
-def VerifUnit(request):
+def verifUnit(request):
     if request.method == 'GET':
         Address = request.GET.get('Address')
         Address = Address.upper()
@@ -1765,7 +1785,7 @@ def VerifUnit(request):
         companyI = []
         AddressI = []
         j = 0
-        print("len cv : ",cv)
+        print("len cv : ", cv)
         if len(cv[0]) > 0:
 
             NBR = len(cv[0])
@@ -1839,6 +1859,114 @@ def VerifUnit(request):
         df6['ADDITIONALOUTPUT'] = se42.values
     return HttpResponse(df6.to_json(orient='records'))
 
+################################# verification d'un fichier ##############
+
+
+def verif_file(df):
+    company = []
+    Add = []
+    INBUILDINGL = []
+    EXTBUILDINGL = []
+    POILOGISTICL = []
+    ZONEL = []
+    HouseNumL = []
+    RoadNameL = []
+    POBOXL = []
+    zipcodeL = []
+    cityL = []
+    countryL = []
+    additionnalL = []
+    companyI = []
+    AddressI = []
+    CompanyName = []
+    j = 0
+    for i in range(0, len(df)):
+        print('i=', i)
+
+        CompanyName0 = df['Input_company'][i]
+        CompanyName0 = CompanyName0.upper()
+        CompanyName.insert(i, CompanyName0)
+        Address = df['Input_Address'][i]
+        print('address=', Address)
+        Address = Address.upper()
+        cv = UNITSEARCH(CompanyName0, Address)
+        AddressI.insert(i, Address)
+        if len(cv[0]) > 0:
+
+            company.insert(i, cv[0][0]['CompanyName'])
+            Add.insert(i, cv[1][0])
+            INBUILDINGL.insert(i, cv[0][0]['INBUILDING'])
+            EXTBUILDINGL.insert(i, cv[0][0]['EXTBUILDING'])
+            POILOGISTICL.insert(i, cv[0][0]['POILOGISTIC'])
+            ZONEL.insert(i, cv[0][0]['ZONE'])
+            HouseNumL.insert(i, cv[0][0]['HouseNum'])
+            RoadNameL.insert(i, cv[0][0]['RoadName'])
+            POBOXL.insert(i, cv[0][0]['POBOX'])
+            zipcodeL.insert(i, cv[0][0]['zipcode'])
+            cityL.insert(i, cv[0][0]['city'])
+            countryL.insert(i, cv[0][0]['country'])
+            additionnalL.insert(i, cv[0][0]['ADDITIONAL'])
+
+        else:
+            company.insert(i, 'NO MATCHING COMPANY')
+            Add.insert(i, 'NO MATCHING ADDRESS')
+            INBUILDINGL.insert(i, 'NONE')
+            EXTBUILDINGL.insert(i, 'NONE')
+            POILOGISTICL.insert(i, 'NONE')
+            ZONEL.insert(i, 'NONE')
+            HouseNumL.insert(i, 'NONE')
+            RoadNameL.insert(i, 'NONE')
+            POBOXL.insert(i, 'NONE')
+            zipcodeL.insert(i, 'NONE')
+            cityL.insert(i, 'NONE')
+            countryL.insert(i, 'NONE')
+            additionnalL.insert(i, 'NONE')
+
+    df6 = pd.DataFrame()
+
+    se28 = pd.Series(CompanyName)
+    df6['companyINPUT'] = se28.values
+    se29 = pd.Series(AddressI)
+    df6['AddressINPUT'] = se29.values
+    se30 = pd.Series(company)
+    df6['companyOUTPUT'] = se30.values
+    se31 = pd.Series(Add)
+    df6['AddressOUTPUT'] = se31.values
+    se32 = pd.Series(INBUILDINGL)
+    df6['INBUILDINGOUTPUT'] = se32.values
+    se33 = pd.Series(EXTBUILDINGL)
+    df6['EXTBUILDINGOUTPUT'] = se33.values
+    se34 = pd.Series(POILOGISTICL)
+    df6['POILOGISTICOUTPUT'] = se34.values
+    se35 = pd.Series(ZONEL)
+    df6['ZONEOUTPUT'] = se35.values
+    se36 = pd.Series(HouseNumL)
+    df6['HouseNumOUTPUT'] = se36.values
+    se37 = pd.Series(RoadNameL)
+    df6['RoadNameOUTPUT'] = se37.values
+    se38 = pd.Series(POBOXL)
+    df6['POBOXOUTPUT'] = se38.values
+    se39 = pd.Series(zipcodeL)
+    df6['zipcodeOUTPUT'] = se39.values
+    se40 = pd.Series(cityL)
+    df6['cityOUTPUT'] = se40.values
+    se41 = pd.Series(countryL)
+    df6['countryOUTPUT'] = se41.values
+    se42 = pd.Series(additionnalL)
+    df6['ADDITIONALOUTPUT'] = se42.values
+    return df6
+
+
+def fileVerif(request):
+    start_time = time.time()
+    if request.method == 'POST':
+        File = request.FILES["file"]
+        df = pd.read_csv(File)
+        # Verification
+        data = verif_file(df)
+    total = time.time()-start_time
+    print(total)
+    return HttpResponse(data.to_json(orient='records'))
 # df6.to_csv('testV.csv')
 
 # File Standardization

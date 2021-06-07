@@ -18,6 +18,8 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     if (this.data != null) {
       console.log(document.getElementById('IframeID'))
+      var iframe = document.getElementById('IframeID');
+        console.log(iframe);
       //document.getElementById('IframeID').setAttribute("src", this.data);
     }
   }

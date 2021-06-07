@@ -45,7 +45,7 @@
                             </mat-select>
                         </mat-form-field>-->
                         <br />
-
+                        <mat-spinner strokeWidth="3" [diameter]="100" *ngIf="dataSource.data.length === 0 && value === 0"></mat-spinner>
                         <div class="table-responsive" [hidden]="dataSource.data.length === 0">
                             <!-- Filtrage -->
                             <mat-label>Filter By :</mat-label>
@@ -79,6 +79,7 @@
                             </mat-form-field>
                             <br />
                             <!--Table-->
+
                             <table mat-table matTableExporter bordered="true" class="mat-elevation-z8 table-hover table" #exporter="matTableExporter" [dataSource]="dataSource">
 
                                 <ng-container matColumnDef="SOCIETY_NAME">
@@ -203,7 +204,7 @@
                             <button mat-raised-button (click)="statistics()" class="btn pull-right">
                 Profiling
               </button>
-                            <button mat-raised-button (click)="dashboard(dataSource)" class="btn pull-right">
+                            <button mat-raised-button (click)="dashboard()" class="btn pull-right">
                 Statistics
               </button>
 

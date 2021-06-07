@@ -28,7 +28,6 @@ export class UnitverifComponent {
   selectedAddress: any;
 
   companyINPUT: any;
-  AddressINPUT: any;
   companyOUTPUT: any;
   AddressOUTPUT: any;
   INBUILDINGOUTPUT: any;
@@ -57,9 +56,7 @@ export class UnitverifComponent {
         this.showing=true
         // to choose witch data gonna be showing
         this.companyINPUT = data[0].companyINPUT
-        //this.AddressINPUT = data[0].AddressINPUT
-        this.AddressOUTPUT = data[0].AddressOUTPUT 
-        //this.companyOUTPUT = "companyOUTPUT : "+data[0].companyOUTPUT
+        this.AddressOUTPUT = data[0].AddressOUTPUT
         this.INBUILDINGOUTPUT=data[0].INBUILDINGOUTPUT
         this.EXTBUILDINGOUTPUT=data[0].EXTBUILDINGOUTPUT
         this.POILOGISTICOUTPUT=data[0].POILOGISTICOUTPUT
