@@ -16,7 +16,7 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-print("base :: ",BASE_DIR)
+#print("base :: ",BASE_DIR)
 
 
 # Quick-start development settings - unsuitable for production
@@ -31,7 +31,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
-print("setting path :: ",SETTINGS_PATH)
+#print("setting path :: ",SETTINGS_PATH)
 # Application definition
 
 INSTALLED_APPS = [
@@ -52,11 +52,6 @@ CORS_ORIGIN_WHITELIST = [
     "http://localhost:4200",
 ]
 
-REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 100
-}
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -73,7 +68,7 @@ ROOT_URLCONF = 'DataValidation.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(SETTINGS_PATH, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -113,7 +108,7 @@ CACHES = {
         'LOCATION': 'http://127.0.0.1:8000/',
     }
 }
-DEFAULT_AUTHENTICATION_CLASSES= (
+DEFAULT_AUTHENTICATION_CLASSES = (
     'rest_framework.authentication.SessionAuthentication',
     'rest_framework.authentication.BasicAuthentication'
 ),

@@ -436,8 +436,12 @@ export class TableListComponent {
       data => {
 
         console.log("lets go")
+        console.log(data)
         //data=data.substring(15);
-        this.router.navigate(['dashboard'], { queryParams: { data: data } });
+        setTimeout(() => {
+          //this.router.navigate(['dashboard'], { queryParams: { data: data } });
+      }, 1);
+        
       });
     /*let navigationExtras: NavigationExtras = {
         queryParams: {

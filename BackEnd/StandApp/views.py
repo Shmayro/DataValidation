@@ -2,22 +2,29 @@ import string
 import csv
 import os
 import time
+import cProfile
+from django import template
 import requests
 import unicodedata
 import numpy as np
 import re
 import json
 import pandas as pd
+import webbrowser
+from pathlib import Path
 from pymongo import MongoClient
 from django.template import Context, loader
 from django.shortcuts import render, redirect
+import dask.dataframe as dd
 from django.http import HttpResponse
 from rest_framework.parsers import JSONParser
-from django.views.decorators.csrf import csrf_exempt
 from pandas_profiling import ProfileReport
+import asyncio
+import multiprocessing
+from pyspark import *
+from joblib import Parallel, delayed
 import matplotlib
 matplotlib.use('agg')
-
 
 # input file
 # df = pd.read_csv(r'Input.csv')
@@ -28,8 +35,9 @@ dfcity = pd.read_csv(r'city_list.csv')
 # fichier contenant la liste des abbreviations des mots cles d'adresses
 json_data = open(r'abbreviation.json')
 
-
 # récupérer la liste des villes
+
+
 def get_list_city(df):
     cityL = []
     for i in range(0, len(df)):
@@ -1183,6 +1191,8 @@ def strip_accents(ss):
     ss = ss.decode('utf8')
     return str(ss)
 
+# @sync_to_async
+
 
 def Address_Standardization(Address):
     Final = []
@@ -1334,6 +1344,7 @@ def Address_Standardization(Address):
 
 
 def StandUnit(request):
+    start_time = time.time()
     if request.method == 'GET':
         Address = request.GET.get('Address')
         Address = Address.upper()
@@ -1405,11 +1416,14 @@ def StandUnit(request):
         df['nbCorr'] = se44.values
         # t = df.to_dict('records')
         # print(t)
+        total = time.time()-start_time
+        print(total)
     return HttpResponse(df.to_json(orient='records'))
 
 
 # Statistiques avec pandas profiling
 def pandasProfiling(request):
+    start_time = time.time()
     if request.method == 'POST':
         File = JSONParser().parse(request)
         newdf1 = pd.DataFrame(File)
@@ -1423,23 +1437,46 @@ def pandasProfiling(request):
         # profile = ProfileReport(newdf1, title="Pandas Profiling Report", minimal=True)
         profile = ProfileReport(newdf1, title="Data Standardization Report")
         # profile
-        profile.to_file(output_file="../../FrontEnd/profiling.html")
-        html = open('../../FrontEnd/profiling.html', 'r')
+        profile.to_file(output_file="./templates/profiling.html")
+        html = open('./templates/profiling.html', 'r')
         mystr = html.read()
+        #webbrowser.open_new_tab("www.google.fr")
         # print(mystr)
-        template = loader.get_template('../../FrontEnd/profiling.html')
+        template = loader.get_template('../templates/profiling.html')
+        template.render()
+        response = HttpResponse()
+        # construct the file's path
+        url = os.path.join('./templates/profiling.html')
+        #print("url :",url)
+        #print("responnnns : ",response)
+        # test if path is ok and file exists
+        if os.path.isfile(url):
+            # let nginx determine the correct content type in this case
+            #print("test")
+            response['Content-Type'] = "application/xhtml+xml"
+            #response['X-Accel-Redirect'] = url
+            response['X-Sendfile'] = url
+        # other webservers may accept X-Sendfile and not X-Accel-Redirect
         # print(template.read())
     # return redirect('profiling.html')
     # return render(request, 'profiling.html', content_type='application/xhtml+xml')
     # return HttpResponse(template.render(t), content_type='application/xhtml+xml')
     # return HttpResponse(template)
     # , content_type='application/xhtml+xml'
+    total = time.time()-start_time
+    print(total)
+    #return response
+    #return render(None, response)
+    #print(os.path.realpath("./templates/profiling.html"))
+    # return HttpResponse(template, content_type='text/html; charset=utf-8', status=200)
+    webbrowser.get('chrome').open("file://"+ os.path.realpath("./templates/profiling.html"), new=0, autoraise=True)
     return HttpResponse(json.dumps(mystr), content_type='text/plain')
 
 # Pour le profilage d'abbreviation
 
 
 def getAbbreviation(request):
+    start_time = time.time()
     if request.method == 'GET':
         Address = request.GET.get('Address')
         Address = Address.upper()
@@ -1457,12 +1494,15 @@ def getAbbreviation(request):
         df['adresse'] = se30.values
         se32 = pd.Series(nb)
         df['nb'] = se32.values
+        total = time.time()-start_time
+        print(total)
     return HttpResponse(df.to_json(orient='records'))
 
 # Pour le profilage de TypoErrorCorrection
 
 
 def getTypoErrorCorrection(request):
+    start_time = time.time()
     if request.method == 'GET':
         Address = request.GET.get('Address')
         print("adress : ", Address)
@@ -1480,6 +1520,8 @@ def getTypoErrorCorrection(request):
         df['adresse'] = se30.values
         se32 = pd.Series(nbtot)
         df['nbtot'] = se32.values
+        total = time.time()-start_time
+        print(total)
     return HttpResponse(df.to_json(orient='records'))
 
 # Pour le profilage de TypoErrorCorrection
@@ -1516,24 +1558,36 @@ def file_Standardization(df):
     nbArr = []
     nbCorr = []
     print("************", df)
+    # for i in range(0, len(df)):
+    # print(i)
+    '''
+    task=asyncio.ensure_future(Address_Standardization(df['ADDRESS'][i]))
+    print(task)
+    R = await asyncio.wait([task])
+    '''
+    num_cores = multiprocessing.cpu_count()
+    print('process name :', multiprocessing.current_process().name)
+    print('process number :', num_cores)
+    R = Parallel(n_jobs=num_cores)(delayed(Address_Standardization)(df['ADDRESS'][i]) for i in range(0, len(df)))
+    print('résultats : ', R)
+
+    #R = Address_Standardization(df['ADDRESS'][i])
+    # print(R)
     for i in range(0, len(df)):
-        # print(i)
         try:
-            R = Address_Standardization(df['ADDRESS'][i])
-            print(R)
-            INBUILDINGL.insert(i, R[1])
-            EXTBUILDINGL.insert(i, R[2])
-            POILOGISTICL.insert(i, R[4])
-            ZONEL.insert(i, R[5])
-            HouseNumL.insert(i, R[6])
-            RoadNameL.insert(i, R[7])
-            POBOXL.insert(i, R[8])
-            ZIPCODEL.insert(i, R[9])
-            CITYL.insert(i, R[10])
-            COUNTRYL.insert(i, R[11])
-            ExtraL.insert(i, R[3])
-            nbArr.insert(i, R[13])
-            nbCorr.insert(i, R[14])
+            INBUILDINGL.insert(i, R[i][1])
+            EXTBUILDINGL.insert(i, R[i][2])
+            POILOGISTICL.insert(i, R[i][4])
+            ZONEL.insert(i, R[i][5])
+            HouseNumL.insert(i, R[i][6])
+            RoadNameL.insert(i, R[i][7])
+            POBOXL.insert(i, R[i][8])
+            ZIPCODEL.insert(i, R[i][9])
+            CITYL.insert(i, R[i][10])
+            COUNTRYL.insert(i, R[i][11])
+            ExtraL.insert(i, R[i][3])
+            nbArr.insert(i, R[i][13])
+            nbCorr.insert(i, R[i][14])
 
         except:
             # print('eeeeeeeeeeeeeeeeeeeeeeeeeee')
@@ -1588,7 +1642,13 @@ def StandFile(request):
         File = request.FILES["file"]
         df = pd.read_csv(File)
         # Standardization
+        '''
+        task=asyncio.ensure_future(file_Standardization(df))
+        print(task)
+        data = await asyncio.wait([task])
+        '''
         data = file_Standardization(df)
+        print('data : ', data)
     total = time.time()-start_time
     print(total)
     return HttpResponse(data.to_json(orient='records'))
@@ -1762,6 +1822,7 @@ def UNITSEARCH(CompanyName, Address):
 
 
 def verifUnit(request):
+    start_time = time.time()
     if request.method == 'GET':
         Address = request.GET.get('Address')
         Address = Address.upper()
@@ -1825,7 +1886,7 @@ def verifUnit(request):
             additionnalL.insert(0, 'NONE')
 
         df6 = pd.DataFrame()
-
+        ddd = spark.createDataFrame(df6)
         se28 = pd.Series(companyI)
         df6['companyINPUT'] = se28.values
         se29 = pd.Series(AddressI)
@@ -1857,6 +1918,8 @@ def verifUnit(request):
         df6['countryOUTPUT'] = se41.values
         se42 = pd.Series(additionnalL)
         df6['ADDITIONALOUTPUT'] = se42.values
+        total = time.time()-start_time
+        print(total)
     return HttpResponse(df6.to_json(orient='records'))
 
 ################################# verification d'un fichier ##############
@@ -1969,6 +2032,7 @@ def fileVerif(request):
     return HttpResponse(data.to_json(orient='records'))
 # df6.to_csv('testV.csv')
 
+#cProfile.run(file_Standardization(pd.read_csv(r'Input copie.csv')))
 # File Standardization
 
 # df = file_Standardization(df)
