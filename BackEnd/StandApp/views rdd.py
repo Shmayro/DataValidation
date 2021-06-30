@@ -3,7 +3,6 @@ import csv
 import os
 import time
 import cProfile
-from typing import Any
 from django import template
 import requests
 import unicodedata
@@ -1248,7 +1247,7 @@ def strip_accents(ss):
 
 def Address_Standardization(Address):
     Final = []
-    #print('###Typographic error correction###')
+    print('###Typographic error correction###')
     Address = Address.replace(",", " ")
     Address = Address.replace("''", "'")
     Address = Address.replace('"', "")
@@ -1271,11 +1270,11 @@ def Address_Standardization(Address):
     TYPOnbr = typoerrorcorrection(Address)[1]
     Address = typoerrorcorrection(Address)[0]
 
-    #print('###Gestion des abbreviations ###')
+    print('###Gestion des abbreviations ###')
     ABVnbr = abbreviation(Address)[1]
     Address = abbreviation(Address)[0]
 
-    #print('###Parsing###')
+    print('###Parsing###')
     RES0 = ExtractLocality(Address, dfcity)
     Address = RES0[3]
     ADDL = Address.split()
@@ -1610,7 +1609,6 @@ def getNbStand(request):
 
 
 def file_Standardization(df):
-    # Spark Data Frame Method
     INBUILDINGL = []
     EXTBUILDINGL = []
     ExtraL = []
@@ -1626,28 +1624,39 @@ def file_Standardization(df):
     nbCorr = []
     #print("************", df)
     spark = SparkSession.builder.appName("fileStand").getOrCreate()
-    dfSpark = spark.createDataFrame(df)
-    
-    for row in dfSpark.rdd.collect():
+    # Une façon de créer une RDD, c'est à travers la méthode parallelize() avec une liste ou array en paramètre
+    #rdd = spark.SparkContext().parallelize(list)
+    # ou bien en passant en paramètre
+    dfspark = spark.createDataFrame(df)
+    rdd = dfspark.rdd
+    # pour voir l'ensemble des éléments contenant RDD
+    rddCollect = rdd.collect()
+    #print(rddCollect)
+    print("Number of Partitions: " + str(rdd.getNumPartitions()))
+    print("Action: First element: " + str(rdd.first()))
+    print("Count : " + str(rdd.count()))
+    print("row adress : " + str(rdd.first().ADDRESS))
+    # pour connaitre comment les partitions sont partitionnée et combien d'éléments comportent
+    # print(rdd.glom())
+    rdd5=rdd.map(lambda row: Address_Standardization(row.ADDRESS))
+    #print(rdd5.toDF())
+    #print(rdd5.collect())        
+    for row in rdd5.collect():
         try:
-            R = Address_Standardization(row.ADDRESS)
-            #print(R)
-            INBUILDINGL.insert(i, R[1])
-            EXTBUILDINGL.insert(i, R[2])
-            POILOGISTICL.insert(i, R[4])
-            ZONEL.insert(i, R[5])
-            HouseNumL.insert(i, R[6])
-            RoadNameL.insert(i, R[7])
-            POBOXL.insert(i, R[8])
-            ZIPCODEL.insert(i, R[9])
-            CITYL.insert(i, R[10])
-            COUNTRYL.insert(i, R[11])
-            ExtraL.insert(i, R[3])
-            nbArr.insert(i, R[13])
-            nbCorr.insert(i, R[14])
-
+            INBUILDINGL.insert(i, row[1])
+            EXTBUILDINGL.insert(i, row[2])
+            POILOGISTICL.insert(i, row[4])
+            ZONEL.insert(i, row[5])
+            HouseNumL.insert(i, row[6])
+            RoadNameL.insert(i, row[7])
+            POBOXL.insert(i, row[8])
+            ZIPCODEL.insert(i, row[9])
+            CITYL.insert(i, row[10])
+            COUNTRYL.insert(i, row[11])
+            ExtraL.insert(i, row[3])
+            nbArr.insert(i, row[13])
+            nbCorr.insert(i, row[14])
         except:
-            # print('eeeeeeeeeeeeeeeeeeeeeeeeeee')
             INBUILDINGL.insert(i, 'NONE')
             EXTBUILDINGL.insert(i, 'NONE')
             POILOGISTICL.insert(i, 'NONE')
@@ -1661,7 +1670,6 @@ def file_Standardization(df):
             ExtraL.insert(i, 'NONE')
             nbArr.insert(i, 0)
             nbCorr.insert(i, 0)
-
     se21 = pd.Series(INBUILDINGL)
     df['INBUILDING'] = se21.values
     se22 = pd.Series(EXTBUILDINGL)
@@ -1694,6 +1702,83 @@ def file_Standardization(df):
 
 # File standardization with Django
 
+
+def getAdress(row, df):
+    INBUILDINGL = []
+    EXTBUILDINGL = []
+    ExtraL = []
+    POILOGISTICL = []
+    ZONEL = []
+    HouseNumL = []
+    RoadNameL = []
+    POBOXL = []
+    ZIPCODEL = []
+    CITYL = []
+    COUNTRYL = []
+    nbArr = []
+    nbCorr = []
+    try:
+        R = Address_Standardization(row.ADDRESS)
+        print(R)
+        INBUILDINGL.insert(i, R[1])
+        EXTBUILDINGL.insert(i, R[2])
+        POILOGISTICL.insert(i, R[4])
+        ZONEL.insert(i, R[5])
+        HouseNumL.insert(i, R[6])
+        RoadNameL.insert(i, R[7])
+        POBOXL.insert(i, R[8])
+        ZIPCODEL.insert(i, R[9])
+        CITYL.insert(i, R[10])
+        COUNTRYL.insert(i, R[11])
+        ExtraL.insert(i, R[3])
+        nbArr.insert(i, R[13])
+        nbCorr.insert(i, R[14])
+
+    except:
+        # print('eeeeeeeeeeeeeeeeeeeeeeeeeee')
+        INBUILDINGL.insert(i, 'NONE')
+        EXTBUILDINGL.insert(i, 'NONE')
+        POILOGISTICL.insert(i, 'NONE')
+        ZONEL.insert(i, 'NONE')
+        HouseNumL.insert(i, 'NONE')
+        RoadNameL.insert(i, 'NONE')
+        POBOXL.insert(i, 'NONE')
+        ZIPCODEL.insert(i, 'NONE')
+        CITYL.insert(i, 'NONE')
+        COUNTRYL.insert(i, 'NONE')
+        ExtraL.insert(i, 'NONE')
+        nbArr.insert(i, 0)
+        nbCorr.insert(i, 0)
+    #df = df.select("*").toPandas()
+    se21 = pd.Series(INBUILDINGL)
+    df = df.withColumn("INBUILDING", array([lit(i) for i in se21]))
+    se22 = pd.Series(EXTBUILDINGL)
+    df = df.withColumn("EXTBUILDING", array([lit(i) for i in se22]))
+    se23 = pd.Series(POILOGISTICL)
+    df = df.withColumn("POILOGISTICL", array([lit(i) for i in se23]))
+    se24 = pd.Series(ZONEL)
+    df = df.withColumn("ZONEL", array([lit(i) for i in se24]))
+    se25 = pd.Series(HouseNumL)
+    df = df.withColumn("HouseNumL", array([lit(i) for i in se25]))
+    se26 = pd.Series(RoadNameL)
+    df = df.withColumn("RoadNameL", array([lit(i) for i in se26]))
+    se27 = pd.Series(POBOXL)
+    df = df.withColumn("POBOXL", array([lit(i) for i in se27]))
+    se28 = pd.Series(ZIPCODEL)
+    df = df.withColumn("ZIPCODEL", array([lit(i) for i in se28]))
+    se29 = pd.Series(CITYL)
+    df = df.withColumn("CITYL", array([lit(i) for i in se29]))
+    se30 = pd.Series(COUNTRYL)
+    df = df.withColumn("COUNTRYL", array([lit(i) for i in se30]))
+    se31 = pd.Series(ExtraL)
+    df = df.withColumn("ExtraL", array([lit(i) for i in se31]))
+    se32 = pd.Series(nbArr)
+    df = df.withColumn("nbArr", array([lit(i) for i in se32]))
+    se33 = pd.Series(nbCorr)
+    df = df.withColumn("nbCorr", array([lit(i) for i in se33]))
+    return df
+
+
 def StandFile(request):
     start_time = time.time()
     if request.method == 'POST':
@@ -1703,6 +1788,11 @@ def StandFile(request):
         #print(df)
 
         # Standardization
+        '''
+        task=asyncio.ensure_future(file_Standardization(df))
+        print(task)
+        data = await asyncio.wait([task])
+        '''
         data = file_Standardization(df)
         print('data : ', data)
         #data = data.select("*").toPandas()

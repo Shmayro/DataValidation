@@ -2,20 +2,20 @@
     <div class="card">
         <h4 class="card-header">Login</h4>
         <div class="card-body">
-            <form novalidate="" ng-reflect-form="[object Object]" class="ng-untouched ng-pristine ng-invalid">
+            <form (ngSubmit)='onSubmit()' [FormGroup]='loginForm' class="ng-untouched ng-pristine ng-invalid">
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="username" type="text" ng-reflect-klass="form-control" ng-reflect-ng-class="[object Object]" ng-reflect-name="username" />
+                    <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="username" type="text" ng-reflect-name="username" />
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="password" type="password" ng-reflect-klass="form-control" ng-reflect-ng-class="[object Object]" ng-reflect-name="password" />
+                    <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="password" type="password" ng-reflect-name="password" />
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-primary">
+                    <button class="btn btn-primary" type="submit">
             Login
           </button>
-                    <a class="btn btn-link" routerlink="../register/" ng-reflect-router-link="../register/" href="/register">
+                    <a class="btn btn-link" routerlink="../register/" ng-reflect-router-link="../register/" href="#/register">
             Register
           </a>
                 </div>

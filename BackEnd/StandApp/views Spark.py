@@ -3,7 +3,6 @@ import csv
 import os
 import time
 import cProfile
-from typing import Any
 from django import template
 import requests
 import unicodedata
@@ -1248,7 +1247,7 @@ def strip_accents(ss):
 
 def Address_Standardization(Address):
     Final = []
-    #print('###Typographic error correction###')
+    print('###Typographic error correction###')
     Address = Address.replace(",", " ")
     Address = Address.replace("''", "'")
     Address = Address.replace('"', "")
@@ -1271,11 +1270,11 @@ def Address_Standardization(Address):
     TYPOnbr = typoerrorcorrection(Address)[1]
     Address = typoerrorcorrection(Address)[0]
 
-    #print('###Gestion des abbreviations ###')
+    print('###Gestion des abbreviations ###')
     ABVnbr = abbreviation(Address)[1]
     Address = abbreviation(Address)[0]
 
-    #print('###Parsing###')
+    print('###Parsing###')
     RES0 = ExtractLocality(Address, dfcity)
     Address = RES0[3]
     ADDL = Address.split()
@@ -1705,8 +1704,6 @@ def StandFile(request):
         # Standardization
         data = file_Standardization(df)
         print('data : ', data)
-        #data = data.select("*").toPandas()
-        #spark.stop()
     total = time.time() - start_time
     print(total)
     return HttpResponse(data.to_json(orient='records'))

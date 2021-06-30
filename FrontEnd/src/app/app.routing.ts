@@ -13,10 +13,14 @@ const routes: Routes =[
     redirectTo: 'home',
     pathMatch: 'full',
   },
-  /*
+  
   {
     path: 'register',
     component: RegisterComponent,
+    children: [{
+      path: '',
+      loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
+    }]
   }, 
   {
     path: 'login',
@@ -25,7 +29,7 @@ const routes: Routes =[
       path: '',
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
     }]
-  }, */{
+  }, {
     path: '',
     component: AdminLayoutComponent,
     children: [{
