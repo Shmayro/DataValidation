@@ -30,8 +30,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 3. Go to your file project
 4. Make sure you have installed [Angular CLI](https://github.com/angular/angular-cli) already. If not, please install.
 5. Run in FrontEnd terminal: ```npm install```.
-6. Run in BackEnd terminal ``` source venv/bin/activate``` to activate virtual envirenement, then run ```python manage.py runserver```.
-7. Back to the FrontEnd, Run `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+6. For windows, Run in BackEnd terminal: ```virtualenv --system-site-packages -p python ./venv``` for adding a virtual envirenement, then run ```./venv/scripts/activate``` to activate it, then run ```python manage.py runserver``` to run the server.
+7. For Mac, Run in BackEnd terminal ``` source venv/bin/activate``` to activate virtual envirenement, then run ```python manage.py runserver```.
+8. Back to the FrontEnd, Run `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ### What's included
 
