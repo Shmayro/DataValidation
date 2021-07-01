@@ -16,10 +16,9 @@ from pathlib import Path
 from pymongo import MongoClient
 from django.template import Context, loader
 from django.shortcuts import render, redirect
-import dask.dataframe as dd
 from django.http import HttpResponse
 from rest_framework.parsers import JSONParser
-#from pandas_profiling import ProfileReport
+from pandas_profiling import ProfileReport
 import asyncio
 import multiprocessing
 from pyspark import *
