@@ -30,10 +30,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 3. Go to your file project
 4. Make sure you have installed [Angular CLI](https://github.com/angular/angular-cli) already. If not, please install.
 5. Run in FrontEnd terminal: ```npm install```.
-6. For windows, Run in BackEnd terminal: ```virtualenv --system-site-packages -p python ./venv``` for adding a virtual envirenement, then run ```./venv/scripts/activate``` to activate it, then run ```python manage.py runserver``` to run the server.
-7. For Mac, Run in BackEnd terminal ``` source venv/bin/activate``` to activate virtual envirenement, then run ```python manage.py runserver```.
-8. Back to the FrontEnd, Run `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+6. For windows, Run in terminal of the BackEnd Folder : ``` py -m pip install --user virtualenv``` for installing a virtual envirenement, then ```py -m venv venv``` to create a venv folder then run ```./venv/scripts/activate``` to activate it,
+7. For Mac, Run in terminal of the BackEnd Folder : ``` python3 -m pip install --user``` for installing a virtual envirenement, then ```python3 -m venv venv``` to create a venv folder then run ``` source venv/bin/activate``` to activate virtual envirenement, then run ```python manage.py runserver```.
+8. Run ```pip install -r requirements.txt``` to install all the modules that you gonna need.
+9. When its Ok, Run ```python manage.py runserver``` to run the server of the BackEnd.
+10. Back to the FrontEnd, Run `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+11. if you add a package in backend, please run ```pip freeze > requirements.txt``` to add automatically the module name and his version (You can check the file in BackEnd folder). 
 ### What's included
 
 Within the download you'll find the following directories and files:
@@ -59,11 +62,26 @@ DataValidation
 │   │   ├── tests.py
 │   │   ├── urls.py
 │   │   ├── views.py
+│   ├── templates
+│   │   ├── profiling.html
+│   ├── 1000.csv
+│   ├── 5000.csv
+│   ├── 10000.csv
+│   ├── 15000.csv
+│   ├── 20000.csv
 │   ├── abbreviation.json
 │   ├── city_list.csv
+│   ├── Conversion_to_collection.py
+│   ├── Echantillon copie.csv
+│   ├── Echantillon.csv
+│   ├── Input copie.csv
 │   ├── Input_Stand.csv
 │   ├── Input.csv
 │   ├── manage.py
+│   ├── ReferenceDB0.csv
+│   ├── requirements.txt
+│   ├── StandardisationV2.py
+│   ├── testV.csv
 ├── FrontEnd
 │   ├── e2e
 │   ├── src
@@ -152,13 +170,16 @@ DataValidation
 │   │   ├── tsconfig.spec.json
 │   │   └── typings.d.ts
 │   ├── angular.json
+│   ├── certificate.cnf
 │   ├── CHANGELOG.md
 │   ├── karma.conf.js
+│   ├── localhost.crt
+│   ├── localhost.key
 │   ├── package-lock.json
 │   ├── package.json
 │   ├── protractor.conf.js
-│   ├── README.md
 │   ├── tsconfig.json
 │   ├── tslint.json
+│   README.md
 
 ```
