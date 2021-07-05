@@ -16,7 +16,6 @@ from pathlib import Path
 from pymongo import MongoClient
 from django.template import Context, loader
 from django.shortcuts import render, redirect
-import dask.dataframe as dd
 from django.http import HttpResponse
 from rest_framework.parsers import JSONParser
 #from pandas_profiling import ProfileReport
@@ -1623,42 +1622,41 @@ def file_Standardization(df):
     COUNTRYL = []
     nbArr = []
     nbCorr = []
-    print("************", df)
-    # for i in range(0, len(df)):
-    # print(i)
-    '''
-    task=asyncio.ensure_future(Address_Standardization(df['ADDRESS'][i]))
-    print(task)
-    R = await asyncio.wait([task])
-    '''
-    num_cores = multiprocessing.cpu_count()
-    print('process name :', multiprocessing.current_process().name)
-    print('process number :', num_cores)
-    #R = Parallel(n_jobs=num_cores)(delayed(Address_Standardization)(df['ADDRESS'][i]) for i in range(0, len(df)))
-    #print('résultats : ', R)
-
-    #R = Address_Standardization(df['ADDRESS'][i])
-    # print(R)
-    for i in range(0, len(df)):
+    #print("************", df)
+    spark = SparkSession.builder.appName("fileStand").getOrCreate()
+    # Une façon de créer une RDD, c'est à travers la méthode parallelize() avec une liste ou array en paramètre
+    #rdd = spark.SparkContext().parallelize(list)
+    # ou bien en passant en paramètre
+    dfspark = spark.createDataFrame(df)
+    rdd = dfspark.rdd
+    # pour voir l'ensemble des éléments contenant RDD
+    # rddCollect = rdd.collect()
+    #print(rddCollect)
+    print("Number of Partitions: " + str(rdd.getNumPartitions()))
+    print("Action: First element: " + str(rdd.first()))
+    print("Count : " + str(rdd.count()))
+    print("row adress : " + str(rdd.first().ADDRESS))
+    # pour connaitre comment les partitions sont partitionnée et combien d'éléments comportent
+    # print(rdd.glom())
+    rdd5=rdd.map(lambda row: Address_Standardization(row.ADDRESS))
+    print(rdd5.toDF())
+    #print(rdd5.collect())        
+    for row in rdd5.collect():
         try:
-            R = Address_Standardization(df['ADDRESS'][i])
-            #print(R)
-            INBUILDINGL.insert(i, R[1])
-            EXTBUILDINGL.insert(i, R[2])
-            POILOGISTICL.insert(i, R[4])
-            ZONEL.insert(i, R[5])
-            HouseNumL.insert(i, R[6])
-            RoadNameL.insert(i, R[7])
-            POBOXL.insert(i, R[8])
-            ZIPCODEL.insert(i, R[9])
-            CITYL.insert(i, R[10])
-            COUNTRYL.insert(i, R[11])
-            ExtraL.insert(i, R[3])
-            nbArr.insert(i, R[13])
-            nbCorr.insert(i, R[14])
-
+            INBUILDINGL.insert(i, row[1])
+            EXTBUILDINGL.insert(i, row[2])
+            POILOGISTICL.insert(i, row[4])
+            ZONEL.insert(i, row[5])
+            HouseNumL.insert(i, row[6])
+            RoadNameL.insert(i, row[7])
+            POBOXL.insert(i, row[8])
+            ZIPCODEL.insert(i, row[9])
+            CITYL.insert(i, row[10])
+            COUNTRYL.insert(i, row[11])
+            ExtraL.insert(i, row[3])
+            nbArr.insert(i, row[13])
+            nbCorr.insert(i, row[14])
         except:
-            # print('eeeeeeeeeeeeeeeeeeeeeeeeeee')
             INBUILDINGL.insert(i, 'NONE')
             EXTBUILDINGL.insert(i, 'NONE')
             POILOGISTICL.insert(i, 'NONE')
@@ -1672,7 +1670,6 @@ def file_Standardization(df):
             ExtraL.insert(i, 'NONE')
             nbArr.insert(i, 0)
             nbCorr.insert(i, 0)
-    # data = pd.DataFrame()
     se21 = pd.Series(INBUILDINGL)
     df['INBUILDING'] = se21.values
     se22 = pd.Series(EXTBUILDINGL)
@@ -1699,6 +1696,7 @@ def file_Standardization(df):
     df['nbArr'] = se32.values
     se33 = pd.Series(nbCorr)
     df['nbCorr'] = se33.values
+    spark.stop()
     return df
 
 

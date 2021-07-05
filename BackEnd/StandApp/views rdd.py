@@ -15,7 +15,6 @@ from pathlib import Path
 from pymongo import MongoClient
 from django.template import Context, loader
 from django.shortcuts import render, redirect
-import dask.dataframe as dd
 from django.http import HttpResponse
 from rest_framework.parsers import JSONParser
 from pandas_profiling import ProfileReport
@@ -1630,7 +1629,7 @@ def file_Standardization(df):
     dfspark = spark.createDataFrame(df)
     rdd = dfspark.rdd
     # pour voir l'ensemble des éléments contenant RDD
-    rddCollect = rdd.collect()
+    # rddCollect = rdd.collect()
     #print(rddCollect)
     print("Number of Partitions: " + str(rdd.getNumPartitions()))
     print("Action: First element: " + str(rdd.first()))
@@ -1639,7 +1638,7 @@ def file_Standardization(df):
     # pour connaitre comment les partitions sont partitionnée et combien d'éléments comportent
     # print(rdd.glom())
     rdd5=rdd.map(lambda row: Address_Standardization(row.ADDRESS))
-    #print(rdd5.toDF())
+    print(rdd5.toDF())
     #print(rdd5.collect())        
     for row in rdd5.collect():
         try:
